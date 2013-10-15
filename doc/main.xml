@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Book SYSTEM "gapdoc.dtd"
+   [ 
+     <!ENTITY ANUPQ "<Package>ANUPQ</Package>">
+     <!ENTITY AutPGrp "<Package>AutPGrp</Package>">
+     <!ENTITY XGAP "<Package>XGAP</Package>">
+   ]>
+
+<Book Name="anupq">
+
+<TitlePage>
+  <Title>&ANUPQ;</Title>
+<!--  <Subtitle>An interface to the ANU pq Standalone Version 1.9</Subtitle> -->
+  <Version>Version TODO</Version>
+  <Date>2013-XX-TODO</Date>
+  <Author>
+    TODO
+  </Author>
+  <Author>
+    Max Horn                          <!-- REQUIRED -->
+    <Address>
+      AG Algebra<Br/>
+      Mathematisches Institut<Br/>
+      Justus-Liebig-Universität Gießen<Br/>
+      Arndtstraße 2<Br/>
+      D-35392 Gießen<Br/>
+      Germany
+    </Address>
+    <Email>
+      max.horn@math.uni-giessen.de
+    </Email>
+    <Homepage>http://www.quendi.de/math</Homepage>
+  </Author>
+  <Author> Werner Nickel
+    <!-- <Email>nickel@mathematik.tu-darmstadt.de</Email> -->
+    <Homepage>http://www.mathematik.tu-darmstadt.de/~nickel</Homepage>
+  </Author>
+<!--
+    <Copyright>
+    <Index>License</Index>
+    &copyright; 2003-2012 by Bettina Eick, Max Horn and Werner Nickel<P/>
+    The &ANUPQ; package is free software;
+    you can redistribute it and/or modify it under the terms of the
+    <URL Text="GNU General Public License">http://www.fsf.org/licenses/gpl.html</URL>
+    as published by the Free Software Foundation; either version 2 of the License,
+    or (at your option) any later version.
+  </Copyright>
+  <Acknowledgements>
+    We appreciate very much all past and future comments, suggestions and
+    contributions to this package and its documentation provided by &GAP;
+    users and developers.
+  </Acknowledgements>
+-->
+</TitlePage>
+
+<TableOfContents/>
+
+<Body>
+
+<#Include SYSTEM "intro.xml"> 
+<#Include SYSTEM "basics.xml"> 
+
+</Body>
+
+<Bibliography Databases="manual.bib" />
+<TheIndex/>
+
+</Book>
+
+<!-- ==================================================================== -->
+
