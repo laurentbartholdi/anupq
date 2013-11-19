@@ -59,10 +59,8 @@ it is also possible to keep an additional `pkg' directory in your private
 directories, see section "ref:Installing  GAP  Packages"  of  the  GAP  4
 reference manual for details on how to do this.)
 
-Version 3.1 of the ANUPQ package  uses  `autoconf'  in  `configure' which 
-should make it easier to compile. It requires at least GAP 4.4 and
-AutPGrp 1.2, although we recommend using more recent versions (at least
-GAP 4.6 and AutPGrp 1.5).
+ANUPQ package requires at least GAP 4.5 and AutPGrp 1.5, although we
+recommend using the most recent versions of each.
 
 Unpack the archive `anupq-<XXX>.tar.gz' in the `pkg' directory.
 
@@ -83,7 +81,7 @@ where 'path' is a path to the GAP home directory. See
 
 for further options.
 
-Afterwards, you can now simply call
+Afterwards, you can simply call
 
   make
 
@@ -191,7 +189,7 @@ If you encounter problems with the `pq' binary, please contact the C code
 author: Eamonn O'Brien <obrien@math.auckland.ac.nz>.
 
 If you encounter problems at the GAP level, please  contact one of the
-GAP package maintainers, Greg Gamble <gregg@math.rwth-aachen.de> or
+GAP package maintainers, Greg Gamble <Greg.Gamble@uwa.edu.au> or
 Max Horn <max.horn@math.uni-giessen.de>.
 
 When sending a bug report, remember we will need to be able to  reproduce

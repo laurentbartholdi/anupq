@@ -17,7 +17,7 @@ These  may  be  executed   or  displayed  via  the  function  <code>PqExample</c
 directory <code>examples</code>. Most of the  examples are translations to <font face="Gill Sans,Helvetica,Arial">GAP</font> of
 examples  provided  for  the  <code>pq</code>  standalone  by  Eamonn  O'Brien;  the
 standalone  examples  are   found  in  directories  <code>standalone/examples</code>
-(<i>p</i>-quotient  and <i>p</i>-group  generation examples)  and <code>standalone/isom</code>
+(<var>p</var>-quotient  and <var>p</var>-group  generation examples)  and <code>standalone/isom</code>
 (standard  presentation  examples).   The  first  line  of  each  example
 indicates its origin.  All the examples seen in  earlier chapters of this
 manual are also  available as examples, in a  slightly modified form (the
@@ -145,7 +145,7 @@ fussed  about  the  order  in   which   the   examples   are   organised,
 In the remainder of this appendix  we  will  discuss  particular  aspects
 related  to  the  <code>Relators</code>  (see&nbsp;<a href="CHAP006.htm#SSEC001.5">option  Relators</a>)  and  <code>Identities</code>
 (see&nbsp;<a href="CHAP006.htm#SSEC001.8">option Identities</a>) options, and the construction of  the  Burnside
-group <i>B</i>(5, 4).
+group <var>B(5, 4)</var>.
 <p>
 <p>
 <h2><a name="SECT001">A.1 The Relators Option</a></h2>
@@ -237,7 +237,7 @@ gap&gt; PqSavePcPresentation(procId, ANUPQData.outfile);
 Please pay heed  to  the  warnings  given  for  the  <code>Identities</code>  option
 (see&nbsp;<a href="CHAP006.htm#SSEC001.8">option Identities</a>); it is written mainly at the <font face="Gill Sans,Helvetica,Arial">GAP</font>  level  and
 is not particularly optimised. The  <code>Identities</code>  option  allows  one  to
-compute <i>p</i>-quotients that satisfy an identity. A trivial example  better
+compute <var>p</var>-quotients that satisfy an identity. A trivial example  better
 done using the <code>Exponent</code> option, but which nevertheless demonstrates the
 usage of the <code>Identities</code> option, is as follows:
 <p>
@@ -274,7 +274,7 @@ is spent in the final <code>Pq</code> statement. The time spent by the <code>pq<
 which is negligible anyway (you can check this  by  running  the  example
 while the <code>InfoANUPQ</code> level is set to 2), is not counted by <code>time</code>.
 <p>
-Since the identity used in the above construction of <i>B</i>(2, 4) is just an
+Since the identity used in the above construction of <var>B(2, 4)</var> is just an
 exponent law, the ``right'' way to  compute  it  is  via  the  <code>Exponent</code>
 option (see&nbsp;<a href="CHAP006.htm#SSEC001.4">option Exponent</a>), which is implemented at the C  level  and
 <strong>is</strong>  highly  optimised.   Consequently,   the   <code>Exponent</code>   option   is
@@ -391,10 +391,10 @@ gap&gt; f( Q.1, Q.2 );
 <a name = "I0"></a>
 
 An example demonstrating how a large computation can be organised with the
-<font face="Gill Sans,Helvetica,Arial">ANUPQ</font> package  is the computation of the Burnside group <i>B</i>(5, 4), the
+<font face="Gill Sans,Helvetica,Arial">ANUPQ</font> package  is the computation of the Burnside group <var>B(5, 4)</var>, the
 largest  group of  exponent  4 generated  by  5 elements.   It has  order
-2<sup>2728</sup>  and   lower  exponent-<i>p</i>  central  class   13.  The  example
-<code>"B5-4.g"</code> computes  <i>B</i>(5, 4);  it is based  on a <code>pq</code>  standalone input
+<var>2<sup>2728</sup></var>  and   lower  exponent-<var>p</var>  central  class   13.  The  example
+<code>"B5-4.g"</code> computes  <var>B(5, 4)</var>;  it is based  on a <code>pq</code>  standalone input
 file written by M.&nbsp;F.&nbsp;Newman.
 <p>
 To be able to do examples like this was part of the motivation to provide
@@ -402,10 +402,10 @@ access to the  low-level functions of the standalone  program from within
 <font face="Gill Sans,Helvetica,Arial">GAP</font>.
 <p>
 Please note that the construction uses the knowledge gained by Newman and
-O'Brien in their  initial  construction  of  <i>B</i>(5, 4),  in  particular,
+O'Brien in their  initial  construction  of  <var>B(5,  4)</var>,  in  particular,
 insight into the commutator structure of the group and the  knowledge  of
-the <i>p</i>-central  class  and  the  order  of  <i>B</i>(5, 4).  Therefore,  the
-construction cannot be used to prove that <i>B</i>(5, 4)  has  the  order  and
+the <var>p</var>-central  class  and  the  order  of  <var>B(5,  4)</var>.  Therefore,  the
+construction cannot be used to prove that <var>B(5, 4)</var>  has  the  order  and
 class mentioned above. It is merely a reconstruction of the  group.  More
 information is contained in the header of the file <code>examples/B5-4.g</code>.
 <p>
@@ -500,7 +500,7 @@ od;
 <h2><a name="SECT004">A.4 Developing descendants trees</a></h2>
 <p><p>
 In the following example we will explore  the  3-groups  of  rank  2  and
-3-coclass 1 up to 3-class 5.  This  will  be  done  using  the  <i>p</i>-group
+3-coclass 1 up to 3-class 5.  This  will  be  done  using  the  <var>p</var>-group
 generation machinery of the package. We start with the elementary abelian
 3-group   of   rank   2.   From   within   <font face="Gill Sans,Helvetica,Arial">GAP</font>,   run   the    example
 <code>"PqDescendants-treetraverse-i"</code> via <code>PqExample</code> (see&nbsp;<a href="CHAP003.htm#SSEC004.4">PqExample</a>).
@@ -640,7 +640,7 @@ To automate the above procedure to some extent we provide:
 <p>
 for the  <var>i</var>th  or  default  interactive  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>  process,  generate  a
 descendant tree for the  group  of  the  process  (which  must  be  a  pc
-<i>p</i>-group) consisting of descendants of <i>p</i>-coclass 1  and  extending  to
+<var>p</var>-group) consisting of descendants of <var>p</var>-coclass 1  and  extending  to
 the class determined by the option <code>TreeDepth</code> (or 6  if  the  option  is
 omitted). In an  <font face="Gill Sans,Helvetica,Arial">XGAP</font>  session,  a  graphical  representation  of  the
 descendants tree appears  in  a  separate  window.  Subsequent  calls  to
@@ -667,7 +667,7 @@ program and number of descendants is <code>Info</code>-ed at <code>InfoANUPQ</co
 <li>
 <code>PqDescendantsTreeCoclassOne</code> is an  ``experimental''  function  that  is
 included to demonstrate the sort of things that  are  possible  with  the
-<i>p</i>-group generation machinery.
+<var>p</var>-group generation machinery.
 <p>
 </ol>
 <p>
@@ -729,5 +729,5 @@ applied for these examples.
 <p>
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP007.htm">Previous</a>] [<a href = "theindex.htm">Index</a>]
 <P>
-<address>ANUPQ manual<br>September 2013
+<address>ANUPQ manual<br>November 2013
 </address></body></html>

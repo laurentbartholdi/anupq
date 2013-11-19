@@ -70,8 +70,8 @@ function is  called without  specifying <var>G</var>,  a group can  be read  in 
 using the function <code>PqRestorePcPresentation</code> (see&nbsp;<a href="CHAP005.htm#SSEC004.12">PqRestorePcPresentation</a>).
 If <code>PqStart</code> is given an integer  argument  <var>workspace</var>,  then  the  <code>pq</code>
 program is started up  with  a  workspace  (an  integer  array)  of  size
-<var>workspace</var> (i.e. 4 &times;<i>workspace</i>  bytes in a 32-bit  environment);
-otherwise, the <code>pq</code> program sets a default workspace of 10000000.
+<var>workspace</var> (i.e. <var>4 times<var>workspace</var></var> bytes in a 32-bit  environment);
+otherwise, the <code>pq</code> program sets a default workspace of <var>10000000</var>.
 <p>
 The  only  <var>options</var>  currently  recognised  by  <code>PqStart</code>  are  <code>Prime</code>,
 <code>Exponent</code> and  <code>Relators</code>  (see  Chapter&nbsp;<a href="CHAP006.htm">ANUPQ  options</a>  for  detailed
@@ -162,7 +162,7 @@ who to email it to.
 <li><code>Pq( : </code><var>options</var><code> ) F</code>
 <p>
 return, for the fp  or pc group (let us call it  <var>F</var>), of the <var>i</var>th or
-default  interactive   <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>  process,  the   <i>p</i>-quotient  of  <var>F</var>
+default  interactive   <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>  process,  the   <var>p</var>-quotient  of  <var>F</var>
 specified by <var>options</var>,  as a pc group; <var>F</var>  must previously have been
 given  (as  first argument)  to  <code>PqStart</code>  to  start the  interactive
 <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>  process  (see&nbsp;<a href="CHAP005.htm#SSEC001.1">PqStart</a>) or  restored  from  file using  the
@@ -285,7 +285,7 @@ gap&gt; Pq(: Prime := 2, ClassBound := 3, OutputLevel := 1 );
 <p>
 return, for  the fp  or pc group (let us  call it <var>F</var>),  of the  <var>i</var>th or
 default interactive  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, an  epimorphism from <var>F</var>  onto the
-<i>p</i>-quotient of <var>F</var> specified by <var>options</var>; <var>F</var> must previously have been
+<var>p</var>-quotient of <var>F</var> specified by <var>options</var>; <var>F</var> must previously have been
 given (as first argument) to  <code>PqStart</code> to start the interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>
 process (see&nbsp;<a href="CHAP005.htm#SSEC001.1">PqStart</a>). Since the  underlying interactions with the <code>pq</code>
 program  effected by  the  interactive <code>PqEpimorphism</code>  are identical  to
@@ -305,7 +305,7 @@ returned by <code>PqEpimorphism</code>.
 <li><code>PqPCover( : </code><var>options</var><code> ) F</code>
 <p>
 return,  for the  fp or  pc  group of  the <var>i</var>th  or default  interactive
-<font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process,  the <i>p</i>-covering group  of the <i>p</i>-quotient  <code>Pq(</code><var>i</var><code> :
+<font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process,  the <var>p</var>-covering group  of the <var>p</var>-quotient  <code>Pq(</code><var>i</var><code> :
 </code><var>options</var><code>)</code> or <code>Pq(: </code><var>options</var><code>)</code>, modulo the following:
 <p>
 <ol>
@@ -313,7 +313,7 @@ return,  for the  fp or  pc  group of  the <var>i</var>th  or default  interacti
 <li>
 If no pc presentation has yet been computed (the case  immediately  after
 the <code>PqStart</code> call initiating the process)  and  the  group  <var>F</var>  of  the
-process is already a <i>p</i>-group, in the sense that  <code>HasIsPGroup(</code><var>F</var><code>)  and
+process is already a <var>p</var>-group, in the sense that  <code>HasIsPGroup(</code><var>F</var><code>)  and
 IsPGroup(</code><var>F</var><code>)</code> is <code>true</code>, then
 <p>
 </ol>
@@ -467,7 +467,7 @@ interactive           form           of            <code>StandardPresentation</c
 the fp or pc group <var>F</var> of  the  <var>i</var>th  or  default  interactive  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>
 process  onto  the  finitely  presented  group  given   by   a   standard
 presentation, i.e.&nbsp;if <var>S</var> is the standard presentation computed  for  the
-<i>p</i>-quotient     of     <var>F</var>      by      <code>StandardPresentation</code>      then
+<var>p</var>-quotient     of     <var>F</var>      by      <code>StandardPresentation</code>      then
 <code>EpimorphismStandardPresentation</code> returns the epimorphism from <var>F</var> to the
 group with presentation <var>S</var>. The group <var>F</var> must have been given (as first
 argument)  to  <code>PqStart</code>  to  start  the  interactive  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>   process
@@ -681,8 +681,8 @@ gap&gt; PqDescendants( G : OrderBound := 3, ClassBound := 2);
 </pre>
 <p>
 In  the  third  example,  we  compute  all  capable  descendants  of  the
-elementary abelian group of order  5<sup>2</sup> which have exponent-5 class at
-most 3, exponent 5, and are metabelian.
+elementary abelian group of order  <var>5<sup>2</sup></var> which have exponent-<var>5</var> class at
+most <var>3</var>, exponent <var>5</var>, and are metabelian.
 <p>
 <pre>
 gap&gt; F := FreeGroup( 2, "g" );;
@@ -708,15 +708,15 @@ gap&gt; List(des, d -&gt; Maximum( List( Elements(d), Order ) ) );
 <li><code>PqSetPQuotientToGroup() F</code>
 <p>
 for  the  <var>i</var>th  or  default  interactive  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>  process,   set   the
-<i>p</i>-quotient  previously  computed  by  the  interactive  <code>Pq</code>   function
+<var>p</var>-quotient  previously  computed  by  the  interactive  <code>Pq</code>   function
 (see&nbsp;<a href="CHAP005.htm#SSEC003.1">Pq!interactive</a>) to be the group of the process. This  function  is
-supplied to enable the computation of descendants of a <i>p</i>-quotient  that
+supplied to enable the computation of descendants of a <var>p</var>-quotient  that
 is already known to the <code>pq</code> program, via the interactive  <code>PqDescendants</code>
 function (see&nbsp;<a href="CHAP005.htm#SSEC003.6">PqDescendants!interactive</a>), thus  avoiding  the  need  to
 re-submit it and have the <code>pq</code> program recompute it.
 <p>
 <strong>Note:</strong>       See       the       function       <code>PqPGSetDescendantToPcp</code>
-(<a href="CHAP005.htm#SSEC004.48">PqPGSetDescendantToPcp</a>) for  a mechanism to make (the  <i>p</i>-cover of) a
+(<a href="CHAP005.htm#SSEC004.48">PqPGSetDescendantToPcp</a>) for  a mechanism to make (the  <var>p</var>-cover of) a
 particular descendants the current group of the process.
 <p>
 The following example of the usage of <code>PqSetPQuotientToGroup</code>,  which  is
@@ -780,7 +780,7 @@ associated with just one menu item of the <code>pq</code> program.
 <li><code>PqNrPcGenerators() F</code>
 <p>
 for the <var>i</var>th or default  interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, return the number
-of pc  generators of the lower  exponent <i>p</i>-class quotient  of the group
+of pc  generators of the lower  exponent <var>p</var>-class quotient  of the group
 currently  determined  by the  process.   This  also  applies if  the  pc
 presentation is not consistent.
 <p>
@@ -792,17 +792,17 @@ for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Ar
 pair <code>[</code><var>p</var><code>, </code><var>n</var><code>]</code> where <var>p</var> is a prime  and  <var>n</var>  is  the  number  of  pc
 generators  (see&nbsp;<a href="CHAP005.htm#SSEC004.1">PqNrPcGenerators</a>)  in  the  pc  presentation  of   the
 quotient group currently determined by the process. If this  presentation
-is consistent, then <i>p</i><sup><i>n</i></sup> is the order of the quotient  group.  Otherwise
+is consistent, then <var>p<sup>n</sup></var> is the order of the quotient  group.  Otherwise
 (if tails have been added but the necessary consistency checks,  relation
 collections, exponent law checks  and  redundant  generator  eliminations
-have not yet been done), <i>p</i><sup><i>n</i></sup> is an upper bound for  the  order  of  the
+have not yet been done), <var>p<sup>n</sup></var> is an upper bound for  the  order  of  the
 group.
 <p>
 <a name = "SSEC004.3"></a>
 <li><code>PqOrder( </code><var>i</var><code> ) F</code>
 <li><code>PqOrder() F</code>
 <p>
-for the <var>i</var>th or default  interactive  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>  process,  return  <i>p</i><sup><i>n</i></sup>
+for the <var>i</var>th or default  interactive  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>  process,  return  <var>p<sup>n</sup></var>
 where  <code>[</code><var>p</var><code>,  </code><var>n</var><code>]</code>  is  the  pair  as  returned  by   <code>PqFactoredOrder</code>
 (see&nbsp;<a href="CHAP005.htm#SSEC004.2">PqFactoredOrder</a>).
 <p>
@@ -811,7 +811,7 @@ where  <code>[</code><var>p</var><code>,  </code><var>n</var><code>]</code>  is 
 <li><code>PqPClass() F</code>
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, return  the  lower
-exponent <i>p</i>-class of the quotient  group  currently  determined  by  the
+exponent <var>p</var>-class of the quotient  group  currently  determined  by  the
 process.
 <p>
 <a name = "SSEC004.5"></a>
@@ -819,7 +819,7 @@ process.
 <li><code>PqWeight( </code><var>j</var><code> ) F</code>
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, return the  weight
-of the <var>j</var>th pc generator of the lower exponent <i>p</i>-class quotient of the
+of the <var>j</var>th pc generator of the lower exponent <var>p</var>-class quotient of the
 group currently determined by the process, or <code>fail</code> if there is no  such
 numbered pc generator.
 <p>
@@ -829,8 +829,8 @@ numbered pc generator.
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, return  the  group
 whose pc presentation is determined by the process as a <font face="Gill Sans,Helvetica,Arial">GAP</font>  pc  group
-(either a lower exponent <i>p</i>-class quotient of the  start  group  or  the
-<i>p</i>-cover of such a quotient).
+(either a lower exponent <var>p</var>-class quotient of the  start  group  or  the
+<var>p</var>-cover of such a quotient).
 <p>
 <strong>Notes:</strong>
 See Section&nbsp;<a href="CHAP003.htm#SECT005">Attributes and a Property for fp and pc  p-groups</a>  for  the
@@ -843,11 +843,11 @@ attributes   and   property   <code>NuclearRank</code>,   <code>MultiplicatorRan
 <li><code>PqDisplayPcPresentation([: OutputLevel := </code><var>lev</var><code> ]) F</code>
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process,  direct  the  <code>pq</code>
-program to display the pc presentation of  the  lower  exponent  <i>p</i>-class
+program to display the pc presentation of  the  lower  exponent  <var>p</var>-class
 quotient of the group currently determined by the process.
 <p>
 Except if the last command communicating  with  the  <code>pq</code>  program  was  a
-<i>p</i>-group generation command (for which there is only  a  verbose  output
+<var>p</var>-group generation command (for which there is only  a  verbose  output
 level), to set the amount of information this command  displays  you  may
 wish  to  call  <code>PqSetOutputLevel</code>  first  (see&nbsp;<a href="CHAP005.htm#SSEC004.8">PqSetOutputLevel</a>),   or
 equivalently pass the option <code>OutputLevel</code> (see&nbsp;<a href="CHAP006.htm#SSEC001.9">option OutputLevel</a>).
@@ -864,7 +864,7 @@ for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Ar
 program to set the output level of the <code>pq</code> program to <var>lev</var>.
 <p>
 <strong>Note:</strong> For those  familiar  with  the  <code>pq</code>  program,  <code>PqSetOutputLevel</code>
-performs menu item 5 of the main (or advanced) <i>p</i>-Quotient menu, or  the
+performs menu item 5 of the main (or advanced) <var>p</var>-Quotient menu, or  the
 Standard Presentation menu.
 <p>
 <a name = "SSEC004.9"></a>
@@ -880,7 +880,7 @@ unnecessary to pass the <code>Identities</code> if set previously.
 <strong>Note:</strong> This function is mainly implemented at the <font face="Gill Sans,Helvetica,Arial">GAP</font> level. It  does
 not correspond to a menu item of the <code>pq</code> program.
 <p>
-<strong>Commands from the Main <i>p</i>-Quotient menu</strong>
+<strong>Commands from the Main <var>p</var>-Quotient menu</strong>
 <p>
 <a name = "SSEC004.10"></a>
 <li><code>PqPcPresentation( </code><var>i</var><code> : </code><var>options</var><code> ) F</code>
@@ -922,7 +922,7 @@ first <code>PqPcPresentation</code> class 1 call and the <code>PqNextClass</code
 <code>PqEvaluateIdentities(</code><var>i</var><code>);</code> as their final step.
 <p>
 For those familiar with the  <code>pq</code>  program,  <code>PqPcPresentation</code>  performs
-menu item 1 of the main <i>p</i>-Quotient menu.
+menu item 1 of the main <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.11"></a>
 <li><code>PqSavePcPresentation( </code><var>i</var><code>, </code><var>filename</var><code> ) F</code>
@@ -937,7 +937,7 @@ which  <font face="Gill Sans,Helvetica,Arial">GAP</font>  was  started.  A   sav
 <code>PqRestorePcPresentation</code> (see&nbsp;<a href="CHAP005.htm#SSEC004.12">PqRestorePcPresentation</a>).
 <p>
 <strong>Note:</strong> For those familiar with the <code>pq</code>  program,  <code>PqSavePcPresentation</code>
-performs menu item 2 of the main <i>p</i>-Quotient menu.
+performs menu item 2 of the main <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.12"></a>
 <li><code>PqRestorePcPresentation( </code><var>i</var><code>, </code><var>filename</var><code> ) F</code>
@@ -952,7 +952,7 @@ was started.
 <p>
 <strong>Note:</strong>
 For  those  familiar  with  the  <code>pq</code>  program,  <code>PqRestorePcPresentation</code>
-performs menu item 3 of the main <i>p</i>-Quotient menu.
+performs menu item 3 of the main <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.13"></a>
 <li><code>PqNextClass( </code><var>i</var><code> [: QueueFactor ]) F</code>
@@ -981,14 +981,14 @@ step is essentially replaced by <code>PqEvaluateIdentities(</code><var>i</var><c
 its own elimination of redundant generators).
 <p>
 For those familiar with the <code>pq</code> program, <code>PqNextClass</code> performs menu item
-6 of the main <i>p</i>-Quotient menu.
+6 of the main <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.14"></a>
 <li><code>PqComputePCover( </code><var>i</var><code> ) F</code>
 <li><code>PqComputePCover() F</code>
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> processi,  directi, the  <code>pq</code>
-program to compute  the  <i>p</i>-covering group  of  <code>ANUPQData.io[</code><var>i</var><code>].group</code>.
+program to compute  the  <var>p</var>-covering group  of  <code>ANUPQData.io[</code><var>i</var><code>].group</code>.
 In contrast to the function <code>PqPCover</code> (see&nbsp;<a href="CHAP004.htm#SSEC001.3">PqPCover</a>), this function does
 not return a <font face="Gill Sans,Helvetica,Arial">GAP</font> pc group.
 <p>
@@ -1002,9 +1002,9 @@ The single command: <code>PqComputePCover(</code><var>i</var><code>);</code> is 
 <br><code>PqEliminateRedundantGenerators(</code><var>i</var><code>);</code>
 <p>
 For those familiar with the <code>pq</code> program, <code>PqComputePCover</code> performs  menu
-item 7 of the main <i>p</i>-Quotient menu.
+item 7 of the main <var>p</var>-Quotient menu.
 <p>
-<strong>Commands from the Advanced <i>p</i>-Quotient menu</strong>
+<strong>Commands from the Advanced <var>p</var>-Quotient menu</strong>
 <p>
 <a name = "SSEC004.15"></a>
 <li><code>PqCollect( </code><var>i</var><code>, </code><var>word</var><code> ) F</code>
@@ -1037,20 +1037,20 @@ for the first allowed form of <var>word</var>.
 </ol>
 <p>
 <strong>Note:</strong> For those familiar with the  <code>pq</code>  program,  <code>PqCollect</code>  performs
-menu item 1 of the Advanced <i>p</i>-Quotient menu.
+menu item 1 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.16"></a>
 <li><code>PqSolveEquation( </code><var>i</var><code>, </code><var>a</var><code>, </code><var>b</var><code> ) F</code>
 <li><code>PqSolveEquation( </code><var>a</var><code>, </code><var>b</var><code> ) F</code>
 <p>
 for the  <var>i</var>th or default  interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, direct  the <code>pq</code>
-program to solve <i>a</i>  * <i>x</i>  = <i>b</i>  for <var>x</var>, where  <var>a</var> and <var>b</var> are words
+program to solve <var><var>a</var>  * <var>x</var> = <var>b</var></var> for <var>x</var>, where  <var>a</var> and <var>b</var> are words
 in the pc generators. For the  representation  of  these  words  see  the
 description of the function <code>PqCollect</code> (<a href="CHAP005.htm#SSEC004.15">PqCollect</a>).
 <p>
 <strong>Note:</strong> 
 For those familiar  with  the  <code>pq</code>  program,  <code>PqSolveEquation</code>  performs
-menu item 2 of the Advanced <i>p</i>-Quotient menu.
+menu item 2 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.17"></a>
 <li><code>PqCommutator( </code><var>i</var><code>, </code><var>words</var><code>, </code><var>pow</var><code> ) F</code>
@@ -1066,7 +1066,7 @@ output word is also the same as for <code>PqCollect</code>.
 <p>
 <strong>Note:</strong>
 For those familiar with the <code>pq</code> program,  <code>PqCommutator</code>  performs  menu
-item 3 of the Advanced <i>p</i>-Quotient menu.
+item 3 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.18"></a>
 <li><code>PqSetupTablesForNextClass( </code><var>i</var><code> ) F</code>
@@ -1079,7 +1079,7 @@ after   <code>PqSetupTablesForNextClass(</code><var>i</var><code>)</code>   the 
 <p>
 <strong>Note:</strong> 
 For those familiar  with  the  <code>pq</code>  program,  <code>PqSetupTablesForNextClass</code>
-performs menu item 6 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 6 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.19"></a>
 <li><code>PqTails( </code><var>i</var><code>, </code><var>weight</var><code> ) F</code>
@@ -1110,7 +1110,7 @@ The single command: <code>PqTails(</code><var>i</var><code>, </code><var>weight<
 <br><code>PqAddTails(</code><var>i</var><code>, </code><var>weight</var><code>);</code>
 <p>
 For those familiar with the <code>pq</code> program, <code>PqTails</code> uses menu  item  7  of
-the Advanced <i>p</i>-Quotient menu.
+the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.20"></a>
 <li><code>PqComputeTails( </code><var>i</var><code>, </code><var>weight</var><code> ) F</code>
@@ -1124,7 +1124,7 @@ even in the default case) or for all  weights  if  <code></code><var>weight</var
 <p>
 <strong>Note:</strong>
 For those familiar with the <code>pq</code> program, <code>PqComputeTails</code> uses menu  item
-7 of the Advanced <i>p</i>-Quotient menu.
+7 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.21"></a>
 <li><code>PqAddTails( </code><var>i</var><code>, </code><var>weight</var><code> ) F</code>
@@ -1139,7 +1139,7 @@ even in the default case) or for all  weights  if  <code></code><var>weight</var
 <p>
 <strong>Note:</strong>
 For those familiar with the <code>pq</code> program, <code>PqAddTails</code> uses menu item 7 of
-the Advanced <i>p</i>-Quotient menu.
+the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.22"></a>
 <li><code>PqDoConsistencyChecks( </code><var>i</var><code>, </code><var>weight</var><code>, </code><var>type</var><code> ) F</code>
@@ -1185,7 +1185,7 @@ It is assumed that tails for the given weight (or weights)  have  already
 been added (see&nbsp;<a href="CHAP005.htm#SSEC004.19">PqTails</a>).
 <p>
 For those familiar with the <code>pq</code> program, <code>PqDoConsistencyChecks</code> performs
-menu item 8 of the Advanced <i>p</i>-Quotient menu.
+menu item 8 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.23"></a>
 <li><code>PqCollectDefiningRelations( </code><var>i</var><code> ) F</code>
@@ -1200,7 +1200,7 @@ incorrectly.
 <p>
 <strong>Note:</strong>
 For those familiar with  the  <code>pq</code>  program,  <code>PqCollectDefiningRelations</code>
-performs menu item 9 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 9 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.24"></a>
 <li><code>PqCollectWordInDefiningGenerators( </code><var>i</var><code>, </code><var>word</var><code> ) F</code>
@@ -1218,7 +1218,7 @@ The <var>word</var> argument may be input  in either of the two ways described f
 <p>
 <strong>Note:</strong>
 For those familiar with the  <code>pq</code>  program,  <code>PqCollectDefiningGenerators</code>
-performs menu item 23 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 23 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.25"></a>
 <li><code>PqCommutatorDefiningGenerators( </code><var>i</var><code>, </code><var>words</var><code>, </code><var>pow</var><code> ) F</code>
@@ -1235,7 +1235,7 @@ generator number, exponent pairs.
 <p>
 <strong>Note</strong>
 For those familiar with the <code>pq</code> program, <code>PqCommutatorDefiningGenerators</code>
-performs menu item 24 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 24 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.26"></a>
 <li><code>PqDoExponentChecks( </code><var>i</var><code> [: Bounds := </code><var>list</var><code> ]) F</code>
@@ -1245,23 +1245,24 @@ for the  <var>i</var>th or  default interactive <font face="Gill Sans,Helvetica,
 program to do exponent checks for weights (inclusively) between the bounds
 of <code>Bounds</code> or for all weights  if <code>Bounds</code> is not given. The value <var>list</var>
 of <code>Bounds</code> (assuming the interactive process is numbered <var>i</var>) should be a
-list of two integers <var>low</var>, <var>high</var>  satisfying 1  <font face="symbol">£</font> <i>low</i>   <font face="symbol">£</font> <i>high</i>   <font face="symbol">£</font> <tt>PqPClass</tt><tt>(</tt><i>i</i> <tt>)</tt> (see&nbsp;<a href="CHAP005.htm#SSEC004.4">PqPClass</a>).  If no exponent law has been specified,
+list of two integers <var>low</var>, <var>high</var>  satisfying <var>1 le<var>low</var> le<var>high</var> le
+<code>PqPClass(</code><var>i</var><code>)</code></var> (see&nbsp;<a href="CHAP005.htm#SSEC004.4">PqPClass</a>).  If no exponent law has been specified,
 no exponent checks are performed.
 <p>
 <strong>Note:</strong>
 For those familiar with the <code>pq</code>  program,  <code>PqDoExponentChecks</code>  performs
-menu item 10 of the Advanced <i>p</i>-Quotient menu.
+menu item 10 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.27"></a>
 <li><code>PqEliminateRedundantGenerators( </code><var>i</var><code> ) F</code>
 <li><code>PqEliminateRedundantGenerators() F</code>
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, direct  the  <code>pq</code>
-program to eliminate redundant generators of the current <i>p</i>-quotient.
+program to eliminate redundant generators of the current <var>p</var>-quotient.
 <p>
 <strong>Note:</strong> 
 For those familiar with the <code>pq</code> program, <code>PqEliminateRedundantGenerators</code>
-performs menu item 11 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 11 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.28"></a>
 <li><code>PqRevertToPreviousClass( </code><var>i</var><code> ) F</code>
@@ -1272,7 +1273,7 @@ program to abandon the current class and revert to the previous class.
 <p>
 <strong>Note:</strong>
 For  those  familiar  with  the  <code>pq</code>  program,  <code>PqRevertToPreviousClass</code>
-performs menu item 12 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 12 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.29"></a>
 <li><code>PqSetMaximalOccurrences( </code><var>i</var><code>, </code><var>noccur</var><code> ) F</code>
@@ -1286,13 +1287,13 @@ theoretical reasons that they would be eliminated later on.
 <p>
 The argument <var>noccur</var>  must be a list of  non-negative integers of length
 the  number  of  weight  1  generators  (i.e.&nbsp;the rank  of  the  class  1
-<i>p</i>-quotient  of  the group  of  the  process). An  entry  of  <code>0</code> for  a
+<var>p</var>-quotient  of  the group  of  the  process). An  entry  of  <code>0</code> for  a
 particular generator  indicates that there is  no limit on  the number of
 occurrences for the generator.
 <p>
 <strong>Note:</strong>
 For  those  familiar  with  the  <code>pq</code>  program,  <code>PqSetMaximalOccurrences</code>
-performs menu item 13 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 13 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.30"></a>
 <li><code>PqSetMetabelian( </code><var>i</var><code> ) F</code>
@@ -1303,7 +1304,7 @@ program to enforce metabelian-ness.
 <p>
 <strong>Note:</strong> 
 For those familiar  with  the  <code>pq</code>  program,  <code>PqSetMetabelian</code>  performs
-menu item 14 of the Advanced <i>p</i>-Quotient menu.
+menu item 14 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.31"></a>
 <li><code>PqDoConsistencyCheck( </code><var>i</var><code>, </code><var>c</var><code>, </code><var>b</var><code>, </code><var>a</var><code> ) F</code>
@@ -1314,26 +1315,46 @@ menu item 14 of the Advanced <i>p</i>-Quotient menu.
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process,  direct  the  <code>pq</code>
 program to do the consistency check for the  pc  generators  with  indices
-<var>c</var>, <var>b</var>, <var>a</var> which should be non-increasing positive integers, i.e.&nbsp;<i>c</i>   <font face="symbol">³</font> <i>b</i>   <font face="symbol">³</font> <i>a</i> .
+<var>c</var>, <var>b</var>, <var>a</var> which should be non-increasing positive integers, i.e.&nbsp;<var><var>c</var>
+ge<var>b</var> ge<var>a</var></var>.
 <p>
 There are 3 types of consistency checks:
-<br clear="all" /><table border="0" width="100%"><tr><td><table align="center" cellspacing="0"  cellpadding="2"><tr><td nowrap="nowrap" align="center"> </td><td nowrap="nowrap"><table border="0" align="left" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"> (<i>a</i><sup><i>n</i></sup>)<i>a</i> </td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center">=</td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"><i>a</i>(<i>a</i><sup><i>n</i></sup>)  </td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="left"><span class="roman">(</span><span class="roman">Type</span>&nbsp;<span class="roman">1</span><span class="roman">)</span></td></tr></table></td></tr> <tr><td nowrap="nowrap" align="center" colspan="1"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"> (<i>b</i><sup><i>n</i></sup>)<i>a</i> </td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center">=</td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"><i>b</i><sup>(<i>n</i><font face="symbol">-</font>1)</sup>(<i>ba</i>), <i>b</i>(<i>a</i><sup><i>n</i></sup>) = (<i>ba</i>)<i>a</i><sup>(<i>n</i><font face="symbol">-</font>1)</sup> </td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="left"><span class="roman">(</span><span class="roman">Type</span>&nbsp;<span class="roman">2</span><span class="roman">)</span></td></tr></table></td></tr> <tr><td nowrap="nowrap" align="center" colspan="1"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"> <i>c</i>(<i>ba</i>) </td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center">=</td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center">(<i>cb</i>)<i>a</i>  </td></tr></table></td><td nowrap="nowrap" align="center"><table><tr><td nowrap="nowrap" align="center" colspan="1"><span class="roman">(</span><span class="roman">Type</span>&nbsp;<span class="roman">3</span><span class="roman">)</span></td></tr></table></td></tr></table></td><td nowrap="nowrap"> </td></tr></table></td></tr></table>
+<p><var>
+matrix
+(a<sup>n</sup>)a = a(a<sup>n</sup>)                                (Type 1)<br>
+(b<sup>n</sup>)a = b<sup>(n-1)</sup>(ba), b(a<sup>n</sup>) = (ba)a<sup>(n-1)</sup> (Type 2)<br>
+c(ba)  = (cb)a                                 (Type 3)<br>
+
+<p></var>
 The reason some people talk about Jacobi relations instead of consistency
 checks becomes clear when one looks at the consistency check of type 3:
-<br clear="all" /><table border="0" width="100%"><tr><td><table align="center" cellspacing="0"  cellpadding="2"><tr><td nowrap="nowrap" align="center"> </td><td nowrap="nowrap"><table border="0" align="left" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"> <i>c</i>(<i>ba</i>) </td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center">=</td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="left"><i>a</i> <i>c</i>[<i>c</i>,<i>a</i>] <i>b</i>[<i>b</i>,<i>a</i>] = <i>acb</i> [<i>c</i>,<i>a</i>][<i>c</i>,<i>a</i>,<i>b</i>][<i>b</i>,<i>a</i>] = ...</td></tr></table></td></tr> <tr><td nowrap="nowrap" align="center" colspan="1"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"> (<i>cb</i>)<i>a</i> </td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center">=</td></tr></table></td><td nowrap="nowrap" align="center"><table><tr><td nowrap="nowrap" align="center" colspan="1"><i>b</i> <i>c</i>[<i>c</i>,<i>b</i>] <i>a</i> = <i>a</i> <i>b</i>[<i>b</i>,<i>a</i>] <i>c</i>[<i>c</i>,<i>a</i>] [<i>c</i>,<i>b</i>][<i>c</i>,<i>b</i>,<i>a</i>] = <i>abc</i> [<i>b</i>,<i>a</i>] [<i>b</i>,<i>a</i>,<i>c</i>] [<i>c</i>,<i>a</i>] [<i>c</i>,<i>b</i>] [<i>c</i>,<i>b</i>,<i>a</i>] = ...</td></tr></table></td></tr></table></td><td nowrap="nowrap"> </td></tr></table></td></tr></table>
+<p><var>
+matrix
+c(ba) = a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = ... <br>
+(cb)a = b c[c,b] a = a b[b,a] c[c,a] [c,b][c,b,a] 
+                     = abc [b,a] [b,a,c] [c,a] [c,b] [c,b,a] = ... <br>
+
+<p></var>
 Each collection  would  normally  carry  on  further.  But  one  can  see
 already that no other commutators of weight 3 will occur. After all terms
 of weight one and weight two have been moved to the left we end up with:
-<br clear="all" /><table border="0" width="100%"><tr><td><table align="center" cellspacing="0"  cellpadding="2"><tr><td nowrap="nowrap" align="center"> </td><td nowrap="nowrap"><table border="0" align="left" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"> </td></tr></table></td><td nowrap="nowrap" align="center"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="left"><i>abc</i> [<i>b</i>,<i>a</i>] [<i>c</i>,<i>a</i>] [<i>c</i>,<i>b</i>] [<i>c</i>,<i>a</i>,<i>b</i>] ...</td></tr></table></td></tr> <tr><td nowrap="nowrap" align="center" colspan="1"><table border="0" cellspacing="0" cellpadding="2"><tr><td nowrap="nowrap" align="center"> =  </td></tr></table></td><td nowrap="nowrap" align="center"><table><tr><td nowrap="nowrap" align="center" colspan="1"><i>abc</i> [<i>b</i>,<i>a</i>] [<i>c</i>,<i>a</i>] [<i>c</i>,<i>b</i>] [<i>c</i>,<i>b</i>,<i>a</i>] [<i>b</i>,<i>a</i>,<i>c</i>] ...</td></tr></table></td></tr></table></td><td nowrap="nowrap"> </td></tr></table></td></tr></table>
+<p><var>
+matrix
+  abc [b,a] [c,a] [c,b] [c,a,b] ... <br>
+= abc [b,a] [c,a] [c,b] [c,b,a] [b,a,c] ... <br>
+
+<p></var>
 Modulo terms of weight 4 this is equivalent to
-<br clear="all" /><table border="0" width="100%"><tr><td><table align="center" cellspacing="0"  cellpadding="2"><tr><td nowrap="nowrap" align="center"> [<i>c</i>,<i>a</i>,<i>b</i>] [<i>b</i>,<i>c</i>,<i>a</i>] [<i>a</i>,<i>b</i>,<i>c</i>] = 1 </td></tr></table></td></tr></table>
+<p><var>
+[c,a,b] [b,c,a] [a,b,c] = 1
+<p></var>
 which is the Jacobi identity.
 <p>
 See also <code>PqDoConsistencyChecks</code> (<a href="CHAP005.htm#SSEC004.22">PqDoConsistencyChecks</a>).
 <p>
 <strong>Note:</strong>
 For those familiar  with  the  <code>pq</code>  program,  <code>PqDoConsistencyCheck</code>  and
-<code>PqJacobi</code> perform menu item 15 of the Advanced <i>p</i>-Quotient menu.
+<code>PqJacobi</code> perform menu item 15 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.32"></a>
 <li><code>PqCompact( </code><var>i</var><code> ) F</code>
@@ -1345,7 +1366,7 @@ perform only at certain points in time.
 <p>
 <strong>Note:</strong>
 For those familiar with the <code>pq</code> program, <code>PqCompact</code> performs  menu  item
-16 of the Advanced <i>p</i>-Quotient menu.
+16 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.33"></a>
 <li><code>PqEchelonise( </code><var>i</var><code> ) F</code>
@@ -1361,7 +1382,7 @@ this command.
 <p>
 <strong>Note:</strong>
 For those familiar with the <code>pq</code>  program,  <code>PqEchelonise</code>  performs  menu
-item 17 of the Advanced <i>p</i>-Quotient menu.
+item 17 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.34"></a>
 <li><code>PqSupplyAutomorphisms( </code><var>i</var><code>, </code><var>mlist</var><code> ) F</code>
@@ -1383,19 +1404,19 @@ corresponding weight one generator under the respective automorphism.
 <p>
 <strong>Note:</strong> 
 For those familiar with the  <code>pq</code>  program,  <code>PqSupplyAutomorphisms</code>  uses
-menu item 18 of the Advanced <i>p</i>-Quotient menu.
+menu item 18 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.35"></a>
 <li><code>PqExtendAutomorphisms( </code><var>i</var><code> ) F</code>
 <li><code>PqExtendAutomorphisms() F</code>
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process,  direct  the  <code>pq</code>
-program to extend automorphisms of the <i>p</i>-quotient of the previous class
-to the <i>p</i>-quotient of the present class.     
+program to extend automorphisms of the <var>p</var>-quotient of the previous class
+to the <var>p</var>-quotient of the present class.     
 <p>
 <strong>Note:</strong>
 For those familiar with the  <code>pq</code>  program,  <code>PqExtendAutomorphisms</code>  uses
-menu item 18 of the Advanced <i>p</i>-Quotient menu.
+menu item 18 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.36"></a>
 <li><code>PqApplyAutomorphisms( </code><var>i</var><code>, </code><var>qfac</var><code> ) F</code>
@@ -1406,7 +1427,7 @@ program to apply automorphisms; <var>qfac</var> is the queue factor e.g. <code>1
 <p>
 <strong>Note:</strong> 
 For those familiar with  the  <code>pq</code>  program,  <code>PqCloseRelations</code>  performs
-menu item 19 of the Advanced <i>p</i>-Quotient menu.
+menu item 19 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.37"></a>
 <li><code>PqDisplayStructure( </code><var>i</var><code> [: Bounds := </code><var>list</var><code> ]) F</code>
@@ -1417,15 +1438,16 @@ program  to  display  the  structure  for  the  pcp  generators   numbered
 (inclusively) between the bounds of <code>Bounds</code> or  for  all  generators  if
 <code>Bounds</code> is not  given.  The  value  <var>list</var>  of  <code>Bounds</code>  (assuming  the
 interactive process is numbered <var>i</var>) should be a  list  of  two  integers
-<var>low</var>,   <var>high</var>   satisfying   1  <font face="symbol">£</font> <i>low</i>   <font face="symbol">£</font> <i>high</i>   <font face="symbol">£</font> <tt>PqNrPcGenerators</tt><tt>(</tt><i>i</i> <tt>)</tt>  (see&nbsp;<a href="CHAP005.htm#SSEC004.1">PqNrPcGenerators</a>).  <code>PqDisplayStructure</code>
+<var>low</var>,   <var>high</var>   satisfying   <var>1    le<var>low</var>    le<var>high</var>    le
+<code>PqNrPcGenerators(</code><var>i</var><code>)</code></var>  (see&nbsp;<a href="CHAP005.htm#SSEC004.1">PqNrPcGenerators</a>).  <code>PqDisplayStructure</code>
 also accepts the option <code>OutputLevel</code> (see <a href="CHAP006.htm#SSEC001.9">option OutputLevel</a>).
 <p>
 <strong>Explanation of output</strong>
 <p>
 New  generators are  defined as  commutators of  previous  generators and
-generators  of  class 1  or  as <i>p</i>-th  powers  of  generators that  have
-themselves been defined as <i>p</i>-th powers. A generator is never defined as
-<i>p</i>-th power of a commutator.
+generators  of  class 1  or  as <var>p</var>-th  powers  of  generators that  have
+themselves been defined as <var>p</var>-th powers. A generator is never defined as
+<var>p</var>-th power of a commutator.
 <p>
 Therefore, there are two cases: all the numbers on the righthand side are
 either the same or  they  differ.  Below,  <code>g</code><var>i</var><code></code>  refers  to  the  <var>i</var>th
@@ -1435,8 +1457,8 @@ defining generator.
 <p>
 <li>
 If the righthand side numbers are all the same, then the generator  is  a
-<i>p</i>-th power (of a <i>p</i>-th power of a <i>p</i>-th power, etc.). The  number  of
-repeated digits say how often a <i>p</i>-th power has to be taken.
+<var>p</var>-th power (of a <var>p</var>-th power of a <var>p</var>-th power, etc.). The  number  of
+repeated digits say how often a <var>p</var>-th power has to be taken.
 <p>
 In the following example, the generator number 31 is the  eleventh  power
 of generator 17 which in turn is an eleventh power and so on:
@@ -1464,7 +1486,7 @@ of generator 11 until one gets to a generator of class 1.
 <p>
 <li>
 If the first two generator numbers are identical, then the left most
-component of the left-normed commutator is a <i>p</i>-th power, e.g.
+component of the left-normed commutator is a <var>p</var>-th power, e.g.
 <p>
 <pre>
 #I  25 is defined on [14, 1] = 1 1 2 1 1 
@@ -1472,14 +1494,16 @@ component of the left-normed commutator is a <i>p</i>-th power, e.g.
 <p>
 In this example, generator 25 is defined as commutator  of  generator  14
 and generator 1. The left-normed commutator is
-<br clear="all" /><table border="0" width="100%"><tr><td><table align="center" cellspacing="0"  cellpadding="2"><tr><td nowrap="nowrap" align="center"> [(<tt>x</tt><tt>1</tt><sup>11</sup>)<sup>11</sup>, <tt>x</tt><tt>2</tt>, <tt>x</tt><tt>1</tt>, <tt>x</tt><tt>1</tt>] </td></tr></table></td></tr></table>
+<p><var>
+[(<code>x1</code><sup>11</sup>)<sup>11</sup>, <code>x2</code>, <code>x1</code>, <code>x1</code>]
+<p></var>
 Again, this can be verified by tracing back the definitions.
 <p>
 </ul>
 <p>
 <strong>Note:</strong>
 For those familiar with the <code>pq</code>  program,  <code>PqDisplayStructure</code>  performs
-menu item 20 of the Advanced <i>p</i>-Quotient menu.
+menu item 20 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.38"></a>
 <li><code>PqDisplayAutomorphisms( </code><var>i</var><code> [: Bounds := </code><var>list</var><code> ]) F</code>
@@ -1490,12 +1514,13 @@ program to display the automorphism actions on the pcp generators numbered
 (inclusively) between the bounds of <code>Bounds</code> or  for  all  generators  if
 <code>Bounds</code> is not  given.  The  value  <var>list</var>  of  <code>Bounds</code>  (assuming  the
 interactive process is numbered <var>i</var>) should be a  list  of  two  integers
-<var>low</var>,   <var>high</var>   satisfying   1  <font face="symbol">£</font> <i>low</i>   <font face="symbol">£</font> <i>high</i>   <font face="symbol">£</font> <tt>PqNrPcGenerators</tt><tt>(</tt><i>i</i> <tt>)</tt>  (see&nbsp;<a href="CHAP005.htm#SSEC004.1">PqNrPcGenerators</a>).  <code>PqDisplayStructure</code>
+<var>low</var>,   <var>high</var>   satisfying   <var>1    le<var>low</var>    le<var>high</var>    le
+<code>PqNrPcGenerators(</code><var>i</var><code>)</code></var>  (see&nbsp;<a href="CHAP005.htm#SSEC004.1">PqNrPcGenerators</a>).  <code>PqDisplayStructure</code>
 also accepts the option <code>OutputLevel</code> (see <a href="CHAP006.htm#SSEC001.9">option OutputLevel</a>).
 <p>
 <strong>Note:</strong>
 For  those  familiar  with  the  <code>pq</code>  program,   <code>PqDisplayAutomorphisms</code>
-performs menu item 21 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 21 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <a name = "SSEC004.39"></a>
 <li><code>PqWritePcPresentation( </code><var>i</var><code>, </code><var>filename</var><code> ) F</code>
@@ -1514,7 +1539,7 @@ presentation has not been previously computed by the <code>pq</code>  program,  
 <code>PqPcPresentation</code> (see&nbsp;<a href="CHAP005.htm#SSEC004.10">PqPcPresentation</a>).
 <p>
 <strong>Note:</strong> For those familiar with the <code>pq</code> program, <code>PqPcWritePresentation</code>
-performs menu item 25 of the Advanced <i>p</i>-Quotient menu.
+performs menu item 25 of the Advanced <var>p</var>-Quotient menu.
 <p>
 <strong>Commands from the Standard Presentation menu</strong>
 <p>
@@ -1524,8 +1549,8 @@ performs menu item 25 of the Advanced <i>p</i>-Quotient menu.
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, directs  the  <code>pq</code>
 program to compute for the group of that process a pc presentation  up  to
-the <i>p</i>-quotient of maximum class or the value of the option <code>ClassBound</code>
-and the <i>p</i>-cover of that  quotient,  and  sets  up  tabular  information
+the <var>p</var>-quotient of maximum class or the value of the option <code>ClassBound</code>
+and the <var>p</var>-cover of that  quotient,  and  sets  up  tabular  information
 required for computation of a standard presentation. Here the group of  a
 process is the one given as first argument when <code>PqStart</code> was  called  to
 initiate  that  process  (for  process  <var>i</var>  the  group  is   stored   as
@@ -1535,7 +1560,7 @@ The possible <var>options</var> are <code>Prime</code>, <code>ClassBound</code>,
 <code>Metabelian</code> and <code>OutputLevel</code> (see Chapter&nbsp;<a href="CHAP006.htm">ANUPQ Options</a> for  detailed
 descriptions of these options). The option <code>Prime</code> is normally determined
 via <code>PrimePGroup</code>, and so is not required unless the group  doesn't  know
-it's a <i>p</i>-group and <code>HasPrimePGroup</code> returns <code>false</code>.
+it's a <var>p</var>-group and <code>HasPrimePGroup</code> returns <code>false</code>.
 <p>
 <strong>Note:</strong>
 For  those  familiar  with  the  <code>pq</code>  program,  <code>PqSPComputePcpAndPCover</code>
@@ -1550,15 +1575,15 @@ by <var>options</var> to compute a standard presentation for  the  group  of  th
 process.  If  argument  <var>mlist</var>  is  given  it  is  assumed  to  be   the
 automorphism group data required. Otherwise it is assumed that a call  to
 either      <code>Pq</code>      (see&nbsp;<a href="CHAP005.htm#SSEC003.1">Pq!interactive</a>)      or      <code>PqEpimorphism</code>
-(see&nbsp;<a href="CHAP005.htm#SSEC003.2">PqEpimorphism!interactive</a>) has generated a <i>p</i>-quotient  and  that
+(see&nbsp;<a href="CHAP005.htm#SSEC003.2">PqEpimorphism!interactive</a>) has generated a <var>p</var>-quotient  and  that
 <font face="Gill Sans,Helvetica,Arial">GAP</font> can compute  its  automorphism  group  from  which  the  necessary
 automorphism group data can be derived. The group of the process  is  the
 one given as first argument when <code>PqStart</code> was  called  to  initiate  the
 process (for process <var>i</var> the group is stored as <code>ANUPQData.io[</code><var>i</var><code>].group</code>
-and     the     <i>p</i>-quotient     if     existent     is     stored     as
+and     the     <var>p</var>-quotient     if     existent     is     stored     as
 <code>ANUPQData.io[</code><var>i</var><code>].pQuotient</code>).  If  <var>mlist</var>   is   not   given   and   a
-<i>p</i>-quotient of the group has not been  previously  computed  a  class  1
-<i>p</i>-quotient is computed.
+<var>p</var>-quotient of the group has not been  previously  computed  a  class  1
+<var>p</var>-quotient is computed.
 <p>
 <code>PqSPStandardPresentation</code> accepts three options, all optional:
 <p>
@@ -1629,7 +1654,7 @@ Presentation menu.
 <li><code>PqSPIsomorphism() F</code>
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process,  direct  the  <code>pq</code>
-program to compute the isomorphism mapping  from  the  <i>p</i>-group  of  the
+program to compute the isomorphism mapping  from  the  <var>p</var>-group  of  the
 process  to  its  standard  presentation.  This   function   provides   a
 description      only;      for      a      <font face="Gill Sans,Helvetica,Arial">GAP</font>      object,       use
 <code>EpimorphismStandardPresentation</code>
@@ -1638,9 +1663,9 @@ description      only;      for      a      <font face="Gill Sans,Helvetica,Aria
 <strong>Note:</strong> For  those  familiar  with  the  <code>pq</code>  program,  <code>PqSPIsomorphism</code>
 performs menu item 8 of the Standard Presentation menu.
 <p>
-<strong>Commands from the Main <i>p</i>-Group Generation menu</strong>
+<strong>Commands from the Main <var>p</var>-Group Generation menu</strong>
 <p>
-Note that the <i>p</i>-group generation commands can only be applied once  the
+Note that the <var>p</var>-group generation commands can only be applied once  the
 <code>pq</code> program has produced a pc presentation of some quotient group of the
 ``group of the process''.
 <p>
@@ -1657,11 +1682,11 @@ see&nbsp;<a href="CHAP005.htm#SSEC004.34">PqSupplyAutomorphisms</a>.      The   
 descriptions of these options may be found in Chapter&nbsp;<a href="CHAP006.htm">ANUPQ Options</a>.)
 <p>
 If <var>mlist</var> is omitted, the automorphism data is determined from the group
-of  the process  which must  have been  a <i>p</i>-group  in  pc presentation.
+of  the process  which must  have been  a <var>p</var>-group  in  pc presentation.
 <p>
 <strong>Note:</strong>
 For  those  familiar  with  the  <code>pq</code>  program,  <code>PqPGSupplyAutomorphisms</code>
-performs menu item 1 of the main <i>p</i>-Group Generation menu.
+performs menu item 1 of the main <var>p</var>-Group Generation menu.
 <p>
 <a name = "SSEC004.46"></a>
 <li><code>PqPGExtendAutomorphisms( </code><var>i</var><code> ) F</code>
@@ -1669,13 +1694,13 @@ performs menu item 1 of the main <i>p</i>-Group Generation menu.
 <p>
 for the <var>i</var>th  or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process,  direct  the <code>pq</code>
 program  to   compute  the  extensions   of  the  automorphisms   of  the
-<i>p</i>-quotient of  the previous  class to the  <i>p</i>-quotient of  the current
+<var>p</var>-quotient of  the previous  class to the  <var>p</var>-quotient of  the current
 class.  You may wish to set the <code>InfoLevel</code> of <code>InfoANUPQ</code> to 2 (or more)
 in order to see the output from the <code>pq</code> program (see&nbsp;<a href="CHAP007.htm#SSEC003.1">InfoANUPQ</a>).
 <p>
 <strong>Note:</strong>    
 For  those  familiar  with  the  <code>pq</code>  program,  <code>PqPGExtendAutomorphisms</code>
-performs menu item 2 of the main or advanced <i>p</i>-Group Generation menu. 
+performs menu item 2 of the main or advanced <var>p</var>-Group Generation menu. 
 <p>
 <a name = "SSEC004.47"></a>
 <li><code>PqPGConstructDescendants( </code><var>i</var><code> : </code><var>options</var><code> ) F</code>
@@ -1692,12 +1717,12 @@ returns the list of descendants).  The options possible are <code>ClassBound</co
 in Chapter&nbsp;<a href="CHAP006.htm">ANUPQ Options</a>.)
 <p>
 <code>PqPGConstructDescendants</code> requires that the <code>pq</code> program  has  previously
-computed a pc presentation and a <i>p</i>-cover for  a  <i>p</i>-quotient  of  some
+computed a pc presentation and a <var>p</var>-cover for  a  <var>p</var>-quotient  of  some
 class of the group of the process.
 <p>
 <strong>Note:</strong> 
 For those  familiar  with  the  <code>pq</code>  program,  <code>PqPGConstructDescendants</code>
-performs menu item 5 of the main <i>p</i>-Group Generation menu.
+performs menu item 5 of the main <var>p</var>-Group Generation menu.
 <p>
 <a name = "SSEC004.48"></a>
 <li><code>PqPGSetDescendantToPcp( </code><var>i</var><code>, </code><var>cls</var><code>, </code><var>n</var><code> ) F</code>
@@ -1725,15 +1750,15 @@ by the <code>pq</code> program.
 <p>
 Since the  <code>PqPGSetDescendantToPcp</code>  and  <code>PqPGRestoreDescendantFromFile</code>
 are intended to be used in calculation of further  descendants  the  <code>pq</code>
-program computes  the  <i>p</i>-cover  of  the  restored  descendant.   Hence,
+program computes  the  <var>p</var>-cover  of  the  restored  descendant.   Hence,
 <code>PqCurrentGroup</code> used immediately after one of these commands returns the
-<i>p</i>-cover of the restored descendant rather than the descendant itself.
+<var>p</var>-cover of the restored descendant rather than the descendant itself.
 <p>
 For those familiar with the <code>pq</code>  program,  <code>PqPGSetDescendantToPcp</code>  and
 <code>PqPGRestoreDescendantFromFile</code> perform  menu  item  3  of  the  main  or
-advanced <i>p</i>-Group Generation menu.
+advanced <var>p</var>-Group Generation menu.
 <p>
-<strong>Commands from the Advanced <i>p</i>-Group Generation menu</strong>
+<strong>Commands from the Advanced <var>p</var>-Group Generation menu</strong>
 <p>
 The   functions   below   perform    the    component    algorithms    of
 <code>PqPGConstructDescendants</code> (see&nbsp;<a href="CHAP005.htm#SSEC004.47">PqPGConstructDescendants</a>). You can  get
@@ -1751,7 +1776,7 @@ any amplified descriptions.
 <li><code>PqAPGDegree( </code><var>step</var><code>, </code><var>rank</var><code> [: Exponent := </code><var>n</var><code> ]) F</code>
 <p>
 for the  <var>i</var>th or default  interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, direct  the <code>pq</code>
-program to invoke menu item  6 of the Advanced <i>p</i>-Group Generation menu.
+program to invoke menu item  6 of the Advanced <var>p</var>-Group Generation menu.
 Here the step-size  <var>step</var> and the rank <var>rank</var>  are positive integers and
 are the  arguments required by  the <code>pq</code> program.   See&nbsp;<a href="CHAP006.htm#SSEC001.4">option Exponent</a>
 for the one recognised option <code>Exponent</code>.
@@ -1761,7 +1786,7 @@ for the one recognised option <code>Exponent</code>.
 <li><code>PqAPGPermutations( : </code><var>options</var><code> ) F</code>
 <p>
 for the  <var>i</var>th or default  interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, direct  the <code>pq</code>
-program to perform menu item 7 of the Advanced <i>p</i>-Group Generation menu.
+program to perform menu item 7 of the Advanced <var>p</var>-Group Generation menu.
 Here   the   options   <var>options</var>  recognised   are   <code>PcgsAutomorphisms</code>,
 <code>SpaceEfficient</code>,   <code>PrintAutomorphisms</code>  and   <code>PrintPermutations</code>  (see
 Chapter&nbsp;<a href="CHAP006.htm">ANUPQ Options</a> for details).
@@ -1771,7 +1796,7 @@ Chapter&nbsp;<a href="CHAP006.htm">ANUPQ Options</a> for details).
 <li><code>PqAPGOrbits( : </code><var>options</var><code> ) F</code>
 <p>
 for the  <var>i</var>th or default  interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, direct  the <code>pq</code>
-to perform menu item 8 of the Advanced <i>p</i>-Group Generation menu.
+to perform menu item 8 of the Advanced <var>p</var>-Group Generation menu.
 <p>
 Here   the   options   <var>options</var>  recognised   are   <code>PcgsAutomorphisms</code>,
 <code>SpaceEfficient</code>  and <code>CustomiseOutput</code>  (see Chapter&nbsp;<a href="CHAP006.htm">ANUPQ Options</a> for
@@ -1783,14 +1808,14 @@ details).   For the  <code>CustomiseOutput</code>  option only  the  setting of 
 <li><code>PqAPGOrbitRepresentatives(: </code><var>options</var><code> ) F</code>
 <p>
 for the  <var>i</var>th or default  interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process, direct  the <code>pq</code>
-to perform item 9 of the Advanced <i>p</i>-Group Generation menu.
+to perform item 9 of the Advanced <var>p</var>-Group Generation menu.
 <p>
 The  options  <var>options</var>  may  be  any   selection   of   the   following:
 <code>PcgsAutomorphisms</code>,    <code>SpaceEfficient</code>,    <code>Exponent</code>,    <code>Metabelian</code>,
 <code>CapableDescendants</code> (or <code>AllDescendants</code>), <code>CustomiseOutput</code> (where only
 the <code>group</code> and <code>autgroup</code> fields are  recognised)  and  <code>Filename</code>  (see
 Chapter&nbsp;<a href="CHAP006.htm">ANUPQ Options</a>  for  details).  If  <code>Filename</code>  is  omitted  the
-reduced <i>p</i>-cover is written to the file <code>"redPCover"</code> in  the  temporary
+reduced <var>p</var>-cover is written to the file <code>"redPCover"</code> in  the  temporary
 directory whose name is stored in <code>ANUPQData.tmpdir</code>.
 <p>
 <a name = "SSEC004.53"></a>
@@ -1798,7 +1823,7 @@ directory whose name is stored in <code>ANUPQData.tmpdir</code>.
 <li><code>PqAPGSingleStage( : </code><var>options</var><code> ) F</code>
 <p>
 for the <var>i</var>th or default interactive <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> process,  direct  the  <code>pq</code>
-to perform option 5 of the Advanced <i>p</i>-Group Generation menu.
+to perform option 5 of the Advanced <var>p</var>-Group Generation menu.
 <p>
 The    possible     options    are    <code>StepSize</code>,    <code>PcgsAutomorphisms</code>,
 <code>RankInitialSegmentSubgroups</code>,   <code>SpaceEfficient</code>,  <code>CapableDescendants</code>,
@@ -1887,5 +1912,5 @@ If <code>PqWrite</code> returns <code>fail</code> it means that the <font face="
 <p>
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP004.htm">Previous</a>] [<a href ="CHAP006.htm">Next</a>] [<a href = "theindex.htm">Index</a>]
 <P>
-<address>ANUPQ manual<br>September 2013
+<address>ANUPQ manual<br>November 2013
 </address></body></html>

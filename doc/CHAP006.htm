@@ -82,11 +82,11 @@ gap&gt; ?&gt;
 <p>
 <dt><a name = "SSEC001.1"></a>
 <dt><li><code>Prime := </code><var>p</var><code> <dd></code>
-Specifies that the <i>p</i>-quotient for the prime  <var>p</var>  should  be  computed.
+Specifies that the <var>p</var>-quotient for the prime  <var>p</var>  should  be  computed.
 <p>
 <dt><a name = "SSEC001.2"></a>
 <dt><li><code>ClassBound := </code><var>n</var><code> <dd></code>
-Specifies that the <i>p</i>-quotient to be  computed  has  lower  exponent-<i>p</i>
+Specifies that the <var>p</var>-quotient to be  computed  has  lower  exponent-<var>p</var>
 class at most <var>n</var>. If this option is omitted a default of  63  (which  is
 the  maximum  possible  for  the  <code>pq</code>  program)  is  taken,  except  for
 <code>PqDescendants</code> (see&nbsp;<a href="CHAP004.htm#SSEC004.1">PqDescendants</a>) and in a special case of <code>PqPCover</code>
@@ -98,7 +98,7 @@ default  is  <code>PClassPGroup(</code><var>F</var><code>)  +  1</code>,  and  f
 <dt><a name = "SSEC001.3"></a>
 <dt><li><code>pQuotient := </code><var>Q</var><code> <dd></code>
 This option is only available for the standard presentation functions. It
-specifies that a <i>p</i>-quotient of the group argument of  the  function  or
+specifies that a <var>p</var>-quotient of the group argument of  the  function  or
 group of the process is the pc <var>p</var>-group  <var>Q</var>,  where  <var>Q</var>  is  of  class
 <strong>less  than</strong>  the  provided  (or  default)  value  of  <code>ClassBound</code>.   If
 <code>pQuotient</code> is provided, then the option  <code>Prime</code>  if  also  provided, is
@@ -106,7 +106,7 @@ ignored; the prime <var>p</var> is discovered by computing <code>PrimePGroup(</c
 <p>
 <dt><a name = "SSEC001.4"></a>
 <dt><li><code>Exponent := </code><var>n</var><code> <dd></code>
-Specifies that the <i>p</i>-quotient to be computed has exponent <var>n</var>.  For  an
+Specifies that the <var>p</var>-quotient to be computed has exponent <var>n</var>.  For  an
 interactive process, <code>Exponent</code> defaults to a previously  supplied  value
 for the process. Otherwise (and non-interactively),  the  default  is  0,
 which means that no exponent law is enforced.
@@ -142,7 +142,7 @@ message to say so is <code>Info</code>-ed at <code>InfoANUPQ</code> level 2.
 <p>
 <dt><a name = "SSEC001.6"></a>
 <dt><li><code>Metabelian <dd></code>
-Specifies that the largest metabelian <i>p</i>-quotient subject to  any  other
+Specifies that the largest metabelian <var>p</var>-quotient subject to  any  other
 conditions specified by other options be  constructed.  By  default  this
 restriction is not enforced.
 <p>
@@ -161,7 +161,9 @@ each function in the list <var>funcs</var>. This option may  be  called  by  <co
 <code>PqEpimorphism</code>, or <code>PqPCover</code> (see&nbsp;<a href="CHAP004.htm#SSEC001.1">Pq</a>).  Each  function  in  the  list
 <var>funcs</var> must return a word in its arguments (there may be any  number  of
 arguments). Let <var>identity</var> be one such function in <var>funcs</var>. Then as  each
-lower exponent <var>p</var>-class quotient is formed, instances  <i>identity</i> (<i>w</i>1 , ..., <i>wn</i> ) are added as relators to the pc presentation, where  <i>w</i>1 , ..., <i>wn</i>  are words in the pc generators  of  the  quotient.  At  each
+lower exponent <var>p</var>-class quotient is formed, instances  <var><var>identity</var>(<var>w1</var>,
+..., <var>wn</var>)</var> are added as relators to the pc presentation, where  <var><var>w1</var>,
+..., <var>wn</var></var> are words in the pc generators  of  the  quotient.  At  each
 class the class and number of pc generators is <code>Info</code>-ed  at  <code>InfoANUPQ</code>
 level 1, the number of instances is <code>Info</code>-ed at <code>InfoANUPQ</code> level 2, and
 the instances that are evaluated are <code>Info</code>-ed at <code>InfoANUPQ</code> level 3. As
@@ -272,7 +274,7 @@ insoluble, an error message occurs.
 <p>
 <dt><a name = "SSEC001.14"></a>
 <dt><li><code>OrderBound := </code><var>n</var><code> <dd></code>
-Specifies that only descendants of size at most <i>p</i><sup><i>n</i> </sup>, where <var>n</var>  is  a
+Specifies that only descendants of size at most <var>p<sup><</sup>n&gt;</var>, where <var>n</var>  is  a
 non-negative integer,  be  generated.  Note  that  you  cannot  set  both
 <code>OrderBound</code> and <code>StepSize</code>.
 <p>
@@ -280,12 +282,12 @@ non-negative integer,  be  generated.  Note  that  you  cannot  set  both
 <dt><li><code>StepSize := </code><var>n</var><code></code>
 <dt><dt><li><code>StepSize := </code><var>list</var><code> <dd></code>
 For  a  positive  integer  <var>n</var>,  <code>StepSize</code>  specifies  that  only  those
-immediate descendants which are a factor <i>p</i><sup><i>n</i> </sup> bigger than their parent
+immediate descendants which are a factor <var>p<sup><</sup>n&gt;</var> bigger than their parent
 group be generated.
 <p>
 <dt><dd>
 For a list <var>list</var> of positive integers such that the sum of the length of
-<var>list</var> and the exponent-<i>p</i> class of <var>G</var> is  equal  to  the  class  bound
+<var>list</var> and the exponent-<var>p</var> class of <var>G</var> is  equal  to  the  class  bound
 defined  by  the  option  <code>ClassBound</code>,  <code>StepSize</code>  specifies  that  the
 integers of <var>list</var> are the step sizes for each additional class.
 <p>
@@ -296,7 +298,7 @@ default, this has value 0.
 <p>
 <dt><a name = "SSEC001.17"></a>
 <dt><li><code>SpaceEfficient <dd></code>
-Specifies that the <code>pq</code> program performs certain calculations of <i>p</i>-group
+Specifies that the <code>pq</code> program performs certain calculations of <var>p</var>-group
 generation more slowly  but with greater space efficiency.   This flag is
 frequently  necessary for groups  of large  Frattini quotient  rank.  The
 space saving  occurs because  only one permutation  is stored at  any one
@@ -340,23 +342,23 @@ Suppose that <var>L</var> is the list of descendants generated, then  for  a  li
 <dt><li><code>NumberOfSolubleAutomorphisms := </code><var>n</var><code> <dd></code>
 Specifies that the number of soluble automorphisms  of  the  automorphism
 group           supplied           by           <code>PqPGSupplyAutomorphisms</code>
-(see&nbsp;<a href="CHAP005.htm#SSEC004.45">PqPGSupplyAutomorphisms</a>) in a <i>p</i>-group generation calculation  is
-<var>n</var>. By default, <var>n</var> is taken to be  0;  <var>n</var>  must  be  a  non-negative
-integer. If <i>n</i>   <font face="symbol">³</font> 0 then a  value  for  the  option  <code>RelativeOrders</code>
+(see&nbsp;<a href="CHAP005.htm#SSEC004.45">PqPGSupplyAutomorphisms</a>) in a <var>p</var>-group generation calculation  is
+<var>n</var>. By default, <var>n</var> is taken to be  <var>0</var>;  <var>n</var>  must  be  a  non-negative
+integer. If <var><var>n</var> ge0</var> then a  value  for  the  option  <code>RelativeOrders</code>
 (see&nbsp;<a href="CHAP006.htm#SSEC001.23">option RelativeOrders</a>) must also be supplied.
 <p>
 <dt><a name = "SSEC001.23"></a>
 <dt><li><code>RelativeOrders := </code><var>list</var><code> <dd></code>
 Specifies the  relative  orders  of  each  soluble  automorphism  of  the
 automorphism     group     supplied     by      <code>PqPGSupplyAutomorphisms</code>
-(see&nbsp;<a href="CHAP005.htm#SSEC004.45">PqPGSupplyAutomorphisms</a>) in a  <i>p</i>-group  generation  calculation.
+(see&nbsp;<a href="CHAP005.htm#SSEC004.45">PqPGSupplyAutomorphisms</a>) in a  <var>p</var>-group  generation  calculation.
 The list <var>list</var> must consist of <var>n</var> positive integers, where <var>n</var>  is  the
 value   of   the   option   <code>NumberOfSolubleAutomorphisms</code>   (see&nbsp;<a href="CHAP006.htm#SSEC001.22">option NumberOfSolubleAutomorphisms</a>). By default <var>list</var> is empty.
 <p>
 <dt><a name = "SSEC001.24"></a>
 <dt><li><code>BasicAlgorithm <dd></code>
 Specifies that an  algorithm that the <code>pq</code> program  calls its ``default''
-algorithm be  used for <i>p</i>-group generation. By default this algorithm is
+algorithm be  used for <var>p</var>-group generation. By default this algorithm is
 <strong>not</strong>  used.   If  this  option  is  supplied  the  settings  of  options
 <code>RankInitialSegmentSubgroups</code>,     <code>AllDescendants</code>,    <code>Exponent</code>    and
 <code>Metabelian</code> are ignored.
@@ -381,9 +383,9 @@ and a complete listing of orbits, respectively. (It's  possible  to  have
 <dt>&nbsp;<code>group := </code><var>list</var><code></code> <dd>
 where <var>list</var> is a list of booleans  which  determine  whether  the  group
 output should contain: the standard matrix of  each  allowable  subgroup,
-the presentation of reduced  <i>p</i>-covering  groups,  the  presentation  of
+the presentation of reduced  <var>p</var>-covering  groups,  the  presentation  of
 immediate  descendants,  the  nuclear  rank  of  descendants,   and   the
-<i>p</i>-multiplicator rank of descendants, respectively.
+<var>p</var>-multiplicator rank of descendants, respectively.
 <p>
 <dt>&nbsp;<code>autgroup := </code><var>list</var><code></code> <dd>
 where  <var>list</var>  is  a  list  of  booleans  which  determine  whether   the
@@ -427,10 +429,10 @@ Specifies a queue factor of <var>n</var>,  where  <var>n</var> must  be a positi
 This option may be used with <code>PqNextClass</code> (see&nbsp;<a href="CHAP005.htm#SSEC004.13">PqNextClass</a>).
 <p>
 The queue factor is used when the <code>pq</code> program uses automorphisms to close
-a set of elements of the <i>p</i>-multiplicator under their action.
+a set of elements of the <var>p</var>-multiplicator under their action.
 <p>
 The algorithm used is a spinning algorithm:  it  starts  with  a  set  of
-vectors in echelonized  form  (elements  of  the  <i>p</i>-multiplicator)  and
+vectors in echelonized  form  (elements  of  the  <var>p</var>-multiplicator)  and
 closes the span of these vectors under the action of  the  automorphisms.
 For this each automorphism is applied to each vector and it is checked if
 the result is contained in the span computed so far.  If  not,  the  span
@@ -471,5 +473,5 @@ the <code>pq</code> program should have the name <var>string</var>.
 <p>
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP005.htm">Previous</a>] [<a href ="CHAP007.htm">Next</a>] [<a href = "theindex.htm">Index</a>]
 <P>
-<address>ANUPQ manual<br>September 2013
+<address>ANUPQ manual<br>November 2013
 </address></body></html>

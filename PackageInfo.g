@@ -11,8 +11,8 @@ SetPackageInfo( rec(
 
 PackageName := "ANUPQ",
 Subtitle    := "ANU p-Quotient",
-Version     := "3.1",
-Date        := "24/09/2013",
+Version     := "3.1.1",
+Date        := "19/11/2013",
 
 Persons := [ 
   rec( 
@@ -105,8 +105,8 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">= 4.4",
-  NeededOtherPackages := [ [ "autpgrp", ">=1.2" ] ],
+  GAP := ">= 4.5",
+  NeededOtherPackages := [ [ "autpgrp", ">=1.5" ] ],
   SuggestedOtherPackages := [ ],
   ExternalConditions := []
 ),

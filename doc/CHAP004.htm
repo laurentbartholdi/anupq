@@ -21,17 +21,17 @@ mainly grouped according to the algorithm of the <code>pq</code> program they re
 to.
 <p>
 In Section&nbsp;<a href="CHAP004.htm#SECT001">Computing p-Quotients</a>, we describe the functions  that  give
-access to the <i>p</i>-quotient algorithm.
+access to the <var>p</var>-quotient algorithm.
 <p>
 Section&nbsp;<a href="CHAP004.htm#SECT002">Computing Standard Presentations</a> describe functions  that  give
 access to the standard presentation algorithm.
 <p>
 Section&nbsp;<a href="CHAP004.htm#SECT003">Testing  p-Groups  for  Isomorphism</a>  describe  functions   that
-implement  an  isomorphism  test  for  <i>p</i>-groups  using   the   standard
+implement  an  isomorphism  test  for  <var>p</var>-groups  using   the   standard
 presentation algorithm.
 <p>
 In Section&nbsp;<a href="CHAP004.htm#SECT004">Computing Descendants of a p-Group</a>,  we  describe  functions
-that give access to the <i>p</i>-group generation algorithm.
+that give access to the <var>p</var>-group generation algorithm.
 <p>
 To use any of the functions one must have at some stage previously typed:
 <p>
@@ -52,7 +52,7 @@ instructive if you set the <code>InfoANUPQ</code> level to 2 (see&nbsp;<a href="
 <a name = "SSEC001.1"></a>
 <li><code>Pq( </code><var>F</var><code> : </code><var>options</var><code> ) F</code>
 <p>
-returns for the fp or pc group <var>F</var>, the <i>p</i>-quotient of <var>F</var> specified  by
+returns for the fp or pc group <var>F</var>, the <var>p</var>-quotient of <var>F</var> specified  by
 <var>options</var>, as a pc group. Following the colon, <var>options</var> is  a  selection
 of the options from the following list, separated by commas  like  record
 components (see Section&nbsp;<a href="badlink:ref:function call!with options">function call!with options</a>  in  the  <font face="Gill Sans,Helvetica,Arial">GAP</font>
@@ -214,8 +214,8 @@ is that the abbreviation must be  unique.  So  <code>"Pr"</code>  may  be  used 
 <a name = "I11"></a>
 
 The following example illustrates the use of the option <code>Identities</code>.  We
-compute the largest finite Burnside  group  of  exponent  5  that  also
-satisfies the 3-Engel identity. Each identity is defined by a  function
+compute the largest finite Burnside  group  of  exponent  <var>5</var>  that  also
+satisfies the <var>3</var>-Engel identity. Each identity is defined by a  function
 whose arguments correspond to the variables of the identity.  The  return
 value of each of  those  functions  is  the  identity  evaluated  on  the
 arguments of the function.
@@ -242,7 +242,7 @@ The above example can be run from <font face="Gill Sans,Helvetica,Arial">GAP</fo
 <li><code>PqEpimorphism( </code><var>F</var><code> : </code><var>options</var><code> ) F</code>
 <p>
 returns for the fp or pc group <var>F</var>  an  epimorphism  from  <var>F</var>  onto  the
-<i>p</i>-quotient  of  <var>F</var>  specified  by  <var>options</var>;  the  possible   options
+<var>p</var>-quotient  of  <var>F</var>  specified  by  <var>options</var>;  the  possible   options
 <var>options</var> and <strong>required</strong> option (<code>"Prime"</code>) are as for  <code>Pq</code>  (see&nbsp;<a href="CHAP004.htm#SSEC001.1">Pq</a>).
 <code>PqEpimorphism</code> only differs from <code>Pq</code> in  what  it  outputs;  everything
 about what must/may be passed as input to <code>PqEpimorphism</code> is the same  as
@@ -275,14 +275,14 @@ Typing: <code>PqExample( "PqEpimorphism" );</code> runs the above example in  <f
 <a name = "SSEC001.3"></a>
 <li><code>PqPCover( </code><var>F</var><code> : </code><var>options</var><code> ) F</code>
 <p>
-returns for the fp or  pc  group  <var>F</var>,  the  <i>p</i>-covering  group  of  the
-<i>p</i>-quotient of <var>F</var> specified by  <var>options</var>,  as  a  pc  group,  i.e.&nbsp;the
-<i>p</i>-covering group of the <i>p</i>-quotient <code>Pq( </code><var>F</var><code> : </code><var>options</var><code> )</code>. Thus  the
+returns for the fp or  pc  group  <var>F</var>,  the  <var>p</var>-covering  group  of  the
+<var>p</var>-quotient of <var>F</var> specified by  <var>options</var>,  as  a  pc  group,  i.e.&nbsp;the
+<var>p</var>-covering group of the <var>p</var>-quotient <code>Pq( </code><var>F</var><code> : </code><var>options</var><code> )</code>. Thus  the
 options that <code>PqPCover</code> accepts are exactly those expected for <code>Pq</code>  (and
 hence as a minimum the user <strong>must</strong> supply a value for the <code>Prime</code> option;
 see&nbsp;<a href="CHAP004.htm#SSEC001.1">Pq</a> for more details), except in the following special case.
 <p>
-If <var>F</var> is already a <i>p</i>-group, in the sense  that  <code>HasIsPGroup(</code><var>F</var><code>)  and
+If <var>F</var> is already a <var>p</var>-group, in the sense  that  <code>HasIsPGroup(</code><var>F</var><code>)  and
 IsPGroup(</code><var>F</var><code>)</code> is <code>true</code>, then
 <p>
 <p>
@@ -350,7 +350,7 @@ gap&gt; PqPCover( F : Prime := 5, ClassBound := 5, Metabelian,
 <a name = "SSEC002.1"></a>
 <li><code>StandardPresentation( </code><var>F</var><code> : </code><var>options</var><code> ) M</code>
 <p>
-return the <var>p</var>-quotient specified by  <var>options</var> of the fp or pc <i>p</i>-group
+return the <var>p</var>-quotient specified by  <var>options</var> of the fp or pc <var>p</var>-group
 <var>F</var>, as an <strong>fp group</strong>  which has a standard presentation.  Here <var>options</var>
 is a selection of the options from the following list (see Chapter&nbsp;<a href="CHAP006.htm">ANUPQ options</a>  for   detailed  descriptions).   Section&nbsp;<a href="CHAP003.htm#SECT006">Hints   and  Warnings regarding the  use of  Options</a> gives some  important hints  and warnings
 regarding option  usage, and Section&nbsp;<a href="badlink:ref:function call!with options">function  call!with options</a> in
@@ -476,7 +476,7 @@ Each of the above functions accepts the same arguments and options as the
 function <code>StandardPresentation</code> (see&nbsp;<a href="CHAP004.htm#SSEC002.1">StandardPresentation</a>) and  returns
 an epimorphism from the fp or pc group <var>F</var> onto  the  finitely  presented
 group given by a standard  presentation,  i.e.&nbsp;if  <var>S</var>  is  the  standard
-presentation    computed    for    the    <i>p</i>-quotient    of    <var>F</var>    by
+presentation    computed    for    the    <var>p</var>-quotient    of    <var>F</var>    by
 <code>StandardPresentation</code> then <code>EpimorphismStandardPresentation</code> returns the
 epimorphism from <var>F</var> to the group with presentation <var>S</var>.
 <p>
@@ -521,9 +521,7 @@ gap&gt; Size( Image(phi) );
 </pre>
 <p>
 Typing: <code>PqExample( "EpimorphismStandardPresentation" );</code> runs the  above
-example in <font face="Gill Sans,Helvetica,Arial">GAP</font> (see&nbsp;<a href="CHAP003.htm#SSEC004.4">PqExample</a>). Note that <code>AssignGeneratorVariables</code>
-(see&nbsp;<a href="../../../doc/ref/chap37.html#X814203E281F3272E">AssignGeneratorVariables</a>)  has  only  been   available   since
-<font face="Gill Sans,Helvetica,Arial">GAP</font>&nbsp;4.3.
+example in <font face="Gill Sans,Helvetica,Arial">GAP</font> (see&nbsp;<a href="CHAP003.htm#SSEC004.4">PqExample</a>).
 <p>
 <p>
 <h2><a name="SECT003">4.3 Testing p-Groups for Isomorphism</a></h2>
@@ -666,7 +664,7 @@ set to their default values.
 Note that you cannot set both <code>OrderBound</code> and <code>StepSize</code>.
 <p>
 In the first example  we  compute all descendants of the Klein four group
-which have exponent-2 class at most 5 and order at most 2<sup>6</sup>.
+which have exponent-2 class at most 5 and order at most <var>2<sup>6</sup></var>.
 <p>
 <pre>
 gap&gt; F := FreeGroup( "a", "b" );; a := F.1;; b := F.2;;         
@@ -710,8 +708,8 @@ gap&gt; PqDescendants( G : OrderBound := 3, ClassBound := 2);
 </pre>
 <p>
 In  the  third  example,  we  compute  all  capable  descendants  of  the
-elementary abelian group of order  5<sup>2</sup> which have exponent-5 class at
-most 3, exponent 5, and are metabelian.
+elementary abelian group of order  <var>5<sup>2</sup></var> which have exponent-<var>5</var> class at
+most <var>3</var>, exponent <var>5</var>, and are metabelian.
 <p>
 <pre>
 gap&gt; F := FreeGroup( 2, "g" );;                                  
@@ -806,5 +804,5 @@ respectively, the results of <code>PqDescendants</code> (see <a href="CHAP004.ht
 <p>
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP003.htm">Previous</a>] [<a href ="CHAP005.htm">Next</a>] [<a href = "theindex.htm">Index</a>]
 <P>
-<address>ANUPQ manual<br>September 2013
+<address>ANUPQ manual<br>November 2013
 </address></body></html>

@@ -22,35 +22,36 @@ The <code>pq</code> program consists of implementations of the following algorit
 <ol>
 <p>
 <li>
-A <strong><i>p</i>-quotient algorithm</strong> to  compute  pc-presentations  for  <i>p</i>-factor
+A <strong><var>p</var>-quotient algorithm</strong> to  compute  pc-presentations  for  <var>p</var>-factor
 groups of finitely presented groups.
 <p>
 <li> 
-A <strong><i>p</i>-group generation algorithm</strong> to generate pc presentations of groups
+A <strong><var>p</var>-group generation algorithm</strong> to generate pc presentations of groups
 of prime power order.
 <p>
 <li>
 A  <strong>standard  presentation  algorithm</strong>  used  to  compute   a   canonical
-pc-presentation of a <i>p</i>-group.
+pc-presentation of a <var>p</var>-group.
 <p>
 <li> 
 An algorithm which can be used to compute the <strong>automorphism group</strong>  of  a
-<i>p</i>-group.
+<var>p</var>-group.
 <p>
 This part of the <code>pq</code> program is  not  accessible  through  the  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>
 package. Instead, users are advised  to  consider  the  <font face="Gill Sans,Helvetica,Arial">GAP</font>&nbsp;4  package
 <font face="Gill Sans,Helvetica,Arial">AutPGrp</font> by Bettina Eick and Eamonn O'Brien, which implements a  better
 algorithm in  <font face="Gill Sans,Helvetica,Arial">GAP</font>  for  the  computation  of  automorphism  groups  of
-<i>p</i>-groups.
+<var>p</var>-groups.
 <p>
 </ol>
 <p>
-The current version of the  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>  package  requires  <font face="Gill Sans,Helvetica,Arial">GAP</font>&nbsp;4.4,  and
-version 1.2 of the <font face="Gill Sans,Helvetica,Arial">AutPGrp</font> package. All code  that  made  the  package
-compatible with earlier versions of <font face="Gill Sans,Helvetica,Arial">GAP</font> has been removed. If you still
-have <font face="Gill Sans,Helvetica,Arial">GAP</font>&nbsp;4.3 (at least fix4), then  you  must  use  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>&nbsp;2.2,  and
-<font face="Gill Sans,Helvetica,Arial">AutPGrp</font>&nbsp;1.1. You should not  use  earlier  versions  of  the  <font face="Gill Sans,Helvetica,Arial">ANUPQ</font>
-package since they are known to have bugs.
+The current version of the <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> package requires <font face="Gill Sans,Helvetica,Arial">GAP</font>&nbsp;4.5, and
+version 1.5 of the <font face="Gill Sans,Helvetica,Arial">AutPGrp</font> package. All code that made the package
+compatible with earlier versions of <font face="Gill Sans,Helvetica,Arial">GAP</font> has been removed. If you must
+use an older <font face="Gill Sans,Helvetica,Arial">GAP</font> version and cannot upgrade (which we strongly
+recommend), then you may try using an older <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> version. However,
+you should not use versions of the <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> package older than 2.2, since
+they are known to have bugs.
 <p>
 <strong>How to read this manual</strong>
 <p>
@@ -169,7 +170,11 @@ Below we list the main changes between versions of the <font face="Gill Sans,Hel
 <p>
 <a name = "I2"></a>
 
-<dt><code>3.1</code><dd>
+<dt><code>3.1.1</code><dd>
+The <font face="Gill Sans,Helvetica,Arial">ANUPQ</font> package now requires at least <font face="Gill Sans,Helvetica,Arial">GAP</font>&nbsp;4.5 and version 1.5 of the
+<font face="Gill Sans,Helvetica,Arial">AutPGrp</font> package.
+<p>
+<dt><dd>
 Max Horn fixed many warnings in the <code>pq</code> program code (<code>pq</code> program is now
 version 1.9).
 <p>
@@ -289,5 +294,5 @@ technology introduced in <font face="Gill Sans,Helvetica,Arial">GAP</font>&nbsp;
 <p>
 [<a href = "chapters.htm">Up</a>] [<a href ="CHAP002.htm">Next</a>] [<a href = "theindex.htm">Index</a>]
 <P>
-<address>ANUPQ manual<br>September 2013
+<address>ANUPQ manual<br>November 2013
 </address></body></html>
