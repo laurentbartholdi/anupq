@@ -17,8 +17,7 @@ done in these functions and naive use may result in incorrect results.
 <Section Label="Basic notions">
 <Heading>Basic notions</Heading>
 
-<E>pc Presentations and Consistency</E>
-<P/>
+<Subsection><Heading>pc Presentations and Consistency</Heading>
 For details, see e.g.&nbsp;<Cite Key="NNN98"/>.
 <P/>
 Every finite <M>p</M>-group <M>G</M> has a presentation of the form: 
@@ -63,22 +62,20 @@ the right hand side of certain equations,  starting  with  subproducts
 indicated by bracketing, will result in the same  normal  form.  There
 are 3 types of such  equations  (that  will  be  referred  to  in  the
 manual):
+
+TODO: FIXME! perhaps use a table for this? or a list?
 <Display>
-TODO
-<!-- 
-\matrix{
-(a^n)a &=& a(a^n)                                \hfill&{\rm (Type\ 1)}\cr
-(b^n)a &=& b^{(n-1)}(ba), b(a^n) = (ba)a^{(n-1)} \hfill&{\rm (Type\ 2)}\cr
- c(ba) &=& (cb)a                                 \hfill&{\rm (Type\ 3)}\cr
-}
- -->
+\begin{split}
+(a^n)a &amp;= a(a^n)                                &amp;\text{(Type 1)} \\
+(b^n)a &amp;= b^{(n-1)}(ba), b(a^n) = (ba)a^{(n-1)} &amp;\text{(Type 2)} \\
+ c(ba) &amp;= (cb)a                                 &amp;\text{(Type 3)}
+\end{split}
 </Display>
 See <Cite Key="VL84"/> for a description of a sufficient set of consistency
 conditions in the context of the <M>p</M>-quotient algorithm.
-<P/>
+</Subsection>
 
-<E>Exponent-<M>p</M> Central Series and Weighted pc Presentations</E>
-<P/>
+<Subsection><Heading>Exponent-<M>p</M> Central Series and Weighted pc Presentations</Heading>
 For details, see <Cite Key="NNN98"/>.
 <P/>
 <Index>exponent-p central series</Index><!-- @exponent-<M>p</M> central series -->
@@ -109,9 +106,9 @@ we can define the <E>weight function</E>  <M>w</M>  for  the  pc  generators  by
 <Index>weighted pcp</Index>
 The pair of such a weight function and a pcp allowing it, is called  a
 <E>weighted pcp</E>.
-<P/>
-<E><M>p</M>-Cover, <M>p</M>-Multiplicator</E>
-<P/>
+</Subsection>
+
+<Subsection><Heading><M>p</M>-Cover, <M>p</M>-Multiplicator</Heading>
 For details, see <Cite Key="NNN98"/>.
 <P/>
 <Index>p-covering group</Index><!-- @<M>p</M>-covering group --><Index>p-cover</Index><!-- @<M>p</M>-cover -->
@@ -127,9 +124,9 @@ group</E> or <E><M>p</M>-cover</E> of <M>G</M>, and <M>R/R^*</M> the <E><M>p</M>
 <M>G</M>. The  <M>p</M>-multiplicator  is,  of  course,  an  elementary  abelian
 <M>p</M>-group;  its  minimal  number   of   generators   is   called   the
 <E>(<M>p</M>-)multiplicator rank</E>.
-<P/>
-<E>Descendants, Capable, Terminal, Nucleus</E>
-<P/>
+</Subsection>
+
+<Subsection><Heading>Descendants, Capable, Terminal, Nucleus</Heading>
 For details, see <Cite Key="New77"/> and  <Cite Key="OBr90"/>.
 <P/>
 <Index>descendant</Index><Index>immediate descendant</Index><Index>nucleus</Index>
@@ -167,10 +164,9 @@ computing the <M>p</M>-cover, extending the automorphisms and computing the
 orbits  on allowable  subgroups can  be repeated.   Iteration  of this
 procedure can in  principle be used to determine  all descendants of a
 <M>p</M>-group.
-<P/>
+</Subsection>
 
-<E>Laws</E>
-<P/>
+<Subsection><Heading>Laws</Heading>
 <Index>law</Index><Index>identical relation</Index><Index>exponent law</Index>
 <Index>metabelian law</Index><Index>Engel identity</Index><!-- @Engel identity -->
 Let <M>l(x_1, \dots, x_n)</M> be a word in the free generators <M>x_1, \dots,
@@ -180,7 +176,7 @@ called a <E>law</E> or <E>identical relation</E>  in  a  group  <M>G</M>  if  <M
 In particular, <M>x^e = 1</M> is called an <E>exponent law</E>, <M>[[x,y],[u,v]] =
 1</M> the <E>metabelian law</E>, and <M>[\dots [[x_1,x_2],x_2],\dots, x_2] =  1</M>
 an <E>Engel identity</E>.
-<P/>
+</Subsection>
 
 </Section>
 
@@ -208,9 +204,8 @@ This  is  done, in  principle,  in  two  steps:  first  the  <M>p</M>-cover
 of <M>G_i := G/P_i(G)</M> is determined (which depends only on
 <M>G_i</M>, not on  <M>G</M>) and then <M>G/P_{i+1}(G)</M> as a  factor group of this
 <M>p</M>-cover.
-<P/>
-<E>Finding the <M>p</M>-cover</E>
-<P/>
+
+<Subsection><Heading>Finding the <M>p</M>-cover</Heading>
 A very detailed description of  the first step is given in <Cite Key="NNN98"/>,
 from which  we just extract  some passages in  order to point  to some
 terms occurring in this manual.
@@ -253,18 +248,17 @@ many ways of a priori reducing the number of <Q>new generators</Q> to  be
 introduced, using e.g.&nbsp;the weights attached to the generators, and the
 main part of <Cite Key="NNN98"/> is devoted to  a  detailed  discussion  with
 proofs of these possibilities.
-<P/>
+</Subsection>
 
-<E>Imposing the Relations of the fp Group</E>
-<P/>
+<Subsection><Heading>Imposing the Relations of the fp Group</Heading>
 In order to obtain <M>G/P_{i+1}(G)</M> from the pcp  of  the  <M>p</M>-cover  of
 <M>G_i  =  G/P_i(G)</M>,  the  defining   relations   from   the   original
 presentation of <M>G</M> must be imposed.  Since  <M>G_i</M>  is  a  homomorphic
 image of <M>G</M>, these relations again yield relations between the  <Q>new
 generators</Q> in the presentation of the <M>p</M>-cover of <M>G_i</M>.
-<P/>
-<E>Imposing Laws</E>
-<P/>
+</Subsection>
+
+<Subsection><Heading>Imposing Laws</Heading>
 While we have so far only considered the  computation  of  the  factor
 groups of a given fp group by the groups of its descending <M>p</M>-central
 series, the <M>p</M>-quotient algorithm allows a very important variant  of
@@ -286,7 +280,8 @@ fact, found  its  most  noted  application  in  the  determination  of
 Via a &GAP; program using the <Q>local</Q> interactive functions of  the
 <C>pq</C> program made available through this interface also arbitrary laws
 can be imposed via the option <C>Identities</C> (see&nbsp;<Ref Sect="option Identities"/>). <!-- TODO/FIXME ref -->
-<P/>
+</Subsection>
+
 </Section>
 
 
