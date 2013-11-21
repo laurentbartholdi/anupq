@@ -4,6 +4,8 @@
 <!DOCTYPE Book SYSTEM "gapdoc.dtd"
 [
 <!ENTITY see '<Alt Only="LaTeX">$	o$</Alt><Alt Not="LaTeX">--&gt;</Alt>'>
+<!ENTITY ANUPQ '<Package>ANUPQ</Package>'>
+<!ENTITY AutPGrp '<Package>AutPGrp</Package>'>
 <!ENTITY anupq '<Package>anupq</Package>'>
 ]
 >
@@ -13,6 +15,8 @@
 <Body>
 <Index>&anupq;</Index>
 <#Include SYSTEM "intro.xml">
+<#Include SYSTEM "basics.xml">
 </Body>
+<Bibliography Databases="anupq.bib"/>
 <TheIndex/>
 </Book>

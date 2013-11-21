@@ -118,51 +118,17 @@ the authors of the components of the &ANUPQ; package.
 <Section Label="Authors and Acknowledgements">
 <Heading>Authors and Acknowledgements</Heading>
 
-The C implementation of the ANU <C>pq</C> standalone was developed by
+The C implementation of the ANU <C>pq</C> standalone was developed by Eamonn O'Brien.
 <P/>
-<Log><![CDATA[
-Eamonn O'Brien
-Department of Mathematics
-University of Auckland
-Private Bag 92019
-Auckland
-New Zealand
-]]></Log>
-<C>email:</C> <Email>obrien@math.auckland.ac.nz</Email>
-<P/>
-New co-maintainer
-<P/>
-&nbsp;&nbsp;<C>Max Horn</C>
-&nbsp;&nbsp;<C>AG Algebra</C>
-&nbsp;&nbsp;<C>Mathematisches Institut</C>
-&nbsp;&nbsp;<C>Justus-Liebig-Universität Gie{\ss}en</C>
-&nbsp;&nbsp;<C>Arndtstra{\ss}e 2, D-35392 Gie{\ss}en, Germany</C>
-<P/>
-<C>email:</C> <Email>max.horn@math.uni-giessen.de</Email>
-<P/>
-joined the team in November, 2011.
+A new co-maintainer, Max Horn, joined the team in November, 2011.
 <P/>
 The &GAP; 4 version of this package was adapted from the &GAP; 3
-version by  
-<P/>
-<Log><![CDATA[
-Werner Nickel
-AG 2, Fachbereich Mathematik, TU Darmstadt
-Schlossgartenstr. 7, 64289 Darmstadt, Germany
-]]></Log>
+version by Werner Nickel.
 <P/>
 An  interactive  interface  using  iostreams  was  developed   with   the
-assistance of Werner Nickel by
+assistance of Werner Nickel by Greg Gamble.
 <P/>
-<Log><![CDATA[
-Greg Gamble
-Department of Mathematics and Statistics
-Curtin University
-GPO Box U 1987, Perth WA 6845, Australia
-]]></Log>
-<C>email:</C> <Email>Greg.Gamble@uwa.edu.au</Email>
-<P/>
-The authors would  like  to  thank  Joachim  Neub\accent127user  for  his
+The authors would  like  to  thank  Joachim  Neubüser  for  his
 careful    proof-reading    and    advice,    and     for     formulating
 Chapter&nbsp;<Ref Chap="Mathematical Background and Terminology"/>.
 <P/>
