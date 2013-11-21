@@ -12,6 +12,7 @@
 <TableOfContents/>
 <Body>
 <Index>&anupq;</Index>
+<#Include SYSTEM "intro.xml">
 </Body>
 <TheIndex/>
 </Book>
