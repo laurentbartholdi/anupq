@@ -1,102 +1,149 @@
 #############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
 ##
+#W  PackageInfo.g             ANUPQ Package                       Greg Gamble
+#W                                                              Werner Nickel
+#W                                                             Eamonn O'Brien
+#W                                                                   Max Horn
 
 SetPackageInfo( rec(
 
-PackageName := "GitHubPagesForGAP",
+PackageName := "ANUPQ",
+Subtitle    := "ANU p-Quotient",
+Version     := "3.1.2",
+Date        := "07/01/2016",
 
-Subtitle := "A GitHubPages generator for GAP packages",
-Version := "0.1",
-Date := "21/03/2014", # dd/mm/yyyy format
-
-Persons := [
-  rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
+Persons := [ 
+  rec( 
+    LastName      := "Gamble",
+    FirstNames    := "Greg",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
+    Email         := "Greg.Gamble@uwa.edu.au",
+    WWWHome       := "http://school.maths.uwa.edu.au/~gregg",
     PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universit‰t Gieﬂen\n",
-                       "Arndtstraﬂe 2\n",
-                       "35392 Gieﬂen\n",
-                       "Germany" ),
-    Place         := "Gieﬂen",
-    Institution   := "Justus-Liebig-Universit‰t Gieﬂen"
+                       "Greg Gamble\n",
+                       "Department of Mathematics and Statistics\n",
+                       "Curtin University\n",
+                       "GPO Box U 1987\n",
+                       "Perth WA 6845\n",
+                       "Australia" ),
+    Place         := "Perth",
+    Institution   := "Curtin University"
   ),
-
-  rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
+  rec( 
+    LastName      := "Nickel",
+    FirstNames    := "Werner",
     IsAuthor      := true,
     IsMaintainer  := false,
-    #Email         := "author@example.com",
+     # MH: Werner rarely (if at all) replies to emails sent to this
+     # old email address. To discourage users from sending bug reports
+     # there, I have disabled it here.
+     #Email         := "nickel@mathematik.tu-darmstadt.de",
+     WWWHome       := "http://www.mathematik.tu-darmstadt.de/~nickel/",
   ),
-
+  rec( 
+    LastName      := "O'Brien",
+    FirstNames    := "Eamonn",
+    IsAuthor      := true,
+    IsMaintainer  := false,
+    Email         := "obrien@math.auckland.ac.nz",
+    WWWHome       := "http://www.math.auckland.ac.nz/~obrien",
+    PostalAddress := Concatenation(
+                       "Department of Mathematics\n",
+                       "University of Auckland\n",
+                       "Private Bag 92019\n",
+                       "Auckland\n",
+                       "New Zealand\n" ),
+    Place         := "Auckland",
+    Institution   := "University of Auckland"
+  ),
   rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
-],
+   LastName      := "Horn",
+   FirstNames    := "Max",
+   IsAuthor      := false,
+   IsMaintainer  := true,
+   Email         := "max.horn@math.uni-giessen.de",
+   WWWHome       := "http://www.quendi.de/math",
+   PostalAddress := Concatenation(
+                      "AG Algebra\n",
+                      "Mathematisches Institut\n",
+                      "Justus-Liebig-Universit√§t Gie√üen\n",
+                      "Arndtstra√üe 2\n",
+                      "35392 Gie√üen\n",
+                      "Germany" ),
+   Place         := "Gie√üen, Germany",
+   Institution   := "Justus-Liebig-Universit√§t Gie√üen"
+ ),
+],  
 
-Status := "other",
+Status         := "accepted",
+CommunicatedBy := "Charles Wright (Eugene)",
+AcceptDate     := "04/2002",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "fingolfin",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
-
-PackageWWWHome := Concatenation("http://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
+PackageWWWHome := "http://gap-packages.github.io/anupq/",
+README_URL     := Concatenation(~.PackageWWWHome, "README"),
+PackageInfoURL := Concatenation(~.PackageWWWHome, "PackageInfo.g"),
+ArchiveURL     := Concatenation("https://github.com/gap-packages/anupq/",
+                                "releases/download/v", ~.Version,
+                                "/anupq-", ~.Version),
 ArchiveFormats := ".tar.gz .tar.bz2",
 
 AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub pages.",
+  "The <span class=\"pkgname\">ANUPQ</span> package provides an interactive \
+   interface to the p-quotient, p-group generation and standard presentation \
+   algorithms of the ANU pq C program.",
 
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
-  ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
+  BookName  := "ANUPQ",
+  ArchiveURLSubset := ["doc", "htm"],
+  HTMLStart := "htm/chapters.htm",
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
-  LongTitle := "A GitHubPages generator for GAP packages",
+  LongTitle := "ANU p-Quotient",
+  Autoload := false
 ),
 
-# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.5.5",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
+  GAP := ">= 4.5",
+  NeededOtherPackages := [ [ "autpgrp", ">=1.5" ] ],
+  SuggestedOtherPackages := [ ],
   ExternalConditions := []
 ),
 
-AvailabilityTest := ReturnTrue,
+AvailabilityTest := 
+  function()
+    # test for existence of the compiled binary
+    if Filename( DirectoriesPackagePrograms( "anupq" ), "pq" ) = fail then
+        return fail;
+    fi;
+    return true;
+  end,
 
-Keywords := ["GitHub pages", "GAP"]
+BannerString := Concatenation( 
+  "---------------------------------------------------------------------------",
+  "\n",
+  "Loading    ", ~.PackageName, " (", ~.Subtitle, ") ", ~.Version, "\n",
+  "GAP code by  ", ~.Persons[1].FirstNames, " ", ~.Persons[1].LastName,
+        " <", ~.Persons[1].Email, "> (address for correspondence)\n",
+  "           ", ~.Persons[2].FirstNames, " ", ~.Persons[2].LastName,
+        " (", ~.Persons[2].WWWHome, ")\n",
+  "           [uses ANU pq binary (C code program) version: 1.9]\n",
+  "C code by  ", ~.Persons[3].FirstNames, " ", ~.Persons[3].LastName,
+        " (", ~.Persons[3].WWWHome, ")\n",
+  "Co-maintained by ", ~.Persons[4].FirstNames, " ", ~.Persons[4].LastName,
+                " <", ~.Persons[4].Email, ">\n\n",
+  "            For help, type: ?", ~.PackageDoc.BookName, "\n",
+  "---------------------------------------------------------------------------",
+  "\n" ),
 
+Autoload := false,
+
+TestFile := "tst/anupqeg.tst",
+
+Keywords := [
+  "p-quotient",
+  "p-group generation",
+  "descendant",
+  "standard presentation",
+  ]
 ));
-
-
