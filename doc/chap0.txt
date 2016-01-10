@@ -6,10 +6,10 @@
                                 [1X ANU p-Quotient [101X
   
   
-                                     3.1.1
+                                     3.1.3
   
   
-                                   19/11/2013
+                                   10/01/2016
   
   
                                   Greg Gamble
@@ -132,64 +132,70 @@
       5.3-7 PqSetPQuotientToGroup
     5.4 [33X[0;0YLow-level Interactive ANUPQ functions based on menu items of the pq
     program[133X
-      5.4-1 PqNrPcGenerators
-      5.4-2 PqFactoredOrder
-      5.4-3 PqOrder
-      5.4-4 PqPClass
-      5.4-5 PqWeight
-      5.4-6 PqCurrentGroup
-      5.4-7 PqDisplayPcPresentation
-      5.4-8 PqSetOutputLevel
-      5.4-9 PqEvaluateIdentities
-      5.4-10 PqPcPresentation
-      5.4-11 PqSavePcPresentation
-      5.4-12 PqRestorePcPresentation
-      5.4-13 PqNextClass
-      5.4-14 PqComputePCover
-      5.4-15 PqCollect
-      5.4-16 PqSolveEquation
-      5.4-17 PqCommutator
-      5.4-18 PqSetupTablesForNextClass
-      5.4-19 PqTails
-      5.4-20 PqComputeTails
-      5.4-21 PqAddTails
-      5.4-22 PqDoConsistencyChecks
-      5.4-23 PqCollectDefiningRelations
-      5.4-24 PqCollectWordInDefiningGenerators
-      5.4-25 PqCommutatorDefiningGenerators
-      5.4-26 PqDoExponentChecks
-      5.4-27 PqEliminateRedundantGenerators
-      5.4-28 PqRevertToPreviousClass
-      5.4-29 PqSetMaximalOccurrences
-      5.4-30 PqSetMetabelian
-      5.4-31 PqDoConsistencyCheck
-      5.4-32 PqCompact
-      5.4-33 PqEchelonise
-      5.4-34 PqSupplyAutomorphisms
-      5.4-35 PqExtendAutomorphisms
-      5.4-36 PqApplyAutomorphisms
-      5.4-37 PqDisplayStructure
-      5.4-38 PqDisplayAutomorphisms
-      5.4-39 PqWritePcPresentation
-      5.4-40 PqSPComputePcpAndPCover
-      5.4-41 PqSPStandardPresentation
-      5.4-42 PqSPSavePresentation
-      5.4-43 PqSPCompareTwoFilePresentations
-      5.4-44 PqSPIsomorphism
-      5.4-45 PqPGSupplyAutomorphisms
-      5.4-46 PqPGExtendAutomorphisms
-      5.4-47 PqPGConstructDescendants
-      5.4-48 PqPGSetDescendantToPcp
-      5.4-49 PqAPGDegree
-      5.4-50 PqAPGPermutations
-      5.4-51 PqAPGOrbits
-      5.4-52 PqAPGOrbitRepresentatives
-      5.4-53 PqAPGSingleStage
-    5.5 [33X[0;0YPrimitive Interactive ANUPQ Process Read/Write Functions[133X
-      5.5-1 PqRead
-      5.5-2 PqReadAll
-      5.5-3 PqReadUntil
-      5.5-4 PqWrite
+    5.5 [33X[0;0YGeneral commands[133X
+      5.5-1 PqNrPcGenerators
+      5.5-2 PqFactoredOrder
+      5.5-3 PqOrder
+      5.5-4 PqPClass
+      5.5-5 PqWeight
+      5.5-6 PqCurrentGroup
+      5.5-7 PqDisplayPcPresentation
+      5.5-8 PqSetOutputLevel
+      5.5-9 PqEvaluateIdentities
+    5.6 [33X[0;0YCommands from the Main [22Xp[122X-Quotient menu[133X
+      5.6-1 PqPcPresentation
+      5.6-2 PqSavePcPresentation
+      5.6-3 PqRestorePcPresentation
+      5.6-4 PqNextClass
+      5.6-5 PqComputePCover
+    5.7 [33X[0;0YCommands from the Advanced [22Xp[122X-Quotient menu[133X
+      5.7-1 PqCollect
+      5.7-2 PqSolveEquation
+      5.7-3 PqCommutator
+      5.7-4 PqSetupTablesForNextClass
+      5.7-5 PqTails
+      5.7-6 PqComputeTails
+      5.7-7 PqAddTails
+      5.7-8 PqDoConsistencyChecks
+      5.7-9 PqCollectDefiningRelations
+      5.7-10 PqCollectWordInDefiningGenerators
+      5.7-11 PqCommutatorDefiningGenerators
+      5.7-12 PqDoExponentChecks
+      5.7-13 PqEliminateRedundantGenerators
+      5.7-14 PqRevertToPreviousClass
+      5.7-15 PqSetMaximalOccurrences
+      5.7-16 PqSetMetabelian
+      5.7-17 PqDoConsistencyCheck
+      5.7-18 PqCompact
+      5.7-19 PqEchelonise
+      5.7-20 PqSupplyAutomorphisms
+      5.7-21 PqExtendAutomorphisms
+      5.7-22 PqApplyAutomorphisms
+      5.7-23 PqDisplayStructure
+      5.7-24 PqDisplayAutomorphisms
+      5.7-25 PqWritePcPresentation
+    5.8 [33X[0;0YCommands from the Standard Presentation menu[133X
+      5.8-1 PqSPComputePcpAndPCover
+      5.8-2 PqSPStandardPresentation
+      5.8-3 PqSPSavePresentation
+      5.8-4 PqSPCompareTwoFilePresentations
+      5.8-5 PqSPIsomorphism
+    5.9 [33X[0;0YCommands from the Main [22Xp[122X-Group Generation menu[133X
+      5.9-1 PqPGSupplyAutomorphisms
+      5.9-2 PqPGExtendAutomorphisms
+      5.9-3 PqPGConstructDescendants
+      5.9-4 PqPGSetDescendantToPcp
+    5.10 [33X[0;0YCommands from the Advanced [22Xp[122X-Group Generation menu[133X
+      5.10-1 PqAPGDegree
+      5.10-2 PqAPGPermutations
+      5.10-3 PqAPGOrbits
+      5.10-4 PqAPGOrbitRepresentatives
+      5.10-5 PqAPGSingleStage
+    5.11 [33X[0;0YPrimitive Interactive ANUPQ Process Read/Write Functions[133X
+      5.11-1 PqRead
+      5.11-2 PqReadAll
+      5.11-3 PqReadUntil
+      5.11-4 PqWrite
   6 [33X[0;0YANUPQ Options[133X
     6.1 [33X[0;0YOverview[133X
       6.1-1 AllANUPQoptions
@@ -198,11 +204,6 @@
   7 [33X[0;0YInstalling the ANUPQ Package[133X
     7.1 [33X[0;0YTesting your ANUPQ installation[133X
     7.2 [33X[0;0YRunning the pq program as a standalone[133X
-    7.3 [33X[0;0YSetting the Verbosity of ANUPQ via Info and InfoANUPQ[133X
-      7.3-1 InfoANUPQ
-    7.4 [33X[0;0YUtility Functions[133X
-      7.4-1 PqLeftNormComm
-      7.4-2 PqGAPRelators
   A [33X[0;0YExamples[133X
     A.1 [33X[0;0YThe Relators Option[133X
     A.2 [33X[0;0YThe Identities Option and PqEvaluateIdentities Function[133X

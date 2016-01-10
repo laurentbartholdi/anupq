@@ -147,7 +147,7 @@
   
   [33X[0;0YFirstly,  we  run  the example that allows pre-expansion of commutators (the
   function [10XPqLeftNormComm[110X is provided by the [5XANUPQ[105X package; see [2XPqLeftNormComm[102X
-  ([14X7.4-1[114X)).  Note that since the two commutators of this example are [13Xvery[113X long
+  ([14X3.4-1[114X)).  Note that since the two commutators of this example are [13Xvery[113X long
   (taking  more  than  an  page  to  print), we have edited the output at this
   point.[133X
   
@@ -322,7 +322,7 @@
   [33X[0;0YThe  (interactive)  call  to [10XPq[110X above is essentially equivalent to a call to
   [10XPqPcPresentation[110X  with  the same arguments and options followed by a call to
   [10XPqCurrentGroup[110X.   Moreover,  the  call  to  [10XPqPcPresentation[110X  (as  described
-  in [2XPqPcPresentation[102X   ([14X5.4-10[114X))   is   equivalent  to  a  [21Xclass  1[121X  call  to
+  in [2XPqPcPresentation[102X   ([14X5.6-1[114X))   is   equivalent   to  a  [21Xclass  1[121X  call  to
   [10XPqPcPresentation[110X  followed  by the requisite number of calls to [10XPqNextClass[110X,
   and  with  the  [10XIdentities[110X option set, both [10XPqPcPresentation[110X and [10XPqNextClass[110X
   [21Xquietly[121X  perform  the  equivalent  of  a  [10XPqEvaluateIdentities[110X  call. In the

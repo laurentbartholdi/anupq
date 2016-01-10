@@ -55,11 +55,11 @@
   [3XG[103X  should  be  an  [13Xfp  group[113X or [13Xpc group[113X that the user intends to manipulate
   using  interactive  [5XANUPQ[105X  functions.  If  the  function  is  called without
   specifying   [3XG[103X,   a   group   can   be   read   in  by  using  the  function
-  [10XPqRestorePcPresentation[110X  (see [2XPqRestorePcPresentation[102X  ([14X5.4-12[114X)). If [10XPqStart[110X
-  is  given  an  integer argument [3Xworkspace[103X, then the [10Xpq[110X program is started up
-  with  a  workspace  (an integer array) of size [3Xworkspace[103X (i.e. [22X4 × [3Xworkspace[103X[122X
-  bytes  in  a  32-bit  environment); otherwise, the [10Xpq[110X program sets a default
-  workspace of [22X10000000[122X.[133X
+  [10XPqRestorePcPresentation[110X (see [2XPqRestorePcPresentation[102X ([14X5.6-3[114X)). If [10XPqStart[110X is
+  given  an integer argument [3Xworkspace[103X, then the [10Xpq[110X program is started up with
+  a  workspace  (an integer array) of size [3Xworkspace[103X (i.e. [22X4 × [3Xworkspace[103X[122X bytes
+  in a 32-bit environment); otherwise, the [10Xpq[110X program sets a default workspace
+  of [22X10000000[122X.[133X
   
   [33X[0;0YThe  only  [3Xoptions[103X  currently  recognised by [10XPqStart[110X are [10XPrime[110X, [10XExponent[110X and
   [10XRelators[110X  (see  Chapter [14X'[33X[0;0YANUPQ  Options[133X'[114X  for detailed descriptions of these
@@ -151,7 +151,7 @@
   group;  [3XF[103X  must previously have been given (as first argument) to [10XPqStart[110X to
   start  the  interactive [5XANUPQ[105X process (see [2XPqStart[102X ([14X5.1-1[114X)) or restored from
   file using the function [10XPqRestorePcPresentation[110X (see [2XPqRestorePcPresentation[102X
-  ([14X5.4-12[114X)).  Following the colon [3Xoptions[103X is a selection of the options listed
+  ([14X5.6-3[114X)).  Following  the colon [3Xoptions[103X is a selection of the options listed
   for  the  non-interactive  [10XPq[110X function (see [2XPq[102X ([14X4.1-1[114X)), separated by commas
   like record components (see Section [14XReference: Function Call With Options[114X in
   the  [5XGAP[105X Reference Manual), except that the options [10XSetupFile[110X or [10XPqWorkspace[110X
@@ -606,7 +606,7 @@
   recompute it.[133X
   
   [33X[0;0Y[13XNote:[113X   See   the  function  [10XPqPGSetDescendantToPcp[110X  ([2XPqPGSetDescendantToPcp[102X
-  ([14X5.4-48[114X))  for a mechanism to make (the [22Xp[122X-cover of) a particular descendants
+  ([14X5.9-4[114X))  for  a mechanism to make (the [22Xp[122X-cover of) a particular descendants
   the current group of the process.[133X
   
   [33X[0;0YThe  following  example  of  the  usage  of  [10XPqSetPQuotientToGroup[110X, which is
@@ -658,13 +658,14 @@
   should  exercise  care and ensure pre-requisites of the various commands are
   met.[133X
   
-  [33X[0;0Y[13XGeneral commands[113X[133X
+  
+  [1X5.5 [33X[0;0YGeneral commands[133X[101X
   
   [33X[0;0YThe  following commands either use a menu item from whatever menu is [21Xcurrent[121X
   for  the [10Xpq[110X program, or have general application and are not associated with
   just one menu item of the [10Xpq[110X program.[133X
   
-  [1X5.4-1 PqNrPcGenerators[101X
+  [1X5.5-1 PqNrPcGenerators[101X
   
   [29X[2XPqNrPcGenerators[102X( [3Xi[103X ) [32X function
   [29X[2XPqNrPcGenerators[102X(  ) [32X function
@@ -674,29 +675,29 @@
   determined  by  the process. This also applies if the pc presentation is not
   consistent.[133X
   
-  [1X5.4-2 PqFactoredOrder[101X
+  [1X5.5-2 PqFactoredOrder[101X
   
   [29X[2XPqFactoredOrder[102X( [3Xi[103X ) [32X function
   [29X[2XPqFactoredOrder[102X(  ) [32X function
   
   [33X[0;0Yfor the [3Xi[103Xth or default interactive [5XANUPQ[105X process, return an integer pair [10X[[3Xp[103X[10X,
   [3Xn[103X[10X][110X   where   [3Xp[103X   is   a   prime  and  [3Xn[103X  is  the  number  of  pc  generators
-  (see [2XPqNrPcGenerators[102X  ([14X5.4-1[114X)) in the pc presentation of the quotient group
+  (see [2XPqNrPcGenerators[102X  ([14X5.5-1[114X)) in the pc presentation of the quotient group
   currently  determined  by  the  process. If this presentation is consistent,
   then  [22Xp^n[122X  is the order of the quotient group. Otherwise (if tails have been
   added  but  the necessary consistency checks, relation collections, exponent
   law checks and redundant generator eliminations have not yet been done), [22Xp^n[122X
   is an upper bound for the order of the group.[133X
   
-  [1X5.4-3 PqOrder[101X
+  [1X5.5-3 PqOrder[101X
   
   [29X[2XPqOrder[102X( [3Xi[103X ) [32X function
   [29X[2XPqOrder[102X(  ) [32X function
   
   [33X[0;0Yfor the [3Xi[103Xth or default interactive [5XANUPQ[105X process, return [22Xp^n[122X where [10X[[3Xp[103X[10X, [3Xn[103X[10X][110X is
-  the pair as returned by [10XPqFactoredOrder[110X (see [2XPqFactoredOrder[102X ([14X5.4-2[114X)).[133X
+  the pair as returned by [10XPqFactoredOrder[110X (see [2XPqFactoredOrder[102X ([14X5.5-2[114X)).[133X
   
-  [1X5.4-4 PqPClass[101X
+  [1X5.5-4 PqPClass[101X
   
   [29X[2XPqPClass[102X( [3Xi[103X ) [32X function
   [29X[2XPqPClass[102X(  ) [32X function
@@ -704,7 +705,7 @@
   [33X[0;0Yfor  the [3Xi[103Xth or default interactive [5XANUPQ[105X process, return the lower exponent
   [22Xp[122X-class of the quotient group currently determined by the process.[133X
   
-  [1X5.4-5 PqWeight[101X
+  [1X5.5-5 PqWeight[101X
   
   [29X[2XPqWeight[102X( [3Xi[103X, [3Xj[103X ) [32X function
   [29X[2XPqWeight[102X( [3Xj[103X ) [32X function
@@ -714,7 +715,7 @@
   currently determined by the process, or [9Xfail[109X if there is no such numbered pc
   generator.[133X
   
-  [1X5.4-6 PqCurrentGroup[101X
+  [1X5.5-6 PqCurrentGroup[101X
   
   [29X[2XPqCurrentGroup[102X( [3Xi[103X ) [32X function
   [29X[2XPqCurrentGroup[102X(  ) [32X function
@@ -728,7 +729,7 @@
   the  attributes  and  property  [10XNuclearRank[110X, [10XMultiplicatorRank[110X and [10XIsCapable[110X
   which may be applied to the group returned by [10XPqCurrentGroup[110X.[133X
   
-  [1X5.4-7 PqDisplayPcPresentation[101X
+  [1X5.5-7 PqDisplayPcPresentation[101X
   
   [29X[2XPqDisplayPcPresentation[102X( [3Xi:[103X [[3XOutputLevel[103X [3X:=[103X [3Xlev[103X] ) [32X function
   [29X[2XPqDisplayPcPresentation[102X( [3X:[103X [[3XOutputLevel[103X [3X:=[103X [3Xlev[103X] ) [32X function
@@ -740,13 +741,13 @@
   [33X[0;0YExcept  if  the last command communicating with the [10Xpq[110X program was a [22Xp[122X-group
   generation  command (for which there is only a verbose output level), to set
   the  amount  of  information  this  command  displays  you  may wish to call
-  [10XPqSetOutputLevel[110X  first (see [2XPqSetOutputLevel[102X ([14X5.4-8[114X)), or equivalently pass
+  [10XPqSetOutputLevel[110X  first (see [2XPqSetOutputLevel[102X ([14X5.5-8[114X)), or equivalently pass
   the option [10XOutputLevel[110X (see [14X6.2[114X).[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X  program, [10XPqDisplayPcPresentation[110X
   performs menu item 4 of the current menu of the [10Xpq[110X program.[133X
   
-  [1X5.4-8 PqSetOutputLevel[101X
+  [1X5.5-8 PqSetOutputLevel[101X
   
   [29X[2XPqSetOutputLevel[102X( [3Xi[103X, [3Xlev[103X ) [32X function
   [29X[2XPqSetOutputLevel[102X( [3Xlev[103X ) [32X function
@@ -758,7 +759,7 @@
   item  5  of  the  main  (or  advanced)  [22Xp[122X-Quotient  menu,  or  the  Standard
   Presentation menu.[133X
   
-  [1X5.4-9 PqEvaluateIdentities[101X
+  [1X5.5-9 PqEvaluateIdentities[101X
   
   [29X[2XPqEvaluateIdentities[102X( [3Xi:[103X [[3XIdentities[103X [3X:=[103X [3Xfuncs[103X] ) [32X function
   [29X[2XPqEvaluateIdentities[102X( [3X:[103X [[3XIdentities[103X [3X:=[103X [3Xfuncs[103X] ) [32X function
@@ -772,9 +773,10 @@
   [33X[0;0Y[13XNote:[113X  This  function  is  mainly  implemented at the [5XGAP[105X level. It does not
   correspond to a menu item of the [10Xpq[110X program.[133X
   
-  [33X[0;0Y[13XCommands from the Main [22Xp[122X-Quotient menu[113X[133X
   
-  [1X5.4-10 PqPcPresentation[101X
+  [1X5.6 [33X[0;0YCommands from the Main [22Xp[122X[101X[1X-Quotient menu[133X[101X
+  
+  [1X5.6-1 PqPcPresentation[101X
   
   [29X[2XPqPcPresentation[102X( [3Xi:[103X [3Xoptions[103X ) [32X function
   [29X[2XPqPcPresentation[102X( [3X:[103X [3Xoptions[103X ) [32X function
@@ -795,7 +797,7 @@
   
   [33X[0;0YThe  pc  presentation  is  held by the [10Xpq[110X program. In contrast to [10XPq[110X (see [2XPq[102X
   ([14X5.3-1[114X)),  no  [5XGAP[105X  pc group is returned; see [10XPqCurrentGroup[110X ([2XPqCurrentGroup[102X
-  ([14X5.4-6[114X)) if you need the corresponding [5XGAP[105X pc group.[133X
+  ([14X5.5-6[114X)) if you need the corresponding [5XGAP[105X pc group.[133X
   
   [33X[0;0Y[10XPqPcPresentation([3Xi[103X[10X:   [3Xoptions[103X[10X);[110X  is  roughly  equivalent  to  the  following
   sequence of low-level commands:[133X
@@ -817,7 +819,7 @@
   [33X[0;0YFor  those familiar with the [10Xpq[110X program, [10XPqPcPresentation[110X performs menu item
   1 of the main [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-11 PqSavePcPresentation[101X
+  [1X5.6-2 PqSavePcPresentation[101X
   
   [29X[2XPqSavePcPresentation[102X( [3Xi[103X, [3Xfilename[103X ) [32X function
   [29X[2XPqSavePcPresentation[102X( [3Xfilename[103X ) [32X function
@@ -828,26 +830,26 @@
   the  string  [3Xfilename[103X  is  not  [10X/[110X,  [3Xfilename[103X  is assumed to be the path of a
   writable  file  relative  to the directory in which [5XGAP[105X was started. A saved
   file may be restored by [10XPqRestorePcPresentation[110X (see [2XPqRestorePcPresentation[102X
-  ([14X5.4-12[114X)).[133X
+  ([14X5.6-3[114X)).[133X
   
   [33X[0;0Y[13XNote:[113X  For those familiar with the [10Xpq[110X program, [10XPqSavePcPresentation[110X performs
   menu item 2 of the main [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-12 PqRestorePcPresentation[101X
+  [1X5.6-3 PqRestorePcPresentation[101X
   
   [29X[2XPqRestorePcPresentation[102X( [3Xi[103X, [3Xfilename[103X ) [32X function
   [29X[2XPqRestorePcPresentation[102X( [3Xfilename[103X ) [32X function
   
   [33X[0;0Yfor  the  [3Xi[103Xth or default interactive [5XANUPQ[105X process, direct the [10Xpq[110X program to
   restore   the   pc   presentation   previously   saved   to   [3Xfilename[103X,   by
-  [10XPqSavePcPresentation[110X   (see [2XPqSavePcPresentation[102X  ([14X5.4-11[114X)).  If  the  first
+  [10XPqSavePcPresentation[110X   (see [2XPqSavePcPresentation[102X   ([14X5.6-2[114X)).  If  the  first
   character  of  the  string  [3Xfilename[103X is not [10X/[110X, [3Xfilename[103X is assumed to be the
   path of a readable file relative to the directory in which [5XGAP[105X was started.[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X  program, [10XPqRestorePcPresentation[110X
   performs menu item 3 of the main [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-13 PqNextClass[101X
+  [1X5.6-4 PqNextClass[101X
   
   [29X[2XPqNextClass[102X( [3Xi:[103X [[3XQueueFactor[103X] ) [32X function
   [29X[2XPqNextClass[102X( [3X:[103X [[3XQueueFactor[103X] ) [32X function
@@ -878,7 +880,7 @@
   [33X[0;0YFor  those familiar with the [10Xpq[110X program, [10XPqNextClass[110X performs menu item 6 of
   the main [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-14 PqComputePCover[101X
+  [1X5.6-5 PqComputePCover[101X
   
   [29X[2XPqComputePCover[102X( [3Xi[103X ) [32X function
   [29X[2XPqComputePCover[102X(  ) [32X function
@@ -902,9 +904,10 @@
   [33X[0;0YFor those familiar with the [10Xpq[110X program, [10XPqComputePCover[110X performs menu item 7
   of the main [22Xp[122X-Quotient menu.[133X
   
-  [33X[0;0Y[13XCommands from the Advanced [22Xp[122X-Quotient menu[113X[133X
   
-  [1X5.4-15 PqCollect[101X
+  [1X5.7 [33X[0;0YCommands from the Advanced [22Xp[122X[101X[1X-Quotient menu[133X[101X
+  
+  [1X5.7-1 PqCollect[101X
   
   [29X[2XPqCollect[102X( [3Xi[103X, [3Xword[103X ) [32X function
   [29X[2XPqCollect[102X( [3Xword[103X ) [32X function
@@ -931,7 +934,7 @@
   [33X[0;0Y[13XNote:[113X For those familiar with the [10Xpq[110X program, [10XPqCollect[110X performs menu item 1
   of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-16 PqSolveEquation[101X
+  [1X5.7-2 PqSolveEquation[101X
   
   [29X[2XPqSolveEquation[102X( [3Xi[103X, [3Xa[103X, [3Xb[103X ) [32X function
   [29X[2XPqSolveEquation[102X( [3Xa[103X, [3Xb[103X ) [32X function
@@ -939,12 +942,12 @@
   [33X[0;0Yfor  the  [3Xi[103Xth or default interactive [5XANUPQ[105X process, direct the [10Xpq[110X program to
   solve [22X[3Xa[103X * [3Xx[103X = [3Xb[103X[122X for [3Xx[103X, where [3Xa[103X and [3Xb[103X are words in the pc generators. For the
   representation  of these words see the description of the function [10XPqCollect[110X
-  ([2XPqCollect[102X ([14X5.4-15[114X)).[133X
+  ([2XPqCollect[102X ([14X5.7-1[114X)).[133X
   
   [33X[0;0Y[13XNote:[113X  For those familiar with the [10Xpq[110X program, [10XPqSolveEquation[110X performs menu
   item 2 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-17 PqCommutator[101X
+  [1X5.7-3 PqCommutator[101X
   
   [29X[2XPqCommutator[102X( [3Xi[103X, [3Xwords[103X, [3Xpow[103X ) [32X function
   [29X[2XPqCommutator[102X( [3Xwords[103X, [3Xpow[103X ) [32X function
@@ -954,13 +957,13 @@
   pc generators raised to the integer power [3Xpow[103X, and return the resulting word
   as  a  list  of generator number, exponent pairs. The form required for each
   word  of  [3Xwords[103X  is  the  same  as  that  required  for the [3Xword[103X argument of
-  [10XPqCollect[110X  (see [2XPqCollect[102X ([14X5.4-15[114X)). The form of the output word is also the
+  [10XPqCollect[110X  (see [2XPqCollect[102X  ([14X5.7-1[114X)). The form of the output word is also the
   same as for [10XPqCollect[110X.[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with the [10Xpq[110X program, [10XPqCommutator[110X performs menu
   item 3 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-18 PqSetupTablesForNextClass[101X
+  [1X5.7-4 PqSetupTablesForNextClass[101X
   
   [29X[2XPqSetupTablesForNextClass[102X( [3Xi[103X ) [32X function
   [29X[2XPqSetupTablesForNextClass[102X(  ) [32X function
@@ -973,7 +976,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the [10Xpq[110X program, [10XPqSetupTablesForNextClass[110X
   performs menu item 6 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-19 PqTails[101X
+  [1X5.7-5 PqTails[101X
   
   [29X[2XPqTails[102X( [3Xi[103X, [3Xweight[103X ) [32X function
   [29X[2XPqTails[102X( [3Xweight[103X ) [32X function
@@ -987,14 +990,14 @@
   weight  [3Xweight[103X  are  computed  and  added,  and in this case and if [10X[3Xweight[103X[10X <
   PqPClass([3Xi[103X[10X)[110X,  it is assumed that the tails that introduce new generators for
   each  weight  from  [10XPqPClass([3Xi[103X[10X)[110X  down to weight [10X[3Xweight[103X[10X + 1[110X have already been
-  added.  You  may wish to call [10XPqSetMetabelian[110X (see [2XPqSetMetabelian[102X ([14X5.4-30[114X))
+  added.  You  may wish to call [10XPqSetMetabelian[110X (see [2XPqSetMetabelian[102X ([14X5.7-16[114X))
   prior to calling [10XPqTails[110X.[133X
   
   [33X[0;0Y[13XNotes[113X[133X
   
   [33X[0;0YFor  its  use  in  the  context  of  finding  the next class see [2XPqNextClass[102X
-  ([14X5.4-13[114X);    in    particular,    a    call   to   [10XPqSetupTablesForNextClass[110X
-  (see [2XPqSetupTablesForNextClass[102X  ([14X5.4-18[114X))  needs  to have been made prior to
+  ([14X5.6-4[114X);    in    particular,    a    call    to   [10XPqSetupTablesForNextClass[110X
+  (see [2XPqSetupTablesForNextClass[102X  ([14X5.7-4[114X))  needs  to  have been made prior to
   calling [10XPqTails[110X.[133X
   
   [33X[0;0YThe single command: [10XPqTails([3Xi[103X[10X, [3Xweight[103X[10X);[110X is equivalent to[133X
@@ -1007,7 +1010,7 @@
   [33X[0;0YFor  those  familiar  with  the  [10Xpq[110X program, [10XPqTails[110X uses menu item 7 of the
   Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-20 PqComputeTails[101X
+  [1X5.7-6 PqComputeTails[101X
   
   [29X[2XPqComputeTails[102X( [3Xi[103X, [3Xweight[103X ) [32X function
   [29X[2XPqComputeTails[102X( [3Xweight[103X ) [32X function
@@ -1015,28 +1018,28 @@
   [33X[0;0Yfor  the  [3Xi[103Xth or default interactive [5XANUPQ[105X process, direct the [10Xpq[110X program to
   compute  tails  of  weight  [3Xweight[103X  if  [3Xweight[103X is in the integer range [10X[2 ..
   PqPClass([3Xi[103X[10X)][110X  (assuming  [3Xi[103X is the number of the process, even in the default
-  case)  or  for all weights if [10X[3Xweight[103X[10X = 0[110X. See [10XPqTails[110X ([2XPqTails[102X ([14X5.4-19[114X)) for
+  case)  or  for  all weights if [10X[3Xweight[103X[10X = 0[110X. See [10XPqTails[110X ([2XPqTails[102X ([14X5.7-5[114X)) for
   more details.[133X
   
   [33X[0;0Y[13XNote:[113X  For those familiar with the [10Xpq[110X program, [10XPqComputeTails[110X uses menu item
   7 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-21 PqAddTails[101X
+  [1X5.7-7 PqAddTails[101X
   
   [29X[2XPqAddTails[102X( [3Xi[103X, [3Xweight[103X ) [32X function
   [29X[2XPqAddTails[102X( [3Xweight[103X ) [32X function
   
   [33X[0;0Yfor  the  [3Xi[103Xth or default interactive [5XANUPQ[105X process, direct the [10Xpq[110X program to
   add  the  tails  of  weight  [3Xweight[103X,  previously  computed by [10XPqComputeTails[110X
-  (see [2XPqComputeTails[102X  ([14X5.4-20[114X)),  if  [3Xweight[103X  is  in  the integer range [10X[2 ..
+  (see [2XPqComputeTails[102X  ([14X5.7-6[114X)),  if  [3Xweight[103X  is  in  the  integer range [10X[2 ..
   PqPClass([3Xi[103X[10X)][110X  (assuming  [3Xi[103X is the number of the process, even in the default
-  case)  or  for all weights if [10X[3Xweight[103X[10X = 0[110X. See [10XPqTails[110X ([2XPqTails[102X ([14X5.4-19[114X)) for
+  case)  or  for  all weights if [10X[3Xweight[103X[10X = 0[110X. See [10XPqTails[110X ([2XPqTails[102X ([14X5.7-5[114X)) for
   more details.[133X
   
   [33X[0;0Y[13XNote:[113X For those familiar with the [10Xpq[110X program, [10XPqAddTails[110X uses menu item 7 of
   the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-22 PqDoConsistencyChecks[101X
+  [1X5.7-8 PqDoConsistencyChecks[101X
   
   [29X[2XPqDoConsistencyChecks[102X( [3Xi[103X, [3Xweight[103X, [3Xtype[103X ) [32X function
   [29X[2XPqDoConsistencyChecks[102X( [3Xweight[103X, [3Xtype[103X ) [32X function
@@ -1046,12 +1049,12 @@
   [3Xi[103X  is  the  number of the process) or for all weights if [10X[3Xweight[103X[10X = 0[110X, and for
   type  [3Xtype[103X if [3Xtype[103X is in the range [10X[1, 2, 3][110X (see below) or for all types if
   [10X[3Xtype[103X[10X  =  0[110X.  (For  its  use  in  the  context  of finding the next class see
-  [2XPqNextClass[102X ([14X5.4-13[114X).)[133X
+  [2XPqNextClass[102X ([14X5.6-4[114X).)[133X
   
   [33X[0;0YThe    [13Xtype[113X    of    a    consistency   check   is   defined   as   follows.
   [10XPqDoConsistencyChecks([3Xi[103X[10X,  [3Xweight[103X[10X, [3Xtype[103X[10X)[110X for [3Xweight[103X in [10X[3 .. PqPClass([3Xi[103X[10X)][110X and
   the   given   value   of  [3Xtype[103X  invokes  the  equivalent  of  the  following
-  [10XPqDoConsistencyCheck[110X calls (see [2XPqDoConsistencyCheck[102X ([14X5.4-31[114X)):[133X
+  [10XPqDoConsistencyCheck[110X calls (see [2XPqDoConsistencyCheck[102X ([14X5.7-17[114X)):[133X
   
   [8X[10X[3Xtype[103X[10X = 1[110X:[108X
         [33X[0;6Y[10XPqDoConsistencyCheck([3Xi[103X[10X,  [3Xa[103X[10X,  [3Xa[103X[10X,  [3Xa[103X[10X)[110X  checks  [10X2  * PqWeight([3Xi[103X[10X, [3Xa[103X[10X) + 1 =
@@ -1070,15 +1073,15 @@
   [33X[0;0Y[13XNotes[113X[133X
   
   [33X[0;0Y[10XPqWeight([3Xi[103X[10X,  [3Xj[103X[10X)[110X  returns  the  weight of the [3Xj[103Xth pc generator, for process [3Xi[103X
-  (see [2XPqWeight[102X ([14X5.4-5[114X)).[133X
+  (see [2XPqWeight[102X ([14X5.5-5[114X)).[133X
   
   [33X[0;0YIt is assumed that tails for the given weight (or weights) have already been
-  added (see [2XPqTails[102X ([14X5.4-19[114X)).[133X
+  added (see [2XPqTails[102X ([14X5.7-5[114X)).[133X
   
   [33X[0;0YFor  those familiar with the [10Xpq[110X program, [10XPqDoConsistencyChecks[110X performs menu
   item 8 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-23 PqCollectDefiningRelations[101X
+  [1X5.7-9 PqCollectDefiningRelations[101X
   
   [29X[2XPqCollectDefiningRelations[102X( [3Xi[103X ) [32X function
   [29X[2XPqCollectDefiningRelations[102X(  ) [32X function
@@ -1086,13 +1089,13 @@
   [33X[0;0Yfor  the  [3Xi[103Xth or default interactive [5XANUPQ[105X process, direct the [10Xpq[110X program to
   collect the images of the defining relations of the original fp group of the
   process,  with  respect  to  the  current pc presentation, in the context of
-  finding the next class (see [2XPqNextClass[102X ([14X5.4-13[114X)). If the tails operation is
+  finding  the next class (see [2XPqNextClass[102X ([14X5.6-4[114X)). If the tails operation is
   not complete then the relations may be evaluated incorrectly.[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with the [10Xpq[110X program, [10XPqCollectDefiningRelations[110X
   performs menu item 9 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-24 PqCollectWordInDefiningGenerators[101X
+  [1X5.7-10 PqCollectWordInDefiningGenerators[101X
   
   [29X[2XPqCollectWordInDefiningGenerators[102X( [3Xi[103X, [3Xword[103X ) [32X function
   [29X[2XPqCollectWordInDefiningGenerators[102X( [3Xword[103X ) [32X function
@@ -1105,12 +1108,12 @@
   of generator number, exponent pairs.[133X
   
   [33X[0;0YThe  [3Xword[103X  argument  may  be  input  in either of the two ways described for
-  [10XPqCollect[110X (see [2XPqCollect[102X ([14X5.4-15[114X)).[133X
+  [10XPqCollect[110X (see [2XPqCollect[102X ([14X5.7-1[114X)).[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar with the [10Xpq[110X program, [10XPqCollectDefiningGenerators[110X
   performs menu item 23 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-25 PqCommutatorDefiningGenerators[101X
+  [1X5.7-11 PqCommutatorDefiningGenerators[101X
   
   [29X[2XPqCommutatorDefiningGenerators[102X( [3Xi[103X, [3Xwords[103X, [3Xpow[103X ) [32X function
   [29X[2XPqCommutatorDefiningGenerators[102X( [3Xwords[103X, [3Xpow[103X ) [32X function
@@ -1126,7 +1129,7 @@
   [33X[0;0Y[13XNote[113X  For those familiar with the [10Xpq[110X program, [10XPqCommutatorDefiningGenerators[110X
   performs menu item 24 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-26 PqDoExponentChecks[101X
+  [1X5.7-12 PqDoExponentChecks[101X
   
   [29X[2XPqDoExponentChecks[102X( [3Xi:[103X [[3XBounds[103X [3X:=[103X [3Xlist[103X] ) [32X function
   [29X[2XPqDoExponentChecks[102X( [3X:[103X [[3XBounds[103X [3X:=[103X [3Xlist[103X] ) [32X function
@@ -1135,13 +1138,13 @@
   do exponent checks for weights (inclusively) between the bounds of [10XBounds[110X or
   for  all  weights if [10XBounds[110X is not given. The value [3Xlist[103X of [10XBounds[110X (assuming
   the interactive process is numbered [3Xi[103X) should be a list of two integers [3Xlow[103X,
-  [3Xhigh[103X  satisfying  [22X1 le [3Xlow[103X le [3Xhigh[103X le[122X [10XPqPClass([3Xi[103X[10X)[110X (see [2XPqPClass[102X ([14X5.4-4[114X)). If
+  [3Xhigh[103X  satisfying  [22X1 le [3Xlow[103X le [3Xhigh[103X le[122X [10XPqPClass([3Xi[103X[10X)[110X (see [2XPqPClass[102X ([14X5.5-4[114X)). If
   no exponent law has been specified, no exponent checks are performed.[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar with the [10Xpq[110X program, [10XPqDoExponentChecks[110X performs
   menu item 10 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-27 PqEliminateRedundantGenerators[101X
+  [1X5.7-13 PqEliminateRedundantGenerators[101X
   
   [29X[2XPqEliminateRedundantGenerators[102X( [3Xi[103X ) [32X function
   [29X[2XPqEliminateRedundantGenerators[102X(  ) [32X function
@@ -1152,7 +1155,7 @@
   [33X[0;0Y[13XNote:[113X For those familiar with the [10Xpq[110X program, [10XPqEliminateRedundantGenerators[110X
   performs menu item 11 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-28 PqRevertToPreviousClass[101X
+  [1X5.7-14 PqRevertToPreviousClass[101X
   
   [29X[2XPqRevertToPreviousClass[102X( [3Xi[103X ) [32X function
   [29X[2XPqRevertToPreviousClass[102X(  ) [32X function
@@ -1163,7 +1166,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X  program, [10XPqRevertToPreviousClass[110X
   performs menu item 12 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-29 PqSetMaximalOccurrences[101X
+  [1X5.7-15 PqSetMaximalOccurrences[101X
   
   [29X[2XPqSetMaximalOccurrences[102X( [3Xi[103X, [3Xnoccur[103X ) [32X function
   [29X[2XPqSetMaximalOccurrences[102X( [3Xnoccur[103X ) [32X function
@@ -1183,7 +1186,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X  program, [10XPqSetMaximalOccurrences[110X
   performs menu item 13 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-30 PqSetMetabelian[101X
+  [1X5.7-16 PqSetMetabelian[101X
   
   [29X[2XPqSetMetabelian[102X( [3Xi[103X ) [32X function
   [29X[2XPqSetMetabelian[102X(  ) [32X function
@@ -1194,7 +1197,7 @@
   [33X[0;0Y[13XNote:[113X  For those familiar with the [10Xpq[110X program, [10XPqSetMetabelian[110X performs menu
   item 14 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-31 PqDoConsistencyCheck[101X
+  [1X5.7-17 PqDoConsistencyCheck[101X
   
   [29X[2XPqDoConsistencyCheck[102X( [3Xi[103X, [3Xc[103X, [3Xb[103X, [3Xa[103X ) [32X function
   [29X[2XPqDoConsistencyCheck[102X( [3Xc[103X, [3Xb[103X, [3Xa[103X ) [32X function
@@ -1239,12 +1242,12 @@
   
   [33X[0;0Ywhich is the Jacobi identity.[133X
   
-  [33X[0;0YSee also [10XPqDoConsistencyChecks[110X ([2XPqDoConsistencyChecks[102X ([14X5.4-22[114X)).[133X
+  [33X[0;0YSee also [10XPqDoConsistencyChecks[110X ([2XPqDoConsistencyChecks[102X ([14X5.7-8[114X)).[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X program, [10XPqDoConsistencyCheck[110X and
   [10XPqJacobi[110X perform menu item 15 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-32 PqCompact[101X
+  [1X5.7-18 PqCompact[101X
   
   [29X[2XPqCompact[102X( [3Xi[103X ) [32X function
   [29X[2XPqCompact[102X(  ) [32X function
@@ -1256,7 +1259,7 @@
   [33X[0;0Y[13XNote:[113X  For  those familiar with the [10Xpq[110X program, [10XPqCompact[110X performs menu item
   16 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-33 PqEchelonise[101X
+  [1X5.7-19 PqEchelonise[101X
   
   [29X[2XPqEchelonise[102X( [3Xi[103X ) [32X function
   [29X[2XPqEchelonise[102X(  ) [32X function
@@ -1265,14 +1268,14 @@
   echelonise  the  word  most  recently collected by [10XPqCollect[110X or [10XPqCommutator[110X
   against  the relations of the current pc presentation, and return the number
   of  the generator made redundant or [9Xfail[109X if no generator was made redundant.
-  A    call    to   [10XPqCollect[110X   (see [2XPqCollect[102X   ([14X5.4-15[114X))   or   [10XPqCommutator[110X
-  (see [2XPqCommutator[102X  ([14X5.4-17[114X))  needs  to  be  performed  prior  to using this
+  A    call    to    [10XPqCollect[110X   (see [2XPqCollect[102X   ([14X5.7-1[114X))   or   [10XPqCommutator[110X
+  (see [2XPqCommutator[102X  ([14X5.7-3[114X))  needs  to  be  performed  prior  to  using this
   command.[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with the [10Xpq[110X program, [10XPqEchelonise[110X performs menu
   item 17 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-34 PqSupplyAutomorphisms[101X
+  [1X5.7-20 PqSupplyAutomorphisms[101X
   
   [29X[2XPqSupplyAutomorphisms[102X( [3Xi[103X, [3Xmlist[103X ) [32X function
   [29X[2XPqSupplyAutomorphisms[102X( [3Xmlist[103X ) [32X function
@@ -1290,7 +1293,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with the [10Xpq[110X program, [10XPqSupplyAutomorphisms[110X uses
   menu item 18 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-35 PqExtendAutomorphisms[101X
+  [1X5.7-21 PqExtendAutomorphisms[101X
   
   [29X[2XPqExtendAutomorphisms[102X( [3Xi[103X ) [32X function
   [29X[2XPqExtendAutomorphisms[102X(  ) [32X function
@@ -1302,7 +1305,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with the [10Xpq[110X program, [10XPqExtendAutomorphisms[110X uses
   menu item 18 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-36 PqApplyAutomorphisms[101X
+  [1X5.7-22 PqApplyAutomorphisms[101X
   
   [29X[2XPqApplyAutomorphisms[102X( [3Xi[103X, [3Xqfac[103X ) [32X function
   [29X[2XPqApplyAutomorphisms[102X( [3Xqfac[103X ) [32X function
@@ -1313,7 +1316,7 @@
   [33X[0;0Y[13XNote:[113X For those familiar with the [10Xpq[110X program, [10XPqCloseRelations[110X performs menu
   item 19 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-37 PqDisplayStructure[101X
+  [1X5.7-23 PqDisplayStructure[101X
   
   [29X[2XPqDisplayStructure[102X( [3Xi:[103X [[3XBounds[103X [3X:=[103X [3Xlist[103X] ) [32X function
   [29X[2XPqDisplayStructure[102X( [3X:[103X [[3XBounds[103X [3X:=[103X [3Xlist[103X] ) [32X function
@@ -1323,7 +1326,7 @@
   the bounds of [10XBounds[110X or for all generators if [10XBounds[110X is not given. The value
   [3Xlist[103X  of [10XBounds[110X (assuming the interactive process is numbered [3Xi[103X) should be a
   list   of   two   integers  [3Xlow[103X,  [3Xhigh[103X  satisfying  [22X1  le  [3Xlow[103X  le  [3Xhigh[103X  le[122X
-  [10XPqNrPcGenerators([3Xi[103X[10X)[110X  (see [2XPqNrPcGenerators[102X ([14X5.4-1[114X)). [10XPqDisplayStructure[110X also
+  [10XPqNrPcGenerators([3Xi[103X[10X)[110X  (see [2XPqNrPcGenerators[102X ([14X5.5-1[114X)). [10XPqDisplayStructure[110X also
   accepts the option [10XOutputLevel[110X (see [14X6.2[114X).[133X
   
   [33X[0;0Y[13XExplanation of output[113X[133X
@@ -1375,7 +1378,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar with the [10Xpq[110X program, [10XPqDisplayStructure[110X performs
   menu item 20 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-38 PqDisplayAutomorphisms[101X
+  [1X5.7-24 PqDisplayAutomorphisms[101X
   
   [29X[2XPqDisplayAutomorphisms[102X( [3Xi:[103X [[3XBounds[103X [3X:=[103X [3Xlist[103X] ) [32X function
   [29X[2XPqDisplayAutomorphisms[102X( [3X:[103X [[3XBounds[103X [3X:=[103X [3Xlist[103X] ) [32X function
@@ -1385,13 +1388,13 @@
   (inclusively)  between  the bounds of [10XBounds[110X or for all generators if [10XBounds[110X
   is  not given. The value [3Xlist[103X of [10XBounds[110X (assuming the interactive process is
   numbered  [3Xi[103X)  should be a list of two integers [3Xlow[103X, [3Xhigh[103X satisfying [22X1 le [3Xlow[103X
-  le    [3Xhigh[103X    le[122X    [10XPqNrPcGenerators([3Xi[103X[10X)[110X    (see [2XPqNrPcGenerators[102X   ([14X5.4-1[114X)).
+  le    [3Xhigh[103X    le[122X    [10XPqNrPcGenerators([3Xi[103X[10X)[110X    (see [2XPqNrPcGenerators[102X   ([14X5.5-1[114X)).
   [10XPqDisplayStructure[110X also accepts the option [10XOutputLevel[110X (see [14X6.2[114X).[133X
   
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X  program,  [10XPqDisplayAutomorphisms[110X
   performs menu item 21 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [1X5.4-39 PqWritePcPresentation[101X
+  [1X5.7-25 PqWritePcPresentation[101X
   
   [29X[2XPqWritePcPresentation[102X( [3Xi[103X, [3Xfilename[103X ) [32X function
   [29X[2XPqWritePcPresentation[102X( [3Xfilename[103X ) [32X function
@@ -1405,14 +1408,15 @@
   the  path  of  a  writable  file  relative to the directory in which [5XGAP[105X was
   started.  If  a  pc  presentation has not been previously computed by the [10Xpq[110X
   program,  then  [10Xpq[110X  is  called  to  compute  it  first, effectively invoking
-  [10XPqPcPresentation[110X (see [2XPqPcPresentation[102X ([14X5.4-10[114X)).[133X
+  [10XPqPcPresentation[110X (see [2XPqPcPresentation[102X ([14X5.6-1[114X)).[133X
   
   [33X[0;0Y[13XNote:[113X For those familiar with the [10Xpq[110X program, [10XPqPcWritePresentation[110X performs
   menu item 25 of the Advanced [22Xp[122X-Quotient menu.[133X
   
-  [33X[0;0Y[13XCommands from the Standard Presentation menu[113X[133X
   
-  [1X5.4-40 PqSPComputePcpAndPCover[101X
+  [1X5.8 [33X[0;0YCommands from the Standard Presentation menu[133X[101X
+  
+  [1X5.8-1 PqSPComputePcpAndPCover[101X
   
   [29X[2XPqSPComputePcpAndPCover[102X( [3Xi:[103X [3Xoptions[103X ) [32X function
   [29X[2XPqSPComputePcpAndPCover[102X( [3X:[103X [3Xoptions[103X ) [32X function
@@ -1434,7 +1438,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X  program, [10XPqSPComputePcpAndPCover[110X
   performs option 1 of the Standard Presentation menu.[133X
   
-  [1X5.4-41 PqSPStandardPresentation[101X
+  [1X5.8-2 PqSPStandardPresentation[101X
   
   [29X[2XPqSPStandardPresentation[102X( [3Xi[103X[, [3Xmlist[103X][3X:[103X [[3Xoptions[103X] ) [32X function
   [29X[2XPqSPStandardPresentation[102X( [[3Xmlist[103X][3X:[103X [[3Xoptions[103X] ) [32X function
@@ -1468,7 +1472,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar with the [10Xpq[110X program, [10XPqSPPcPresentation[110X performs
   menu item 2 of the Standard Presentation menu.[133X
   
-  [1X5.4-42 PqSPSavePresentation[101X
+  [1X5.8-3 PqSPSavePresentation[101X
   
   [29X[2XPqSPSavePresentation[102X( [3Xi[103X, [3Xfilename[103X ) [32X function
   [29X[2XPqSPSavePresentation[102X( [3Xfilename[103X ) [32X function
@@ -1484,7 +1488,7 @@
   [33X[0;0Y[13XNote:[113X  For those familiar with the [10Xpq[110X program, [10XPqSPSavePresentation[110X performs
   menu item 3 of the Standard Presentation menu.[133X
   
-  [1X5.4-43 PqSPCompareTwoFilePresentations[101X
+  [1X5.8-4 PqSPCompareTwoFilePresentations[101X
   
   [29X[2XPqSPCompareTwoFilePresentations[102X( [3Xi[103X, [3Xf1[103X, [3Xf2[103X ) [32X function
   [29X[2XPqSPCompareTwoFilePresentations[102X( [3Xf1[103X, [3Xf2[103X ) [32X function
@@ -1500,14 +1504,14 @@
   [33X[0;0YThe  presentations  in  files  [3Xf1[103X  and [3Xf2[103X must have been generated by the [10Xpq[110X
   program  but  they  do  [13Xnot[113X  need  to  be  [13Xstandard[113X presentations. If If the
   presentations    in    files    [3Xf1[103X   and   [3Xf2[103X   [13Xhave[113X   been   generated   by
-  [10XPqSPStandardPresentation[110X   (see [2XPqSPStandardPresentation[102X  ([14X5.4-41[114X))  then  a
-  [9Xfalse[109X  response from [10XPqSPCompareTwoFilePresentations[110X says the groups defined
-  by those presentations are [13Xnot[113X isomorphic.[133X
+  [10XPqSPStandardPresentation[110X (see [2XPqSPStandardPresentation[102X ([14X5.8-2[114X)) then a [9Xfalse[109X
+  response  from  [10XPqSPCompareTwoFilePresentations[110X  says  the groups defined by
+  those presentations are [13Xnot[113X isomorphic.[133X
   
   [33X[0;0YFor  those  familiar  with  the  [10Xpq[110X program, [10XPqSPCompareTwoFilePresentations[110X
   performs menu item 6 of the Standard Presentation menu.[133X
   
-  [1X5.4-44 PqSPIsomorphism[101X
+  [1X5.8-5 PqSPIsomorphism[101X
   
   [29X[2XPqSPIsomorphism[102X( [3Xi[103X ) [32X function
   [29X[2XPqSPIsomorphism[102X(  ) [32X function
@@ -1521,13 +1525,14 @@
   [33X[0;0Y[13XNote:[113X  For those familiar with the [10Xpq[110X program, [10XPqSPIsomorphism[110X performs menu
   item 8 of the Standard Presentation menu.[133X
   
-  [33X[0;0Y[13XCommands from the Main [22Xp[122X-Group Generation menu[113X[133X
+  
+  [1X5.9 [33X[0;0YCommands from the Main [22Xp[122X[101X[1X-Group Generation menu[133X[101X
   
   [33X[0;0YNote  that  the  [22Xp[122X-group generation commands can only be applied once the [10Xpq[110X
   program  has  produced a pc presentation of some quotient group of the [21Xgroup
   of the process[121X.[133X
   
-  [1X5.4-45 PqPGSupplyAutomorphisms[101X
+  [1X5.9-1 PqPGSupplyAutomorphisms[101X
   
   [29X[2XPqPGSupplyAutomorphisms[102X( [3Xi[103X[, [3Xmlist[103X][3X:[103X [3Xoptions[103X ) [32X function
   [29X[2XPqPGSupplyAutomorphisms[102X( [[3Xmlist[103X][3X:[103X [3Xoptions[103X ) [32X function
@@ -1535,7 +1540,7 @@
   [33X[0;0Yfor the [3Xi[103Xth or default interactive [5XANUPQ[105X process, supply the [10Xpq[110X program with
   the  automorphism group data needed for the current quotient of the group of
   that  process  (for process [3Xi[103X the group is stored as [10XANUPQData.io[[3Xi[103X[10X].group[110X).
-  For a description of the format of [3Xmlist[103X see [2XPqSupplyAutomorphisms[102X ([14X5.4-34[114X).
+  For a description of the format of [3Xmlist[103X see [2XPqSupplyAutomorphisms[102X ([14X5.7-20[114X).
   The  options  possible  are [10XNumberOfSolubleAutomorphisms[110X and [10XRelativeOrders[110X.
   (Detailed  descriptions  of  these  options  may  be found in Chapter [14X'[33X[0;0YANUPQ
   Options[133X'[114X.)[133X
@@ -1546,7 +1551,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X  program, [10XPqPGSupplyAutomorphisms[110X
   performs menu item 1 of the main [22Xp[122X-Group Generation menu.[133X
   
-  [1X5.4-46 PqPGExtendAutomorphisms[101X
+  [1X5.9-2 PqPGExtendAutomorphisms[101X
   
   [29X[2XPqPGExtendAutomorphisms[102X( [3Xi[103X ) [32X function
   [29X[2XPqPGExtendAutomorphisms[102X(  ) [32X function
@@ -1560,7 +1565,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X  program, [10XPqPGExtendAutomorphisms[110X
   performs menu item 2 of the main or advanced [22Xp[122X-Group Generation menu.[133X
   
-  [1X5.4-47 PqPGConstructDescendants[101X
+  [1X5.9-3 PqPGConstructDescendants[101X
   
   [29X[2XPqPGConstructDescendants[102X( [3Xi:[103X [3Xoptions[103X ) [32X function
   [29X[2XPqPGConstructDescendants[102X( [3X:[103X [3Xoptions[103X ) [32X function
@@ -1581,7 +1586,7 @@
   [33X[0;0Y[13XNote:[113X  For  those  familiar  with  the  [10Xpq[110X program, [10XPqPGConstructDescendants[110X
   performs menu item 5 of the main [22Xp[122X-Group Generation menu.[133X
   
-  [1X5.4-48 PqPGSetDescendantToPcp[101X
+  [1X5.9-4 PqPGSetDescendantToPcp[101X
   
   [29X[2XPqPGSetDescendantToPcp[102X( [3Xi[103X, [3Xcls[103X, [3Xn[103X ) [32X function
   [29X[2XPqPGSetDescendantToPcp[102X( [3Xcls[103X, [3Xn[103X ) [32X function
@@ -1597,7 +1602,7 @@
   positive  integers,  or the group stored in [3Xname[103X. [10XPqPGSetDescendantToPcp[110X and
   [10XPqPGRestoreDescendantFromFile[110X  are  synonyms;  they  make sense only after a
   prior   call   to  construct  descendants  by  say  [10XPqPGConstructDescendants[110X
-  (see [2XPqPGConstructDescendants[102X  ([14X5.4-47[114X))  or  the  interactive [10XPqDescendants[110X
+  (see [2XPqPGConstructDescendants[102X  ([14X5.9-3[114X))  or  the  interactive  [10XPqDescendants[110X
   (see [2XPqDescendants[102X  ([14X5.3-6[114X)).  In  the  [10XFilename[110X  option  forms,  the option
   defaults  to  the last filename in which a presentation was stored by the [10Xpq[110X
   program.[133X
@@ -1614,19 +1619,20 @@
   [10XPqPGRestoreDescendantFromFile[110X  perform  menu  item 3 of the main or advanced
   [22Xp[122X-Group Generation menu.[133X
   
-  [33X[0;0Y[13XCommands from the Advanced [22Xp[122X-Group Generation menu[113X[133X
+  
+  [1X5.10 [33X[0;0YCommands from the Advanced [22Xp[122X[101X[1X-Group Generation menu[133X[101X
   
   [33X[0;0YThe    functions    below    perform    the    component    algorithms    of
-  [10XPqPGConstructDescendants[110X  (see [2XPqPGConstructDescendants[102X  ([14X5.4-47[114X)).  You can
-  get some idea of their usage by trying [10XPqExample("Nott-APG-Rel-i");[110X. You can
-  get  some  idea  of  the  breakdown  of  [10XPqPGConstructDescendants[110X into these
-  functions by comparing the previous output with [10XPqExample("Nott-PG-Rel-i");[110X.[133X
+  [10XPqPGConstructDescendants[110X (see [2XPqPGConstructDescendants[102X ([14X5.9-3[114X)). You can get
+  some idea of their usage by trying [10XPqExample("Nott-APG-Rel-i");[110X. You can get
+  some  idea of the breakdown of [10XPqPGConstructDescendants[110X into these functions
+  by comparing the previous output with [10XPqExample("Nott-PG-Rel-i");[110X.[133X
   
   [33X[0;0YThese  functions  are  intended  for use only by [21Xexperts[121X; please contact the
   authors  of  the  package if you genuinely have a need for them and need any
   amplified descriptions.[133X
   
-  [1X5.4-49 PqAPGDegree[101X
+  [1X5.10-1 PqAPGDegree[101X
   
   [29X[2XPqAPGDegree[102X( [3Xi[103X, [3Xstep[103X, [3Xrank:[103X [[3XExponent[103X [3X:=[103X [3Xn[103X] ) [32X function
   [29X[2XPqAPGDegree[102X( [3Xstep[103X, [3Xrank:[103X [[3XExponent[103X [3X:=[103X [3Xn[103X] ) [32X function
@@ -1636,7 +1642,7 @@
   step-size [3Xstep[103X and the rank [3Xrank[103X are positive integers and are the arguments
   required by the [10Xpq[110X program. See [14X6.2[114X for the one recognised option [10XExponent[110X.[133X
   
-  [1X5.4-50 PqAPGPermutations[101X
+  [1X5.10-2 PqAPGPermutations[101X
   
   [29X[2XPqAPGPermutations[102X( [3Xi:[103X [3Xoptions[103X ) [32X function
   [29X[2XPqAPGPermutations[102X( [3X:[103X [3Xoptions[103X ) [32X function
@@ -1647,7 +1653,7 @@
   [10XPrintAutomorphisms[110X  and  [10XPrintPermutations[110X  (see Chapter [14X'[33X[0;0YANUPQ Options[133X'[114X for
   details).[133X
   
-  [1X5.4-51 PqAPGOrbits[101X
+  [1X5.10-3 PqAPGOrbits[101X
   
   [29X[2XPqAPGOrbits[102X( [3Xi:[103X [3Xoptions[103X ) [32X function
   [29X[2XPqAPGOrbits[102X( [3X:[103X [3Xoptions[103X ) [32X function
@@ -1660,7 +1666,7 @@
   [10XCustomiseOutput[110X  option  only  the  setting  of the [10Xorbit[110X is recognised (all
   other fields if set are ignored).[133X
   
-  [1X5.4-52 PqAPGOrbitRepresentatives[101X
+  [1X5.10-4 PqAPGOrbitRepresentatives[101X
   
   [29X[2XPqAPGOrbitRepresentatives[102X( [3Xi:[103X [3Xoptions[103X ) [32X function
   [29X[2XPqAPGOrbitRepresentatives[102X( [3X:[103X [3Xoptions[103X ) [32X function
@@ -1676,7 +1682,7 @@
   [10X"redPCover"[110X   in   the   temporary   directory   whose  name  is  stored  in
   [10XANUPQData.tmpdir[110X.[133X
   
-  [1X5.4-53 PqAPGSingleStage[101X
+  [1X5.10-5 PqAPGSingleStage[101X
   
   [29X[2XPqAPGSingleStage[102X( [3Xi:[103X [3Xoptions[103X ) [32X function
   [29X[2XPqAPGSingleStage[102X( [3X:[103X [3Xoptions[103X ) [32X function
@@ -1691,14 +1697,14 @@
   Options[133X'[114X.)[133X
   
   
-  [1X5.5 [33X[0;0YPrimitive Interactive ANUPQ Process Read/Write Functions[133X[101X
+  [1X5.11 [33X[0;0YPrimitive Interactive ANUPQ Process Read/Write Functions[133X[101X
   
   [33X[0;0YFor  those  familiar  with  using  the [10Xpq[110X program as a standalone we provide
   primitive read/write tools to communicate directly with an interactive [5XANUPQ[105X
   process,  started  via  [10XPqStart[110X.  For the most part, it is up to the user to
   translate the output strings from [10Xpq[110X program into a form useful in [5XGAP[105X.[133X
   
-  [1X5.5-1 PqRead[101X
+  [1X5.11-1 PqRead[101X
   
   [29X[2XPqRead[102X( [3Xi[103X ) [32X function
   [29X[2XPqRead[102X(  ) [32X function
@@ -1713,7 +1719,7 @@
   level  2.  It  doesn't  try to distinguish banner and menu output from other
   output of the [10Xpq[110X program.[133X
   
-  [1X5.5-2 PqReadAll[101X
+  [1X5.11-2 PqReadAll[101X
   
   [29X[2XPqReadAll[102X( [3Xi[103X ) [32X function
   [29X[2XPqReadAll[102X(  ) [32X function
@@ -1727,7 +1733,7 @@
   partial   line,  it  waits  for  the  complete  line,  thus  increasing  the
   probability that it has captured all the output to be had from [5XANUPQ[105X.[133X
   
-  [1X5.5-3 PqReadUntil[101X
+  [1X5.11-3 PqReadUntil[101X
   
   [29X[2XPqReadUntil[102X( [3Xi[103X, [3XIsMyLine[103X ) [32X function
   [29X[2XPqReadUntil[102X( [3XIsMyLine[103X ) [32X function
@@ -1752,7 +1758,7 @@
   [33X[0;0YIf   [10X[3XIsMyLine[103X[10X(   [3XModify[103X[10X([3Xline[103X[10X)   )[110X  is  never  true,  [10XPqReadUntil[110X  will  wait
   indefinitely.[133X
   
-  [1X5.5-4 PqWrite[101X
+  [1X5.11-4 PqWrite[101X
   
   [29X[2XPqWrite[102X( [3Xi[103X, [3Xstring[103X ) [32X function
   [29X[2XPqWrite[102X( [3Xstring[103X ) [32X function

@@ -241,6 +241,7 @@
   [8X[10XPcgsAutomorphisms[110X
   [108X
   [8X[10XPcgsAutomorphisms := false[110X
+  
   [108X
         [33X[0;6YLet [3XG[103X be the group associated with the calling function (or associated
         interactive  process).  Passing the option [10XPcgsAutomorphisms[110X without a
@@ -268,6 +269,7 @@
   [8X[10XStepSize := [3Xn[103X[10X[110X
   [108X
   [8X[10XStepSize := [3Xlist[103X[10X[110X
+  
   [108X
         [33X[0;6YFor a positive integer [3Xn[103X, [10XStepSize[110X specifies that only those immediate
         descendants  which  are a factor [22Xp^[3Xn[103X[122X bigger than their parent group be
@@ -329,7 +331,7 @@
   [108X
         [33X[0;6YSpecifies that the number of soluble automorphisms of the automorphism
         group supplied by [10XPqPGSupplyAutomorphisms[110X (see [2XPqPGSupplyAutomorphisms[102X
-        ([14X5.4-45[114X))  in  a [22Xp[122X-group generation calculation is [3Xn[103X. By default, [3Xn[103X is
+        ([14X5.9-1[114X))  in  a  [22Xp[122X-group generation calculation is [3Xn[103X. By default, [3Xn[103X is
         taken  to  be  [22X0[122X;  [3Xn[103X  must be a non-negative integer. If [22X[3Xn[103X ge 0[122X then a
         value for the option [10XRelativeOrders[110X (see [14X6.2[114X) must also be supplied.[133X
   
@@ -337,7 +339,7 @@
   [108X
         [33X[0;6YSpecifies  the  relative  orders  of  each soluble automorphism of the
         automorphism     group     supplied     by     [10XPqPGSupplyAutomorphisms[110X
-        (see [2XPqPGSupplyAutomorphisms[102X   ([14X5.4-45[114X))   in   a  [22Xp[122X-group  generation
+        (see [2XPqPGSupplyAutomorphisms[102X   ([14X5.9-1[114X))   in   a   [22Xp[122X-group  generation
         calculation.  The list [3Xlist[103X must consist of [3Xn[103X positive integers, where
         [3Xn[103X  is  the value of the option [10XNumberOfSolubleAutomorphisms[110X (see [14X6.2[114X).
         By default [3Xlist[103X is empty.[133X
@@ -416,7 +418,7 @@
   [8X[10XQueueFactor := [3Xn[103X[10X[110X
   [108X
         [33X[0;6YSpecifies  a  queue  factor  of [3Xn[103X, where [3Xn[103X must be a positive integer.
-        This option may be used with [10XPqNextClass[110X (see [2XPqNextClass[102X ([14X5.4-13[114X)).[133X
+        This option may be used with [10XPqNextClass[110X (see [2XPqNextClass[102X ([14X5.6-4[114X)).[133X
   
         [33X[0;6YThe  queue  factor  is  used when the [10Xpq[110X program uses automorphisms to
         close a set of elements of the [22Xp[122X-multiplicator under their action.[133X
@@ -444,7 +446,7 @@
   [108X
         [33X[0;6YSpecifies a lower and upper bound on the indices of a list, where [3Xlist[103X
         is  a pair of positive non-decreasing integers. See [2XPqDisplayStructure[102X
-        ([14X5.4-37[114X)  and [2XPqDisplayAutomorphisms[102X ([14X5.4-38[114X) where this option may be
+        ([14X5.7-23[114X)  and [2XPqDisplayAutomorphisms[102X ([14X5.7-24[114X) where this option may be
         used.[133X
   
   [8X[10XPrintAutomorphisms := [3Xlist[103X[10X[110X

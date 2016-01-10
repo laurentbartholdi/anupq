@@ -19,6 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap5.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap7.html">[Next Chapter]</a>&nbsp;  </div>
 
+<p id="mathjaxlink" class="pcenter"><a href="chap6_mj.html">[MathJax on]</a></p>
 <p><a id="X7B0946E97E7EB359" name="X7B0946E97E7EB359"></a></p>
 <div class="ChapSects"><a href="chap6.html#X7B0946E97E7EB359">6 <span class="Heading">ANUPQ Options</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X8389AD927B74BA4A">6.1 <span class="Heading">Overview</span></a>
@@ -145,7 +146,7 @@
 </dd>
 <dt><strong class="Mark"><code class="code">Identities := <var class="Arg">funcs</var></code>
 </strong></dt>
-<dd><p>Specifies that the pc presentation should satisfy the laws defined by each function in the list <var class="Arg">funcs</var>. This option may be called by <code class="code">Pq</code>, <code class="code">PqEpimorphism</code>, or <code class="code">PqPCover</code> (see <code class="func">Pq</code> (<a href="chap4.html#X86DD32D5803CF2C8"><span class="RefLink">4.1-1</span></a>)). Each function in the list <var class="Arg">funcs</var> must return a word in its arguments (there may be any number of arguments). Let <var class="Arg">identity</var> be one such function in <var class="Arg">funcs</var>. Then as each lower exponent <var class="Arg">p</var>-class quotient is formed, instances <span class="SimpleMath"><var class="Arg">identity</var>(<var class="Arg">w1</var>, dots, <var class="Arg">wn</var>)</span> are added as relators to the pc presentation, where <span class="SimpleMath"><var class="Arg">w1</var>, dots, <var class="Arg">wn</var></span> are words in the pc generators of the quotient. At each class the class and number of pc generators is <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 1, the number of instances is <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 2, and the instances that are evaluated are <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 3. As usual timing information is <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 2; and details of the processing of each instance from the <code class="code">pq</code> program (which is often quite <em>voluminous</em>) is <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 3. Try the examples <code class="code">"B2-4-Id"</code> and <code class="code">"11gp-3-Engel-Id"</code> which demonstrate the usage of the <code class="code">Identities</code> option; these are run using <code class="code">PqExample</code> (see <code class="func">PqExample</code> (<a href="chap3.html#X7A9D9AF682156E22"><span class="RefLink">3.4-4</span></a>)). Take note of Note 1. below in relation to the example <code class="code">"B2-4-Id"</code>; the companion example <code class="code">"B2-4"</code> generates the same group using the <code class="code">Exponent</code> option. These examples are discussed at length in Section <a href="chapA.html#X80B2AA7084C57F5D"><span class="RefLink"><span class="Heading">The Identities Option and PqEvaluateIdentities Function</span></span></a>.</p>
+<dd><p>Specifies that the pc presentation should satisfy the laws defined by each function in the list <var class="Arg">funcs</var>. This option may be called by <code class="code">Pq</code>, <code class="code">PqEpimorphism</code>, or <code class="code">PqPCover</code> (see <code class="func">Pq</code> (<a href="chap4.html#X86DD32D5803CF2C8"><span class="RefLink">4.1-1</span></a>)). Each function in the list <var class="Arg">funcs</var> must return a word in its arguments (there may be any number of arguments). Let <var class="Arg">identity</var> be one such function in <var class="Arg">funcs</var>. Then as each lower exponent <var class="Arg">p</var>-class quotient is formed, instances <span class="SimpleMath"><var class="Arg">identity</var>(<var class="Arg">w1</var>, dots, <var class="Arg">wn</var>)</span> are added as relators to the pc presentation, where <span class="SimpleMath"><var class="Arg">w1</var>, dots, <var class="Arg">wn</var></span> are words in the pc generators of the quotient. At each class the class and number of pc generators is <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 1, the number of instances is <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 2, and the instances that are evaluated are <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 3. As usual timing information is <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 2; and details of the processing of each instance from the <code class="code">pq</code> program (which is often quite <em>voluminous</em>) is <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 3. Try the examples <code class="code">"B2-4-Id"</code> and <code class="code">"11gp-3-Engel-Id"</code> which demonstrate the usage of the <code class="code">Identities</code> option; these are run using <code class="code">PqExample</code> (see <code class="func">PqExample</code> (<a href="chap3.html#X7BB0EB607F337265"><span class="RefLink">3.4-4</span></a>)). Take note of Note 1. below in relation to the example <code class="code">"B2-4-Id"</code>; the companion example <code class="code">"B2-4"</code> generates the same group using the <code class="code">Exponent</code> option. These examples are discussed at length in Section <a href="chapA.html#X80B2AA7084C57F5D"><span class="RefLink"><span class="Heading">The Identities Option and PqEvaluateIdentities Function</span></span></a>.</p>
 
 <p><em>Notes</em></p>
 
@@ -180,13 +181,14 @@
 </dd>
 <dt><strong class="Mark"><code class="code">PqWorkspace := <var class="Arg">workspace</var></code>
 </strong></dt>
-<dd><p>Non-interactively, this option sets the memory used by the <code class="code">pq</code> program. It sets the maximum number of integer-sized elements to allocate in its main storage array. By default, the <code class="code">pq</code> program sets this figure to 10000000. Interactively, <code class="code">PqWorkspace</code> is ignored; the memory used in this case may be set by giving <code class="code">PqStart</code> a second argument (see <code class="func">PqStart</code> (<a href="chap5.html#X7DEAC582785B52AB"><span class="RefLink">5.1-1</span></a>)).</p>
+<dd><p>Non-interactively, this option sets the memory used by the <code class="code">pq</code> program. It sets the maximum number of integer-sized elements to allocate in its main storage array. By default, the <code class="code">pq</code> program sets this figure to 10000000. Interactively, <code class="code">PqWorkspace</code> is ignored; the memory used in this case may be set by giving <code class="code">PqStart</code> a second argument (see <code class="func">PqStart</code> (<a href="chap5.html#X83B2EC237F37623C"><span class="RefLink">5.1-1</span></a>)).</p>
 
 </dd>
 <dt><strong class="Mark"><code class="code">PcgsAutomorphisms</code>
 </strong></dt>
 <dd></dd>
 <dt><strong class="Mark"><code class="code">PcgsAutomorphisms := false</code>
+
 </strong></dt>
 <dd><p>Let <var class="Arg">G</var> be the group associated with the calling function (or associated interactive process). Passing the option <code class="code">PcgsAutomorphisms</code> without a value (or equivalently setting it to <code class="keyw">true</code>), specifies that a polycyclic generating sequence for the automorphism group (which must be <em>soluble</em>) of <var class="Arg">G</var>, be computed and passed to the <code class="code">pq</code> program. This increases the efficiency of the computation; it also prevents the <code class="code">pq</code> from calling <strong class="pkg">GAP</strong> for orbit-stabilizer calculations. By default, <code class="code">PcgsAutomorphisms</code> is set to the value returned by <code class="code">IsSolvable( AutomorphismGroup( <var class="Arg">G</var> ) )</code>, and uses the package <strong class="pkg">AutPGrp</strong> to compute <code class="code">AutomorphismGroup( <var class="Arg">G</var> )</code> if it is installed. This flag is set to <code class="keyw">true</code> or <code class="keyw">false</code> in the background according to the above criterion by the function <code class="code">PqDescendants</code> (see <code class="func">PqDescendants</code> (<a href="chap4.html#X80985CC479CD9FA3"><span class="RefLink">4.4-1</span></a>) and <code class="func">PqDescendants</code> (<a href="chap5.html#X795817217C53AB89"><span class="RefLink">5.3-6</span></a>)).</p>
 
@@ -202,6 +204,7 @@
 </strong></dt>
 <dd></dd>
 <dt><strong class="Mark"><code class="code">StepSize := <var class="Arg">list</var></code>
+
 </strong></dt>
 <dd><p>For a positive integer <var class="Arg">n</var>, <code class="code">StepSize</code> specifies that only those immediate descendants which are a factor <span class="SimpleMath">p^<var class="Arg">n</var></span> bigger than their parent group be generated.</p>
 
@@ -240,12 +243,12 @@
 </dd>
 <dt><strong class="Mark"><code class="code">NumberOfSolubleAutomorphisms := <var class="Arg">n</var></code>
 </strong></dt>
-<dd><p>Specifies that the number of soluble automorphisms of the automorphism group supplied by <code class="code">PqPGSupplyAutomorphisms</code> (see <code class="func">PqPGSupplyAutomorphisms</code> (<a href="chap5.html#X794A8D667A9D725A"><span class="RefLink">5.4-45</span></a>)) in a <span class="SimpleMath">p</span>-group generation calculation is <var class="Arg">n</var>. By default, <var class="Arg">n</var> is taken to be <span class="SimpleMath">0</span>; <var class="Arg">n</var> must be a non-negative integer. If <span class="SimpleMath"><var class="Arg">n</var> ge 0</span> then a value for the option <code class="code">RelativeOrders</code> (see <a href="chap6.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a>) must also be supplied.</p>
+<dd><p>Specifies that the number of soluble automorphisms of the automorphism group supplied by <code class="code">PqPGSupplyAutomorphisms</code> (see <code class="func">PqPGSupplyAutomorphisms</code> (<a href="chap5.html#X794A8D667A9D725A"><span class="RefLink">5.9-1</span></a>)) in a <span class="SimpleMath">p</span>-group generation calculation is <var class="Arg">n</var>. By default, <var class="Arg">n</var> is taken to be <span class="SimpleMath">0</span>; <var class="Arg">n</var> must be a non-negative integer. If <span class="SimpleMath"><var class="Arg">n</var> ge 0</span> then a value for the option <code class="code">RelativeOrders</code> (see <a href="chap6.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a>) must also be supplied.</p>
 
 </dd>
 <dt><strong class="Mark"><code class="code">RelativeOrders := <var class="Arg">list</var></code>
 </strong></dt>
-<dd><p>Specifies the relative orders of each soluble automorphism of the automorphism group supplied by <code class="code">PqPGSupplyAutomorphisms</code> (see <code class="func">PqPGSupplyAutomorphisms</code> (<a href="chap5.html#X794A8D667A9D725A"><span class="RefLink">5.4-45</span></a>)) in a <span class="SimpleMath">p</span>-group generation calculation. The list <var class="Arg">list</var> must consist of <var class="Arg">n</var> positive integers, where <var class="Arg">n</var> is the value of the option <code class="code">NumberOfSolubleAutomorphisms</code> (see <a href="chap6.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a>). By default <var class="Arg">list</var> is empty.</p>
+<dd><p>Specifies the relative orders of each soluble automorphism of the automorphism group supplied by <code class="code">PqPGSupplyAutomorphisms</code> (see <code class="func">PqPGSupplyAutomorphisms</code> (<a href="chap5.html#X794A8D667A9D725A"><span class="RefLink">5.9-1</span></a>)) in a <span class="SimpleMath">p</span>-group generation calculation. The list <var class="Arg">list</var> must consist of <var class="Arg">n</var> positive integers, where <var class="Arg">n</var> is the value of the option <code class="code">NumberOfSolubleAutomorphisms</code> (see <a href="chap6.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a>). By default <var class="Arg">list</var> is empty.</p>
 
 </dd>
 <dt><strong class="Mark"><code class="code">BasicAlgorithm</code>
@@ -297,7 +300,7 @@ CustomiseOutput := rec(group := [,,1], autgroup := [,1])
 </dd>
 <dt><strong class="Mark"><code class="code">QueueFactor := <var class="Arg">n</var></code>
 </strong></dt>
-<dd><p>Specifies a queue factor of <var class="Arg">n</var>, where <var class="Arg">n</var> must be a positive integer. This option may be used with <code class="code">PqNextClass</code> (see <code class="func">PqNextClass</code> (<a href="chap5.html#X832F69597C095A27"><span class="RefLink">5.4-13</span></a>)).</p>
+<dd><p>Specifies a queue factor of <var class="Arg">n</var>, where <var class="Arg">n</var> must be a positive integer. This option may be used with <code class="code">PqNextClass</code> (see <code class="func">PqNextClass</code> (<a href="chap5.html#X832F69597C095A27"><span class="RefLink">5.6-4</span></a>)).</p>
 
 <p>The queue factor is used when the <code class="code">pq</code> program uses automorphisms to close a set of elements of the <span class="SimpleMath">p</span>-multiplicator under their action.</p>
 
@@ -310,7 +313,7 @@ CustomiseOutput := rec(group := [,,1], autgroup := [,1])
 </dd>
 <dt><strong class="Mark"><code class="code">Bounds := <var class="Arg">list</var></code>
 </strong></dt>
-<dd><p>Specifies a lower and upper bound on the indices of a list, where <var class="Arg">list</var> is a pair of positive non-decreasing integers. See <code class="func">PqDisplayStructure</code> (<a href="chap5.html#X81A3D5BF87A34934"><span class="RefLink">5.4-37</span></a>) and <code class="func">PqDisplayAutomorphisms</code> (<a href="chap5.html#X853834B478C4EEE2"><span class="RefLink">5.4-38</span></a>) where this option may be used.</p>
+<dd><p>Specifies a lower and upper bound on the indices of a list, where <var class="Arg">list</var> is a pair of positive non-decreasing integers. See <code class="func">PqDisplayStructure</code> (<a href="chap5.html#X81A3D5BF87A34934"><span class="RefLink">5.7-23</span></a>) and <code class="func">PqDisplayAutomorphisms</code> (<a href="chap5.html#X853834B478C4EEE2"><span class="RefLink">5.7-24</span></a>) where this option may be used.</p>
 
 </dd>
 <dt><strong class="Mark"><code class="code">PrintAutomorphisms := <var class="Arg">list</var></code>

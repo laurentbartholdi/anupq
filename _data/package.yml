@@ -1,6 +1,6 @@
 name: ANUPQ
-version: 3.1.2
-date: 07/01/2016
+version: 3.1.3
+date: 10/01/2016
 description: ANU p-Quotient
 
 authors:
@@ -30,12 +30,12 @@ packageinfo: http://gap-packages.github.io/anupq/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/anupq/releases/download/v3.1.2/anupq-3.1.2.tar.gz
+      url: https://github.com/gap-packages/anupq/releases/download/v3.1.3/anupq-3.1.3.tar.gz
     - name: .tar.bz2
-      url: https://github.com/gap-packages/anupq/releases/download/v3.1.2/anupq-3.1.2.tar.bz2
+      url: https://github.com/gap-packages/anupq/releases/download/v3.1.3/anupq-3.1.3.tar.bz2
 
 abstract: The <span class="pkgname">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.
 
 status: accepted
-doc-html: htm/chapters.htm
+doc-html: doc/chap0.html
 doc-pdf: doc/manual.pdf
