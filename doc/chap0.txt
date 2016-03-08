@@ -1,15 +1,15 @@
   
   
-                                    [1X anupq [101X
+                                    [1X ANUPQ [101X
   
   
                                 [1X ANU p-Quotient [101X
   
   
-                                     3.1.3
+                                     3.1.4
   
   
-                                   10/01/2016
+                                   08/03/2016
   
   
                                   Greg Gamble
@@ -60,7 +60,7 @@
   -------------------------------------------------------
   
   
-  [1XContents (anupq)[101X
+  [1XContents (ANUPQ)[101X
   
   1 [33X[0;0YIntroduction[133X
     1.1 [33X[0;0YOverview[133X

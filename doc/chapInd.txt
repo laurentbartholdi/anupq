@@ -5,7 +5,6 @@
   [2XAllANUPQoptions[102X  6.1-1
   allowable subgroup  2.1-4
   [2XAllPqExamples[102X  3.4-5
-  [5Xanupq[105X  .-1
   ANUPQ  1.1
   [10XANUPQ_GAP_EXEC[110X, environment variable  7.
   [10XANUPQ_GAP_EXEC[110X, environment variable  7.1

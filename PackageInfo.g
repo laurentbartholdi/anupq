@@ -9,8 +9,8 @@ SetPackageInfo( rec(
 
 PackageName := "ANUPQ",
 Subtitle    := "ANU p-Quotient",
-Version     := "3.1.3",
-Date        := "10/01/2016",
+Version     := "3.1.4",
+Date        := "08/03/2016",
 
 Persons := [ 
   rec( 
@@ -80,11 +80,16 @@ Status         := "accepted",
 CommunicatedBy := "Charles Wright (Eugene)",
 AcceptDate     := "04/2002",
 
-PackageWWWHome := "http://gap-packages.github.io/anupq/",
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/anupq",
+),
+IssueTrackerURL:= Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome := "https://gap-packages.github.io/anupq/",
 README_URL     := Concatenation(~.PackageWWWHome, "README"),
 PackageInfoURL := Concatenation(~.PackageWWWHome, "PackageInfo.g"),
-ArchiveURL     := Concatenation("https://github.com/gap-packages/anupq/",
-                                "releases/download/v", ~.Version,
+ArchiveURL     := Concatenation(~.SourceRepository.URL,
+                                "/releases/download/v", ~.Version,
                                 "/anupq-", ~.Version),
 ArchiveFormats := ".tar.gz .tar.bz2",
 
