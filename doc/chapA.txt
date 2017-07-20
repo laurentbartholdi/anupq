@@ -680,14 +680,14 @@
   [33X[0;0YThe  following  examples  (executed  via  [10XPqExample[110X; see [2XPqExample[102X ([14X3.4-4[114X)),
   demonstrate the use of [10XPqDescendantsTreeCoclassOne[110X:[133X
   
-  [8X[10X"PqDescendantsTreeCoclassOne-9-i"[110X[108X
+  [8X[10X"PqDescendantsTreeCoclassOne-9-i"[110X[8X[108X
         [33X[0;6Yapproximately  does example [10X"PqDescendants-treetraverse-i"[110X again using
         [10XPqDescendantsTreeCoclassOne[110X;[133X
   
-  [8X[10X"PqDescendantsTreeCoclassOne-16-i"[110X[108X
+  [8X[10X"PqDescendantsTreeCoclassOne-16-i"[110X[8X[108X
         [33X[0;6Yuses the option [10XCapableDescendants[110X; and[133X
   
-  [8X[10X"PqDescendantsTreeCoclassOne-25-i"[110X[108X
+  [8X[10X"PqDescendantsTreeCoclassOne-25-i"[110X[8X[108X
         [33X[0;6Ycalculates all descendants by omitting the [10XCapableDescendants[110X option.[133X
   
   [33X[0;0YThe  numbers [10X9[110X, [10X16[110X and [10X25[110X respectively, indicate the order of the elementary

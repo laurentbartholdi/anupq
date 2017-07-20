@@ -267,11 +267,11 @@
         process  is  already  a  [22Xp[122X-group, in the sense that [10XHasIsPGroup([3XF[103X[10X) and
         IsPGroup([3XF[103X[10X)[110X is [9Xtrue[109X, then[133X
   
-        [8X[10XPrime[110X[108X
+        [8X[10XPrime[110X[8X[108X
               [33X[0;12Ydefaults    to    [10XPrimePGroup([3XF[103X[10X)[110X,    if    not    supplied   and
               [10XHasPrimePGroup([3XF[103X[10X) = true[110X; and[133X
   
-        [8X[10XClassBound[110X[108X
+        [8X[10XClassBound[110X[8X[108X
               [33X[0;12Ydefaults  to [10XPClassPGroup([3XF[103X[10X)[110X if [10XHasPClassPGroup([3XF[103X[10X) = true[110X if not
               supplied, or to the usual default of 63, otherwise.[133X
   
@@ -1056,16 +1056,16 @@
   the   given   value   of  [3Xtype[103X  invokes  the  equivalent  of  the  following
   [10XPqDoConsistencyCheck[110X calls (see [2XPqDoConsistencyCheck[102X ([14X5.7-17[114X)):[133X
   
-  [8X[10X[3Xtype[103X[10X = 1[110X:[108X
+  [8X[10X[3Xtype[103X[8X[10X = 1[110X[8X:[108X
         [33X[0;6Y[10XPqDoConsistencyCheck([3Xi[103X[10X,  [3Xa[103X[10X,  [3Xa[103X[10X,  [3Xa[103X[10X)[110X  checks  [10X2  * PqWeight([3Xi[103X[10X, [3Xa[103X[10X) + 1 =
         [3Xweight[103X[10X[110X, for pc generators of index [3Xa[103X.[133X
   
-  [8X[10X[3Xtype[103X[10X = 2[110X:[108X
+  [8X[10X[3Xtype[103X[8X[10X = 2[110X[8X:[108X
         [33X[0;6Y[10XPqDoConsistencyCheck([3Xi[103X[10X,  [3Xb[103X[10X,  [3Xb[103X[10X, [3Xa[103X[10X)[110X checks for pc generators of indices
         [3Xb[103X,  [3Xa[103X satisfyingx both [10X[3Xb[103X[10X > [3Xa[103X[10X[110X and [10XPqWeight([3Xi[103X[10X, [3Xb[103X[10X) + PqWeight([3Xi[103X[10X, [3Xa[103X[10X) + 1 =
         [3Xweight[103X[10X[110X.[133X
   
-  [8X[10X[3Xtype[103X[10X = 3[110X:[108X
+  [8X[10X[3Xtype[103X[8X[10X = 3[110X[8X:[108X
         [33X[0;6Y[10XPqDoConsistencyCheck([3Xi[103X[10X,  [3Xc[103X[10X,  [3Xb[103X[10X, [3Xa[103X[10X)[110X checks for pc generators of indices
         [3Xc[103X,  [3Xb[103X,  [3Xa[103X  satisfying  [10X[3Xc[103X[10X  >  [3Xb[103X[10X > [3Xa[103X[10X[110X and the sum of the weights of these
         generators equals [3Xweight[103X.[133X
@@ -1211,34 +1211,38 @@
   [33X[0;0YThere are 3 types of consistency checks:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\begin{array}{rclrl} (a^n)a &=& a(a^n) && {\rm (Type\ 1)} \\ (b^n)a
-        &=& b^{(n-1)}(ba), b(a^n) = (ba)a^{(n-1)} && {\rm (Type\ 2)} \\ c(ba)
-        &=& (cb)a && {\rm (Type\ 3)} \\ \end{array}[133X [124X[133X
+  [24X[33X[0;6Y\begin{array}{rclrl}  (a^n)a  &=&  a(a^n)  &&  {\rm (Type\ 1)} \\ (b^n)a &=&
+  b^{(n-1)}(ba),  b(a^n) = (ba)a^{(n-1)} && {\rm (Type\ 2)} \\ c(ba) &=& (cb)a
+  && {\rm (Type\ 3)} \\ \end{array}[133X
   
+  [124X
   
   [33X[0;0YThe  reason  some  people talk about Jacobi relations instead of consistency
   checks becomes clear when one looks at the consistency check of type 3:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\begin{array}{rcl} c(ba) &=& a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] =
-        \dots \\ (cb)a &=& b c[c,b] a = a b[b,a] c[c,a] [c,b][c,b,a] \\ &=&
-        abc [b,a] [b,a,c] [c,a] [c,b] [c,b,a] = \dots \\ \end{array}[133X [124X[133X
+  [24X[33X[0;6Y\begin{array}{rcl} c(ba) &=& a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots
+  \\  (cb)a  &=&  b  c[c,b]  a = a b[b,a] c[c,a] [c,b][c,b,a] \\ &=& abc [b,a]
+  [b,a,c] [c,a] [c,b] [c,b,a] = \dots \\ \end{array}[133X
   
+  [124X
   
   [33X[0;0YEach  collection  would  normally  carry on further. But one can see already
   that  no other commutators of weight 3 will occur. After all terms of weight
   one and weight two have been moved to the left we end up with:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\begin{array}{rcl} & &abc [b,a] [c,a] [c,b] [c,a,b] \dots \\ &=&abc
-        [b,a] [c,a] [c,b] [c,b,a] [b,a,c] \dots \\ \end{array}[133X [124X[133X
+  [24X[33X[0;6Y\begin{array}{rcl}  &  &abc  [b,a] [c,a] [c,b] [c,a,b] \dots \\ &=&abc [b,a]
+  [c,a] [c,b] [c,b,a] [b,a,c] \dots \\ \end{array}[133X
   
+  [124X
   
   [33X[0;0YModulo terms of weight 4 this is equivalent to[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y[c,a,b] [b,c,a] [a,b,c] = 1[133X [124X[133X
+  [24X[33X[0;6Y[c,a,b] [b,c,a] [a,b,c] = 1[133X
   
+  [124X
   
   [33X[0;0Ywhich is the Jacobi identity.[133X
   
@@ -1370,8 +1374,9 @@
         and generator 1. The left-normed commutator is[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y[(x1^{11})^{11}, x2, x1, x1][133X [124X[133X
+  [24X      [33X[0;6Y[(x1^{11})^{11}, x2, x1, x1][133X
   
+  [124X
   
         [33X[0;6YAgain, this can be verified by tracing back the definitions.[133X
   

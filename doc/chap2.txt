@@ -24,9 +24,10 @@
   [33X[0;0YEvery finite [22Xp[122X-group [22XG[122X has a presentation of the form:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\{a_1,\dots,a_n \mid a_i^p = v_{ii}, 1 \le i \le n, [a_k, a_j] =
-        v_{jk}, 1 \le j < k \le n \}.[133X [124X[133X
+  [24X[33X[0;6Y\{a_1,\dots,a_n  \mid  a_i^p = v_{ii}, 1 \le i \le n, [a_k, a_j] = v_{jk}, 1
+  \le j < k \le n \}.[133X
   
+  [124X
   
   [33X[0;0Ywhere [22Xv_jk[122X is a word in the elements [22Xa_k+1,dots,a_n[122X for [22X1 le j ≤ k le n[122X.[133X
   
@@ -37,7 +38,7 @@
   product  of  the generators can be brought into such a normal form using the
   defining  relations  in  the  above  presentation as rewrite rules. Any such
   process  is  called  [13Xcollection[113X.  For  the  discussion of various collection
-  methods see [LS90] and [Vau90a].[133X
+  methods see [LGS90] and [VL90b].[133X
   
   [33X[0;0YEvery  [22Xp[122X-group  of  order  [22Xp^n[122X has such a pcp on [22Xn[122X generators and conversely
   every  such  presentation  defines a [22Xp[122X-group. However a [22Xp[122X-group defined by a
@@ -59,12 +60,13 @@
   equations (that will be referred to in the manual):[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\begin{array}{rclrl} (a^n)a &=& a(a^n) &&{\rm (Type 1)} \\ (b^n)a &=&
-        b^{(n-1)}(ba), b(a^n) = (ba)a^{(n-1)} &&{\rm (Type 2)} \\ c(ba) &=&
-        (cb)a &&{\rm (Type 3)} \\ \end{array}[133X [124X[133X
+  [24X[33X[0;6Y\begin{array}{rclrl}  (a^n)a  &=&  a(a^n)  &&{\rm  (Type  1)}  \\ (b^n)a &=&
+  b^{(n-1)}(ba),  b(a^n)  =  (ba)a^{(n-1)} &&{\rm (Type 2)} \\ c(ba) &=& (cb)a
+  &&{\rm (Type 3)} \\ \end{array}[133X
   
+  [124X
   
-  [33X[0;0YSee  [Vau84] for a description of a sufficient set of consistency conditions
+  [33X[0;0YSee  [VL84]  for a description of a sufficient set of consistency conditions
   in the context of the [22Xp[122X-quotient algorithm.[133X
   
   
@@ -76,8 +78,9 @@
   [22XG[122X is defined by[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YP_0(G) := G, P_i(G) := [G, P_{i-1}(G)] P_{i-1}(G)^p.[133X [124X[133X
+  [24X[33X[0;6YP_0(G) := G, P_i(G) := [G, P_{i-1}(G)] P_{i-1}(G)^p.[133X
   
+  [124X
   
   [33X[0;0YFor a [22Xp[122X-group [22XG[122X this series terminates with the trivial group. [22XG[122X has [13X[22Xp[122X-class[113X
   [22Xc[122X  if  [22Xc[122X  is  the smallest integer such that [22XP_c(G)[122X is the trivial group. In
@@ -87,9 +90,10 @@
   [33X[0;0YLet the [22Xp[122X-group [22XG[122X have a consistent pcp as above. Then the subgroups[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\langle1\rangle < {\langle}a_n\rangle < {\langle}a_n, a_{n-1}\rangle <
-        \dots < {\langle}a_n,\dots,a_i\rangle < \dots < G[133X [124X[133X
+  [24X[33X[0;6Y\langle1\rangle < {\langle}a_n\rangle < {\langle}a_n, a_{n-1}\rangle < \dots
+  < {\langle}a_n,\dots,a_i\rangle < \dots < G[133X
   
+  [124X
   
   [33X[0;0Yform  a  central  series  of [22XG[122X. If this refines the [22Xp[122X-central series, we can
   define  the [13Xweight function[113X [22Xw[122X for the pc generators by [22Xw(a_i) = k[122X, if [22Xa_i[122X is
@@ -158,7 +162,7 @@
   
   [1X2.2 [33X[0;0YThe p-quotient Algorithm[133X[101X
   
-  [33X[0;0YFor  details,  see  [HN80],  [NO96]  and  [Vau84]. Other descriptions of the
+  [33X[0;0YFor  details,  see  [HN80],  [NO96]  and  [VL84].  Other descriptions of the
   algorithm are given in [Sim94].[133X
   
   [33X[0;0YThe  [10Xpq[110X algorithm successively determines the factor groups of the groups of
@@ -241,7 +245,7 @@
   [33X[0;0YIn  this form, starting with a free group and imposing an exponent law (also
   referred  to  as  an  [13Xexponent check[113X) the [10Xpq[110X program has, in fact, found its
   most  noted application in the determination of (restricted) Burnside groups
-  (as reported in e.g. [HN80], [NO96] and [Vau90b]).[133X
+  (as reported in e.g. [HN80], [NO96] and [VL90a]).[133X
   
   [33X[0;0YVia  a  [5XGAP[105X  program using the [21Xlocal[121X interactive functions of the [10Xpq[110X program
   made available through this interface also arbitrary laws can be imposed via

@@ -73,12 +73,10 @@
   
   [1X6.2 [33X[0;0YDetailed descriptions of ANUPQ Options[133X[101X
   
-  [8X[10XPrime := [3Xp[103X[10X[110X
-  [108X
+  [8X[10XPrime := [3Xp[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies that the [22Xp[122X-quotient for the prime [3Xp[103X should be computed.[133X
   
-  [8X[10XClassBound := [3Xn[103X[10X[110X
-  [108X
+  [8X[10XClassBound := [3Xn[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that  the  [22Xp[122X-quotient  to  be computed has lower exponent-[22Xp[122X
         class  at  most [3Xn[103X. If this option is omitted a default of 63 (which is
         the  maximum  possible  for  the  [10Xpq[110X  program)  is  taken,  except for
@@ -88,8 +86,7 @@
         [10XPqDescendants[110X  the default is [10XPClassPGroup([3XF[103X[10X) + 1[110X, and for the special
         case of [10XPqPCover[110X the default is [10XPClassPGroup([3XF[103X[10X)[110X.[133X
   
-  [8X[10XpQuotient := [3XQ[103X[10X[110X
-  [108X
+  [8X[10XpQuotient := [3XQ[103X[8X[10X[110X[8X [108X
         [33X[0;6YThis option is only available for the standard presentation functions.
         It  specifies  that a [22Xp[122X-quotient of the group argument of the function
         or  group of the process is the pc [3Xp[103X-group [3XQ[103X, where [3XQ[103X is of class [13Xless
@@ -97,15 +94,13 @@
         provided,  then  the  option  [10XPrime[110X  if also provided, is ignored; the
         prime [3Xp[103X is discovered by computing [10XPrimePGroup([3XQ[103X[10X)[110X.[133X
   
-  [8X[10XExponent := [3Xn[103X[10X[110X
-  [108X
+  [8X[10XExponent := [3Xn[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that  the  [22Xp[122X-quotient to be computed has exponent [3Xn[103X. For an
         interactive  process, [10XExponent[110X defaults to a previously supplied value
         for  the process. Otherwise (and non-interactively), the default is 0,
         which means that no exponent law is enforced.[133X
   
-  [8X[10XRelators := [3Xrels[103X[10X[110X
-  [108X
+  [8X[10XRelators := [3Xrels[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that  the  relators  sent  to the [10Xpq[110X program should be [3Xrels[103X
         instead of the relators of the argument group [3XF[103X (or start group in the
         interactive  case)  of  the calling function; [3Xrels[103X should be a list of
@@ -131,22 +126,19 @@
               If  they  are  ok,  a  message to say so is [10XInfo[110X-ed at [10XInfoANUPQ[110X
               level 2.[133X
   
-  [8X[10XMetabelian[110X
-  [108X
+  [8X[10XMetabelian[110X[8X [108X
         [33X[0;6YSpecifies  that the largest metabelian [22Xp[122X-quotient subject to any other
         conditions  specified by other options be constructed. By default this
         restriction is not enforced.[133X
   
-  [8X[10XGroupName := [3Xname[103X[10X[110X
-  [108X
+  [8X[10XGroupName := [3Xname[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that  the  [10Xpq[110X program should refer to the group by the name
         [3Xname[103X  (a  string).  If  [10XGroupName[110X  is  not  set and the group has been
-        assigned  a name via [10XSetName[110X (see [14XReference: SetName[114X) it is set as the
+        assigned  a  name  via  [10XSetName[110X (see [14XReference: Name[114X) it is set as the
         name the [10Xpq[110X program should use. Otherwise, the [21Xgeneric[121X name [10X"[grp]"[110X is
         set as a default.[133X
   
-  [8X[10XIdentities := [3Xfuncs[103X[10X[110X
-  [108X
+  [8X[10XIdentities := [3Xfuncs[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that the pc presentation should satisfy the laws defined by
         each  function  in  the  list  [3Xfuncs[103X. This option may be called by [10XPq[110X,
         [10XPqEpimorphism[110X, or [10XPqPCover[110X (see [2XPq[102X ([14X4.1-1[114X)). Each function in the list
@@ -185,8 +177,7 @@
               using  the  [10XIdentities[110X  option, by including other restrictions,
               e.g. by using the [10XClassBound[110X option (see [2Xoption ClassBound[102X).[133X
   
-  [8X[10XOutputLevel := [3Xn[103X[10X[110X
-  [108X
+  [8X[10XOutputLevel := [3Xn[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  the level of [21Xverbosity[121X of the information output by the ANU
         [10Xpq[110X  program  when computing a pc presentation; [3Xn[103X must be an integer in
         the range 0 to 3. [10XOutputLevel := 0[110X displays at most one line of output
@@ -197,16 +188,14 @@
         Warnings  regarding  the  use  of  Options[133X'[114X  for  an  example  of  how
         [10XOutputLevel[110X can be used as a troubleshooting tool.[133X
   
-  [8X[10XRedoPcp[110X
-  [108X
+  [8X[10XRedoPcp[110X[8X [108X
         [33X[0;6YSpecifies  that  the  current  pc  presentation  (for  an  interactive
         process)  stored  by the [10Xpq[110X program be scrapped and clears the current
         values   stored  for  the  options  [10XPrime[110X,  [10XClassBound[110X,  [10XExponent[110X  and
         [10XMetabelian[110X  and  also clears the [10XpQuotient[110X, [10XpQepi[110X and [10XpCover[110X fields of
         the data record of the process.[133X
   
-  [8X[10XSetupFile := [3Xfilename[103X[10X[110X
-  [108X
+  [8X[10XSetupFile := [3Xfilename[103X[8X[10X[110X[8X [108X
         [33X[0;6YNon-interactively,  this  option  directs that [10Xpq[110X should not be called
         and  that  an input file with name [3Xfilename[103X (a string), containing the
         commands  necessary  for  the  ANU  [10Xpq[110X standalone, be constructed. The
@@ -229,8 +218,7 @@
         compared  with  the  [21X[10XToPQ> [110X[121X commands that are [10XInfo[110X-ed) or setting a [10Xpq[110X
         command log file by using [10XToPQLog[110X (see [2XToPQLog[102X ([14X3.4-7[114X)).[133X
   
-  [8X[10XPqWorkspace := [3Xworkspace[103X[10X[110X
-  [108X
+  [8X[10XPqWorkspace := [3Xworkspace[103X[8X[10X[110X[8X [108X
         [33X[0;6YNon-interactively, this option sets the memory used by the [10Xpq[110X program.
         It  sets  the  maximum number of integer-sized elements to allocate in
         its main storage array. By default, the [10Xpq[110X program sets this figure to
@@ -238,11 +226,8 @@
         this  case may be set by giving [10XPqStart[110X a second argument (see [2XPqStart[102X
         ([14X5.1-1[114X)).[133X
   
-  [8X[10XPcgsAutomorphisms[110X
-  [108X
-  [8X[10XPcgsAutomorphisms := false[110X
-  
-  [108X
+  [8X[10XPcgsAutomorphisms[110X[8X [108X
+  [8X[10XPcgsAutomorphisms := false[110X[8X [108X
         [33X[0;6YLet [3XG[103X be the group associated with the calling function (or associated
         interactive  process).  Passing the option [10XPcgsAutomorphisms[110X without a
         value   (or  equivalently  setting  it  to  [9Xtrue[109X),  specifies  that  a
@@ -260,17 +245,13 @@
         [33X[0;6Y[13XNote:[113X If [10XPcgsAutomorphisms[110X is used when the automorphism group of [3XG[103X is
         insoluble, an error message occurs.[133X
   
-  [8X[10XOrderBound := [3Xn[103X[10X[110X
-  [108X
+  [8X[10XOrderBound := [3Xn[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that  only  descendants  of  size at most [22Xp^[3Xn[103X[122X, where [3Xn[103X is a
         non-negative  integer,  be  generated.  Note  that you cannot set both
         [10XOrderBound[110X and [10XStepSize[110X.[133X
   
-  [8X[10XStepSize := [3Xn[103X[10X[110X
-  [108X
-  [8X[10XStepSize := [3Xlist[103X[10X[110X
-  
-  [108X
+  [8X[10XStepSize := [3Xn[103X[8X[10X[110X[8X [108X
+  [8X[10XStepSize := [3Xlist[103X[8X[10X[110X[8X [108X
         [33X[0;6YFor a positive integer [3Xn[103X, [10XStepSize[110X specifies that only those immediate
         descendants  which  are a factor [22Xp^[3Xn[103X[122X bigger than their parent group be
         generated.[133X
@@ -280,13 +261,11 @@
         defined by the option [10XClassBound[110X, [10XStepSize[110X specifies that the integers
         of [3Xlist[103X are the step sizes for each additional class.[133X
   
-  [8X[10XRankInitialSegmentSubgroups := [3Xn[103X[10X[110X
-  [108X
+  [8X[10XRankInitialSegmentSubgroups := [3Xn[103X[8X[10X[110X[8X [108X
         [33X[0;6YSets  the  rank  of  the  initial  segment subgroup chosen to be [3Xn[103X. By
         default, this has value 0.[133X
   
-  [8X[10XSpaceEfficient[110X
-  [108X
+  [8X[10XSpaceEfficient[110X[8X [108X
         [33X[0;6YSpecifies that the [10Xpq[110X program performs certain calculations of [22Xp[122X-group
         generation more slowly but with greater space efficiency. This flag is
         frequently  necessary  for groups of large Frattini quotient rank. The
@@ -297,16 +276,14 @@
         the  process.  Otherwise (and non-interactively), [10XSpaceEfficient[110X is by
         default [9Xfalse[109X.[133X
   
-  [8X[10XCapableDescendants[110X
-  [108X
+  [8X[10XCapableDescendants[110X[8X [108X
         [33X[0;6YBy  default, [13Xall[113X (i.e. capable and terminal) descendants are computed.
         If  this  flag  is set, only capable descendants are computed. Setting
         this   option   is  equivalent  to  setting  [10XAllDescendants  :=  false[110X
         (see [2Xoption  AllDescendants[102X),  except  if  both [10XCapableDescendants[110X and
         [10XAllDescendants[110X are passed, [10XAllDescendants[110X is essentially ignored.[133X
   
-  [8X[10XAllDescendants := false[110X
-  [108X
+  [8X[10XAllDescendants := false[110X[8X [108X
         [33X[0;6YBy  default,  [13Xall[113X  descendants are constructed. If this flag is set to
         [9Xfalse[109X,  only  capable descendants are computed. Passing [10XAllDescendants[110X
         without  a  value  (which  is  equivalent  to  setting  it to [9Xtrue[109X) is
@@ -315,28 +292,24 @@
         [10XAllDescendants[110X  was  set to [9Xfalse[109X (rather than [9Xtrue[109X). It is preferable
         to use [10XCapableDescendants[110X (see [2Xoption CapableDescendants[102X).[133X
   
-  [8X[10XTreeDepth := [3Xclass[103X[10X[110X
-  [108X
+  [8X[10XTreeDepth := [3Xclass[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies     that     the     descendants     tree    developed    by
         [10XPqDescendantsTreeCoclassOne[110X  (see [2XPqDescendantsTreeCoclassOne[102X ([14XA.4-1[114X))
         should be extended to class [3Xclass[103X, where [3Xclass[103X is a positive integer.[133X
   
-  [8X[10XSubList := [3Xsub[103X[10X[110X
-  [108X
+  [8X[10XSubList := [3Xsub[103X[8X[10X[110X[8X [108X
         [33X[0;6YSuppose  that  [3XL[103X is the list of descendants generated, then for a list
         [3Xsub[103X of integers this option causes [10XPqDescendants[110X to return [10XSublist( [3XL[103X[10X,
         [3Xsub[103X[10X )[110X. If an integer [3Xn[103X is supplied, [10XPqDescendants[110X returns [10X[3XL[103X[10X[[3Xn[103X[10X][110X.[133X
   
-  [8X[10XNumberOfSolubleAutomorphisms := [3Xn[103X[10X[110X
-  [108X
+  [8X[10XNumberOfSolubleAutomorphisms := [3Xn[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies that the number of soluble automorphisms of the automorphism
         group supplied by [10XPqPGSupplyAutomorphisms[110X (see [2XPqPGSupplyAutomorphisms[102X
         ([14X5.9-1[114X))  in  a  [22Xp[122X-group generation calculation is [3Xn[103X. By default, [3Xn[103X is
         taken  to  be  [22X0[122X;  [3Xn[103X  must be a non-negative integer. If [22X[3Xn[103X ge 0[122X then a
         value for the option [10XRelativeOrders[110X (see [14X6.2[114X) must also be supplied.[133X
   
-  [8X[10XRelativeOrders := [3Xlist[103X[10X[110X
-  [108X
+  [8X[10XRelativeOrders := [3Xlist[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  the  relative  orders  of  each soluble automorphism of the
         automorphism     group     supplied     by     [10XPqPGSupplyAutomorphisms[110X
         (see [2XPqPGSupplyAutomorphisms[102X   ([14X5.9-1[114X))   in   a   [22Xp[122X-group  generation
@@ -344,33 +317,31 @@
         [3Xn[103X  is  the value of the option [10XNumberOfSolubleAutomorphisms[110X (see [14X6.2[114X).
         By default [3Xlist[103X is empty.[133X
   
-  [8X[10XBasicAlgorithm[110X
-  [108X
+  [8X[10XBasicAlgorithm[110X[8X [108X
         [33X[0;6YSpecifies  that  an  algorithm  that  the [10Xpq[110X program calls its [21Xdefault[121X
         algorithm be used for [22Xp[122X-group generation. By default this algorithm is
         [13Xnot[113X  used.  If  this  option  is  supplied  the  settings  of  options
         [10XRankInitialSegmentSubgroups[110X,  [10XAllDescendants[110X,  [10XExponent[110X and [10XMetabelian[110X
         are ignored.[133X
   
-  [8X[10XCustomiseOutput := [3Xrec[103X[10X[110X
-  [108X
+  [8X[10XCustomiseOutput := [3Xrec[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that  fine  tuning of the output is desired. The record [3Xrec[103X
         should have any subset (or all) of the the following fields:[133X
   
-        [8X[10Xperm := [3Xlist[103X[10X[110X[108X
+        [8X[10Xperm := [3Xlist[103X[8X[10X[110X[8X[108X
               [33X[0;12Ywhere  [3Xlist[103X  is  a  list of booleans which determine whether the
               permutation  group  output  for  the  automorphism  group should
               contain:   the   degree,   the   extended   automorphisms,   the
               automorphism matrices, and the permutations, respectively.[133X
   
-        [8X[10Xorbit := [3Xlist[103X[10X[110X[108X
+        [8X[10Xorbit := [3Xlist[103X[8X[10X[110X[8X[108X
               [33X[0;12Ywhere  [3Xlist[103X  is  a  list of booleans which determine whether the
               orbit  output  of  the  action  of the automorphism group should
               contain:   a   summary,   and  a  complete  listing  of  orbits,
               respectively.  (It's  possible  to  have  [13Xboth[113X  a  summary and a
               complete listing.)[133X
   
-        [8X[10Xgroup := [3Xlist[103X[10X[110X[108X
+        [8X[10Xgroup := [3Xlist[103X[8X[10X[110X[8X[108X
               [33X[0;12Ywhere  [3Xlist[103X  is  a  list of booleans which determine whether the
               group  output  should  contain:  the  standard  matrix  of  each
               allowable  subgroup,  the  presentation  of  reduced  [22Xp[122X-covering
@@ -378,13 +349,13 @@
               rank   of   descendants,   and   the   [22Xp[122X-multiplicator  rank  of
               descendants, respectively.[133X
   
-        [8X[10Xautgroup := [3Xlist[103X[10X[110X[108X
+        [8X[10Xautgroup := [3Xlist[103X[8X[10X[110X[8X[108X
               [33X[0;12Ywhere  [3Xlist[103X  is  a  list of booleans which determine whether the
               automorphism group output should contain: the commutator matrix,
               the  automorphism  group  description  of  descendants,  and the
               automorphism group order of descendants, respectively.[133X
   
-        [8X[10Xtrace := [3Xval[103X[10X[110X[108X
+        [8X[10Xtrace := [3Xval[103X[8X[10X[110X[8X[108X
               [33X[0;12Ywhere  [3Xval[103X  is a boolean which if [9Xtrue[109X specifies algorithm trace
               data  is  desired.  By default, one does not get algorithm trace
               data.[133X
@@ -405,8 +376,7 @@
         there  should  be no algorithm trace data, and that the default output
         should be provided for the permutation group and orbit output.[133X
   
-  [8X[10XStandardPresentationFile := [3Xfilename[103X[10X[110X
-  [108X
+  [8X[10XStandardPresentationFile := [3Xfilename[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that the file to which the standard presentation is written
         has  name  [3Xfilename[103X.  If the first character of the string [3Xfilename[103X is
         not  [10X/[110X, [3Xfilename[103X is assumed to be the path of a writable file relative
@@ -415,8 +385,7 @@
         [10XFilename(  ANUPQData.tmpdir,  "SPres"  );[110X,  i.e. the  file  with  name
         [10X"SPres"[110X in the temporary directory in which the [10Xpq[110X program executes.[133X
   
-  [8X[10XQueueFactor := [3Xn[103X[10X[110X
-  [108X
+  [8X[10XQueueFactor := [3Xn[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  a  queue  factor  of [3Xn[103X, where [3Xn[103X must be a positive integer.
         This option may be used with [10XPqNextClass[110X (see [2XPqNextClass[102X ([14X5.6-4[114X)).[133X
   
@@ -442,23 +411,19 @@
         second  queue  if  the  percentage of its non-zero entries exceeds the
         queue factor.[133X
   
-  [8X[10XBounds := [3Xlist[103X[10X[110X
-  [108X
+  [8X[10XBounds := [3Xlist[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies a lower and upper bound on the indices of a list, where [3Xlist[103X
         is  a pair of positive non-decreasing integers. See [2XPqDisplayStructure[102X
         ([14X5.7-23[114X)  and [2XPqDisplayAutomorphisms[102X ([14X5.7-24[114X) where this option may be
         used.[133X
   
-  [8X[10XPrintAutomorphisms := [3Xlist[103X[10X[110X
-  [108X
+  [8X[10XPrintAutomorphisms := [3Xlist[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies that automorphism matrices be printed.[133X
   
-  [8X[10XPrintPermutations := [3Xlist[103X[10X[110X
-  [108X
+  [8X[10XPrintPermutations := [3Xlist[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies that permutations of the subgroups be printed.[133X
   
-  [8X[10XFilename := [3Xstring[103X[10X[110X
-  [108X
+  [8X[10XFilename := [3Xstring[103X[8X[10X[110X[8X [108X
         [33X[0;6YSpecifies  that  an output or input file to be written to or read from
         by the [10Xpq[110X program should have the name [3Xstring[103X.[133X
   
